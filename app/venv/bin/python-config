@@ -1,4 +1,4 @@
-#!/app/venv/bin/python
+#!/PEviewer-Packer-Protector-PEinfo-website/app/venv/bin/python
 
 import sys
 import getopt
