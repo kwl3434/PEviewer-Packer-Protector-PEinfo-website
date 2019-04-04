@@ -1,0 +1,3 @@
+[console_scripts]
+virustotal = vt_driver:main
+
