@@ -5,18 +5,25 @@ import sys
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
 app = Flask(__name__)
-
+menu='menubar.html'
+pack='pack_protector.html'
 #업로드 HTML 렌더링
 
 
 @app.route('/')
-def render_file():
-   return render_template('upload.html')
+def home():
+   return render_template('total.html',src1=menu, src2=pack)
+@app.route('/menubar.html')
+def index():
+    return render_template('menubar.html')
 
+@app.route('/pack_protector.html', methods = ['GET', 'POST'])
+def render_file():
+    return render_template('pack_protector.html')
 
 
 #파일 업로드 처리
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/pack_protector.html', methods = ['GET', 'POST'])
 def upload_file():
    if request.method == 'POST':
       f = request.files['file']
