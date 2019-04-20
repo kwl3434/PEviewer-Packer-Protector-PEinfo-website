@@ -4,42 +4,31 @@
                 <title>upload,protect,pack</title></head>
         <body>
                 <br>
-                <form>  
-                        <fieldset>     
-                                <form  method = "POST" enctype = "multipart/form-data">
-                                        <input type = "file" name = "file" /> 
-                                        <input type = "submit"/>
-                                </form>
-
-                        </fieldset>
-
+                <form  action = "http://114.71.70.60:5000/upload" method = "POST" enctype = "multipart/form-data">
+                        <input type = "file" name = "file" /> 
+                        <input type = "submit"/>
+                </form>
+                <form>
                         <br>
-
-
                         <fieldset>
                                 <h3>Packer </h3>
-                                        <select name="china">
-                                                <option value="1" selected>UPXpacker</option>
-                                                <option value="2" >packer2</option>
-                                                <option value="3">packer3</option>
-                                        </select>
-                                        <input type="submit" value="pack">
-                                        <input type="submit" value="unpack">
-
+                                <select name="china">
+                                        <option value="1" selected>UPXpacker</option>
+                                        <option value="2" >packer2</option>
+                                        <option value="3">packer3</option>
+                                </select>
+                                <input type="submit" value="pack">
+                                <input type="submit" value="unpack">
                         </fieldset>
-
-
                         <br>
-
-
                         <fieldset>
                                 <h3>Protector</h3>
-                                        <select name="china">
-                                                <option value="1" selected> Protecter </option>
-                                                <option value="2" >Protecter </option>
-                                                <option value="3">Protecter </option>
-                                        </select>
-                                        <input type="submit" value="protect">
+                                <select name="china">
+                                        <option value="1" selected> Protecter </option>
+                                        <option value="2" >Protecter </option>
+                                        <option value="3">Protecter </option>
+                                </select>
+                                <input type="submit" value="protect">
                         </fieldset>
                 </form>
         </body>

@@ -12,25 +12,25 @@ pack='pack_protector.html'
 
 @app.route('/')
 def home():
-   return render_template('total.html',src1=menu, src2=pack)
+   return render_template('total.html',src1=menu, src2=pack, methods = ['GET','POST'])
 @app.route('/menubar.html')
 def index():
     return render_template('menubar.html')
 
-@app.route('/pack_protector.html', methods = ['GET', 'POST'])
+@app.route('/pack_protector.html', methods = ['GET','POST'])
 def render_file():
     return render_template('pack_protector.html')
 
 
 #파일 업로드 처리
-@app.route('/pack_protector.html', methods = ['GET', 'POST'])
+@app.route('/upload', methods = ['GET', 'POST'])
 def upload_file():
    if request.method == 'POST':
       f = request.files['file']
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
-      os.system('upx '+f.filename)
+#      os.system('upx '+f.filename)
       return '-> 파일 업로드 성공!'
 
 if __name__ == '__main__':
