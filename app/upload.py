@@ -30,15 +30,25 @@ def upload_file():
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
-#      os.system('upx '+f.filename)
-      print(f.filename)
       return render_template('pack_protector.html')
 
-@app.route('/download', methods = ['GET'])
-def return_file():
-        print(f.filename+"hi")
+@app.route('/pack_download', methods = ['GET'])
+def pack_return_file():
+    try:
         path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
+        os.system('upx '+f.filename)
         return send_file(path,as_attachment=True)
+    except Exception as e:
+        return "Please upload the file first."
+
+@app.route('/unpack_download', methods = ['GET'])
+def unpack_return_file():
+    try:
+        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
+        os.system('upx -d '+f.filename)
+        return send_file(path,as_attachment=True)
+    except Exception as e:
+        return "Please upload the file first."
 
 if __name__ == '__main__':
     #서버 실행
