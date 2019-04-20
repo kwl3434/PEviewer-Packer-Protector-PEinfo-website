@@ -8,7 +8,6 @@
                         <input type = "file" name = "file" /> 
                         <input type = "submit"/>
                 </form>
-                <form>
                         <br>
                         <fieldset>
                                 <h3>Packer </h3>
@@ -17,9 +16,11 @@
                                         <option value="2" >packer2</option>
                                         <option value="3">packer3</option>
                                 </select>
-                                <input type="submit" value="pack">
+                                <form method="GET" action ="http://114.71.70.60:5000/download"><input type="submit" value="pack">
+                                </form>
                                 <input type="submit" value="unpack">
                         </fieldset>
+                  <form>
                         <br>
                         <fieldset>
                                 <h3>Protector</h3>

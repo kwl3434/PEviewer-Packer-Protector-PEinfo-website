@@ -3,12 +3,12 @@ import subprocess
 import os
 import sys
 from flask import Flask, render_template, request
+from flask import send_file
 from werkzeug import secure_filename
 app = Flask(__name__)
 menu='menubar.html'
 pack='pack_protector.html'
 #업로드 HTML 렌더링
-
 
 @app.route('/')
 def home():
@@ -21,17 +21,24 @@ def index():
 def render_file():
     return render_template('pack_protector.html')
 
-
 #파일 업로드 처리
 @app.route('/upload', methods = ['GET', 'POST'])
 def upload_file():
    if request.method == 'POST':
+      global f
       f = request.files['file']
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
 #      os.system('upx '+f.filename)
-      return '-> 파일 업로드 성공!'
+      print(f.filename)
+      return render_template('pack_protector.html')
+
+@app.route('/download', methods = ['GET'])
+def return_file():
+        print(f.filename+"hi")
+        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
+        return send_file(path,as_attachment=True)
 
 if __name__ == '__main__':
     #서버 실행
