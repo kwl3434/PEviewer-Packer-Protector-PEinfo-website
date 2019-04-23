@@ -6,16 +6,29 @@ from flask import Flask, render_template, request
 from flask import send_file
 from werkzeug import secure_filename
 app = Flask(__name__)
-menu='menubar.html'
+main='main.html'
 pack='pack_protector.html'
+home='home.html'
+howto='howtouse.html'
+total='total.html'
+
 #업로드 HTML 렌더링
 
 @app.route('/')
+def main():
+    return render_template('main.html')
+
+@app.route('/total')
+def total():
+    return render_template('total.html',src1=pack)
+
+@app.route('/home')
 def home():
-   return render_template('total.html',src1=menu, src2=pack, methods = ['GET','POST'])
-@app.route('/menubar.html')
-def index():
-    return render_template('menubar.html')
+    return render_template('home.html')
+
+@app.route('/howtouse')
+def howtouse():
+    return render_template('howtouse.html')
 
 @app.route('/pack_protector.html', methods = ['GET','POST'])
 def render_file():
@@ -32,21 +45,25 @@ def upload_file():
       os.system('./viruscheck '+f.filename)
       return render_template('pack_protector.html')
 
-@app.route('/pack_download', methods = ['GET'])
-def pack_return_file():
+@app.route('/pack_download', methods = ['GET', 'POST'])
+def pack_download_file():
+   if request.method == 'POST':
     try:
         path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
         os.system('upx '+f.filename)
-        return send_file(path,as_attachment=True)
+        return "upx pack"
+        #return send_file(path,as_attachment=True)
     except Exception as e:
         return "Please upload the file first."
 
-@app.route('/unpack_download', methods = ['GET'])
-def unpack_return_file():
+@app.route('/unpack_download', methods = ['GET', 'POST'])
+def unpack_download_file():
+   if request.method == 'POST':
     try:
         path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
         os.system('upx -d '+f.filename)
-        return send_file(path,as_attachment=True)
+        return "UPX unpack"
+        #return send_file(path,as_attachment=True)
     except Exception as e:
         return "Please upload the file first."
 

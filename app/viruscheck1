@@ -1,0 +1,21 @@
+#!/bin/bash
+
+wc -c output.txt # 바이러스 오류가 없는 출력물의 바이트 수가 있고 232byte
+wc -c output1.txt #바이러스 오류가 있는 출력물의 바이트 수가 있으면 292byte
+#바이러스 오류가 있는 output1.txt 의 바이트 수보다  바이러스 오류가 없는 output.txt 가 바이트수가 더 작을 것임
+#이 출력물을 비교하고 바이러스 없는 출력물에 비해 바이러스가 있는 출력물의 바이트수가 크면 그 파일 삭제하고 해쉬값 삭제
+
+md5sum *.txt | awk '{print $1}' > /root/test1.txt #업로드되는 파일들을 해쉬 값으로 변경시키고 test1.txt에 한 개 씩 적재됨
+
+
+
+if [  ]
+
+then
+
+
+
+else
+
+
+fi     
