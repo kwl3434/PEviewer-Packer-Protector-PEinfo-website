@@ -8,15 +8,19 @@ from werkzeug import secure_filename
 app = Flask(__name__)
 main='main.html'
 pack='pack_protector.html'
-home='home.html'
 howto='howtouse.html'
 total='total.html'
+jpg1='1.JPG'
+jpg2='2.JPG'
+jpg3='3.JPG'
+jpg4='4.JPG'
+jpg5='5.JPG'
 
 #업로드 HTML 렌더링
 
 @app.route('/')
 def main():
-    return render_template('main.html')
+    return render_template('main.html',src1=howto)
 
 @app.route('/total')
 def total():
@@ -33,6 +37,7 @@ def howtouse():
 @app.route('/pack_protector.html', methods = ['GET','POST'])
 def render_file():
     return render_template('pack_protector.html')
+
 
 #파일 업로드 처리
 @app.route('/upload', methods = ['GET', 'POST'])

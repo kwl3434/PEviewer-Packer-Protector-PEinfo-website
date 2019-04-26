@@ -7,35 +7,46 @@
         <link href="https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Pen+Script" rel="stylesheet">
 
         <style>
-.upload{
-        border: 2px solid #BACEB0;
-        display: inline-block;
-        text-align: center;
-        width: 96%;
-        padding: 10px;
-        margin: 4px;
-        clear: both;
-}
-        .pp {
-                border: 2px solid #BACEB0;
+        .upload{
                 display: inline-block;
                 text-align: center;
-                        float : left;
-                        width : 46.25%;
-                height: 30vh;
-                padding: 10px;
-                margin: 4px;
+                width: 96%;
+                clear: both;
         }
-        .peinfo {
+        .uploaddiv{
+                border: 2px solid #BACEB0;
+                width: 96%;
+        }
+        .pp {
+                display: inline-block;
+                text-align: center;
+                clear: both;
+                width: 46%;
+        }
+        .ppp{
+                display: inline-block;
+                text-align: center;
+                border: 2px solid #BACEB0;
+                width: 94%;
+                margin-left: 10px;
+                margin-right: 10px;
+
+        }
+        .progress {
+                display: inline-block;
+                text-align: center;
+                width: 96%;
+                height: 24vh;
+        }
+        .progress2 {
                 border: 2px solid #BACEB0;
                 display: inline-block;
                 text-align: center;
-                width: 96.1%;
-                height: 24vh;
-                padding: 10px;
-                        margin : 4px;
+                width: 96%;
         }
         span{
+                display: inline-block;
+                align : center;
                 background-color:  #BACEB0;
                 color: #263835;
                 font-size: 20px;
@@ -45,8 +56,8 @@
         }
         div{
                 display: inline-block;
-                padding: 6px;
-                margin: 10px;
+                padding: 2px;
+                margin: 5px;
         }
         .button{
                 background-color: #BACEB0;
@@ -63,39 +74,23 @@
                 function jbFunc() {
                         document.getElementById( 'bar' ).value = '80';
                 }
-                
-                
-		function FileCheck(file) {
-
-		
-                        if(file.value == ""){
-			alert("파일을 선택해주세요");
-			return;
-
-			}
-
-			else
-			return;
-                }
-              
         </script>
         </head>
         <body>
                 <Div class="upload">
-                <span> 파일 선택 버튼을 누르고 파일을 선택 후 제출 버튼을 누르세요.</span>
-                <br>
-                <div>
-                <form  action = "http://114.71.70.60:5000/upload" method = "POST" enctype = "multipart/form-data">
-                        <input class="button" type = "file" name = "file" />
-                        <input class="button" onclick="FileCheck(file)" type = "submit"/>
-                </form>
-                </div>
+                        <span> 파일 선택 버튼을 누르고 파일을 선택 후 제출 버튼을 누르세요.</span>
+                        <div class="uploaddiv">
+                        <form  action = "http://114.71.70.60:5000/upload" method = "POST" enctype = "multipart/form-data">
+                                <input class="button" type = "file" name = "file" />
+                                <input class="button" type = "submit"/>
+                        </form>
+                        </div>
                 </Div>
 
                 <Div class = "pp">
-                        <span>패커를 선택하세요</span>
+                        <span>팩커를 선택하세요</span>
                         <br>
-                        <Div>
+                        <div  class = "ppp">
                                 <select name="packer">
                                         <option value="1" selected>UPXpacker</option>
                                         <option value="2" >packer2</option>
@@ -107,13 +102,12 @@
                                 <form action ="http://114.71.70.60:5000/pack_download" method = "POST"  style="float:right;margin:0;">
                                         <input class="button" type="submit" value="Pack"/>
                                 </form>
-                        </Div>
-                </Div>
-
-                <Div class = "pp">
+                        </div>
+                </div>
+                <div class = "pp">
                         <span>프로텍터를 선택하세요 </span>
                         <br>
-                        <div>
+                        <div  class = "ppp">
                                 <select name="protecter">
                                         <option value="1" selected> Protector </option>
                                         <option value="2" >Protector </option>
@@ -121,15 +115,15 @@
                                 </select>
                                 <input class="button" type="submit" value="Protect"/>
                         </div>
-                </Div>
+                </div>
 
-                <Div class="peinfo">
-                        <span>Pack | Unpack | Protecting 진행상황 </span>
+                <Div class="progress">
+                        <span>Packing | Unpacking | Protecting 진행상황 </span>
                         <br>
-                        <div>
+                        <div class="progress2">
                                 <progress value="20" max="100" id="bar"></progress>
+                                <button class="button" onclick="jbFunc()">Click</button>
                         </div>
-                        <button class="button" onclick="jbFunc()">Click</button>
                 </Div>
 
         </body>

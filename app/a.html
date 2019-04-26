@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>큰 자리수와 낮은자리수 같은지 비교</h3>
+    <hr>
+    <script>
+        var n=prompt("숫자 입력");
+        var num=n;
+        var last=n%10;
+        while(n>10) { 
+            n=n/10;
+            n=Math.floor(n);
+        }
+        if(n==last) {
+            document.write(num +": 같음");
+        }
+        else {
+            document.write(num+": 다름");
+        }
+    </script>
+</body>
+</html>
