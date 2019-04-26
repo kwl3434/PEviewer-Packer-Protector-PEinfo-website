@@ -4,7 +4,6 @@
 #-----------upload.py 로 파일이 업로드 된다고 가정하고 ----------------------
 
 sed '1,$d' /root/test1.txt #파일이 업로드 돼고 해쉬값으로 변경된 test1.txt의 1행 부터 마지막 행까지 해쉬 값들이  쌓인것을 초기화(다 없애버림) 해줌
- md5sum /uploadfile/*.txt | awk '{print $1}' > /root/test1.txt #업로드되는 파일들을 해쉬 값으로 변경시키고 test1.txt에 해쉬코드 적재
  md5sum /uploadfile/*.exe | awk '{print $1}' > /root/test1.txt #업로드되는.exe파일을 해쉬 값으로 변경시키고 test1.txt에 해쉬코드 적재
  #문제점 위 두 명령어를 실행하게 되면 결과값을 바이트수로 변경했을시에 무조건 바이러스 있는 해쉬로 간주하게됨 문자수232보다 크기 때문
 

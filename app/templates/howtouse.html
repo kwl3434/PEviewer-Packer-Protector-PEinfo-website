@@ -3,64 +3,80 @@
         <head>
                 <meta charset="UTF-8">
                 <title>사용방법</title>
+                <style>
+div {
+        font-family: 'Press Start 2P', cursive;
+        text-align: left;
+                font-size : 40px;
+        font-weight: bold;
+                color : #5E8680;
+}
+                </style>
         </head>
-        <body>
-                <h3>HOW TO USE</h3>
-                <hr>
-                <figure id="1-1">
-                        <table>
-                                <tr>
-                                        <pre><td><img src="{{ url_for( 'static', filename='images/1.JPG' ) }}" alt="실행결과"><br>
+        <h3>
+                <body>
+                        <div>How to use</div></h3>
+        <hr>
+        <figure id="1-1">
+                <table>
+                        <tr>
+                                <pre><td><img src="{{ url_for( 'static', filename='images/1.JPG' ) }}" alt="실행결과"><br>
  메인화면 실행결과</pre></td>
-                                        <td>
-                                                <figure>
-                                                        메인 화면 실행 화면 입니다.
-                                                </figure>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <pre><td><img src="{{ url_for( 'static', filename='images/2.JPG' ) }}" alt="실행결과"><br>
+                                <td>
+                                        <figure>
+                                                <mark>메인 화면 실행 화면</mark> 입니다.
+                                        </figure>
+                                </td>
+                        </tr>
+                        <tr>
+                                <pre><td><img src="{{ url_for( 'static', filename='images/2.JPG' ) }}" alt="실행결과"><br>
   파일 선택후 예시</pre></td>
-                                        <td>
-                                                <figure>
-                                                        ① 파일을 선택합니다.<br>
-                                                        ② 제출을 눌러 파일을 제출 해주세요.
-                                                </figure>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <pre><td><img src="{{ url_for( 'static', filename='images/3.JPG' ) }}" alt="실행결과"><br>
+                                <td>
+                                        <figure>
+                                                ① 파일을 <mark>선택</mark>합니다.<br>
+                                                ② <mark>제출</mark>을 눌러 파일을 <mark>제출</mark> 해주세요.
+                                        </figure>
+                                </td>
+                        </tr>
+                        <pre><td><img src="{{ url_for( 'static', filename='images/3.JPG' ) }}" alt="실행결과"><br>
          패커의 종류 선택 예시</pre></td>
-                                        <td>
-                                                <figure>
-                                                        ① 패커의 종류를 선택 하여 주세요. 패커의 종류는
-                                                        총 3가지 입니다.<br>
-                                                        ② 다음은 Pack 버튼을 눌러 주세요.
-                                                </figure>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <pre><td><img src="{{ url_for( 'static', filename='images/4.JPG' ) }}" alt="실행결과"><br>
+                        <td>
+                                <figure>
+                                        ① 패커의 종류를 <mark>선택</mark> 하여 주세요. 패커의 종류는 총 <mark>3가지</mark> 입니다.<br>
+                                        ② 다음은 <mark>Pack 버튼</mark>을 눌러 주세요.<br>
+                                        ③ <mark>UnPack버튼</mark>으로 <mark>UnPack</mark> 할 수 있습니다.
+                                </figure>
+                        </td>
+                        </tr>
+                        <tr>
+                                <pre><td><img src="{{ url_for( 'static', filename='images/4.JPG' ) }}" alt="실행결과"><br>
+    하단의 진행상황 예시</pre></td>
+                                <td>
+                                        <figure>
+                                                하단의 <mark>진행 상황</mark>으로 <mark>현재 진행 상황</mark>을 알수있습니다.
+                                        </figure>
+                                </td>
+                        </tr>
+                        <tr>
+                                <pre><td><img src="{{ url_for( 'static', filename='images/5.JPG' ) }}" alt="실행결과"><br>
     프로텍터 종류 선택 예시</pre></td>
-                                        <td>
-                                                <figure>
-                                                        ① 프로텍터 종류 선택 하여 주세요. 프로텍터의 종류는 총 3가지 입니다.<br>
-                                                        ② 다음은 Protect 버튼을 눌러 주세요.
-                                                </figure>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <pre><td><img src="{{ url_for( 'static', filename='images/5.JPG' ) }}" alt="실행결과"><br>
+                                <td>
+                                        <figure>
+                                                ① <mark>프로텍터 종류 선택</mark> 하여 주세요. <mark>프로텍터</mark>의 종류는 총 <mark>3가지</mark> 입니다.<br>
+                                                ② 다음은 <mark>Protect 버튼</mark>을 눌러 주세요.
+                                        </figure>
+                                </td>
+                        </tr>
+                        <tr>
+                                <pre><td><img src="{{ url_for( 'static', filename='images/6.JPG' ) }}" alt="실행결과"><br>
      하단의 진행상황 예시</pre></td>
-                                        <td>
-                                                <figure>
-                                                        하단의 진행상황으로 현재 언제까지 진행 되었는지 알수있습니다.
-                                                </figure>
-                                        </td>
-                                </tr>
-                                </pre>
-                                </code>
-                </figure>
-                        </table>
-        </body>
+                                <td>
+                                        <figure>
+                                                하단의 <mark>진행 상황</mark>으로 <mark>현재 진행 상황</mark>을 알수있습니다.
+                                        </figure>
+                                </td>
+                        </tr>
+        </figure>
+                </table>
+                </body>
 </html>
