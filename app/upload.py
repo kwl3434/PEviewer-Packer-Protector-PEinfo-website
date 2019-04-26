@@ -56,8 +56,7 @@ def pack_download_file():
     try:
         path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
         os.system('upx '+f.filename)
-        return "upx pack"
-        #return send_file(path,as_attachment=True)
+        return send_file(path,as_attachment=True)
     except Exception as e:
         return "Please upload the file first."
 
@@ -67,8 +66,7 @@ def unpack_download_file():
     try:
         path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
         os.system('upx -d '+f.filename)
-        return "UPX unpack"
-        #return send_file(path,as_attachment=True)
+        return send_file(path,as_attachment=True)
     except Exception as e:
         return "Please upload the file first."
 
