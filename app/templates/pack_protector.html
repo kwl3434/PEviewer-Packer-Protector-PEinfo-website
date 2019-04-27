@@ -70,6 +70,15 @@
                 function jbFunc() {
                         document.getElementById( 'bar' ).value = '80';
                 }
+                
+                function FileCheck() {
+                        if (file.value == "")
+                        {       alert("파일을 선택해주세요");
+                                return;
+                        }
+                        else
+                                return;
+                }
         </script>
         </head>
         <body>
@@ -80,7 +89,7 @@
                         <div class="uploaddiv" style="margin : 5px;">
                         <form  action = "http://114.71.70.60:5000/upload" method = "POST" enctype = "multipart/form-data">
                                 <input class="button" type = "file" name = "file" />
-                                <input class="button" type = "submit"/>
+                                <input class="button" type = "submit" onclick="FileCheck(file)"/>
                         </form>
                         </div>
                 </Div>
