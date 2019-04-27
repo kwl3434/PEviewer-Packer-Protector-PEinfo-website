@@ -7,9 +7,11 @@ from flask import send_file
 from werkzeug import secure_filename
 app = Flask(__name__)
 main='main.html'
-pack='pack_protector.html'
+pack='pack_protector'
 howto='howtouse.html'
 total='total.html'
+peinfo='peinfo'
+peview='peview'
 jpg1='1.JPG'
 jpg2='2.JPG'
 jpg3='3.JPG'
@@ -24,7 +26,7 @@ def main():
 
 @app.route('/total')
 def total():
-    return render_template('total.html',src1=pack)
+    return render_template('total.html',src1=pack,src2=peinfo, src3=peview)
 
 @app.route('/home')
 def home():
@@ -34,10 +36,17 @@ def home():
 def howtouse():
     return render_template('howtouse.html')
 
-@app.route('/pack_protector.html', methods = ['GET','POST'])
+@app.route('/peinfo')
+def peinfo_e():
+    return render_template('peinfo.html')
+
+@app.route('/peview')
+def peview_e():
+    return render_template('peview.html')
+
+@app.route('/pack_protector', methods = ['GET','POST'])
 def render_file():
     return render_template('pack_protector.html')
-
 
 #파일 업로드 처리
 @app.route('/upload', methods = ['GET', 'POST'])
@@ -54,8 +63,9 @@ def upload_file():
 def pack_download_file():
    if request.method == 'POST':
     try:
-        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
+        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename+".7z"
         os.system('upx '+f.filename)
+        os.system('7zr a '+f.filename+'.7z '+f.filename)
         return send_file(path,as_attachment=True)
     except Exception as e:
         return "Please upload the file first."

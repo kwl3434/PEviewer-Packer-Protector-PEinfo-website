@@ -1,29 +1,22 @@
 #!/bin/bash
+echo "-----------------Waiting for Process--------------------"
+sed '1,$d' /root/test1.txt > test1.txt  
+md5sum ./uploadfile/*.exe | awk '{print $1}' > /root/test1.txt 
+foo = "wc -c /root/output.txt | awk '{print $1}'"
+value = `expr $foo`
+
+if [ $value -gt 232 ]; then   
+        sed '1,$d' /root/test1.txt > /root/test1.txt
+        rm ./uploadfile/*.* 
+       echo "check"
+elif[ $value -le 232 ]; then 
+        #PEview Peinfo Execute                                                               
+        echo "check"
+        rm ./uploadfile/*.*
+else
+        echo "Not Response"
+    
+echo "-------------------End Process--------------------------"
+fi
 
 
-#-----------upload.py 로 파일이 업로드 된다고 가정하고 ----------------------
-
-sed '1,$d' /root/test1.txt #파일이 업로드 돼고 해쉬값으로 변경된 test1.txt의 1행 부터 마지막 행까지 해쉬 값들이  쌓인것을 초기화(다 없애버림) 해줌
- md5sum /uploadfile/*.exe | awk '{print $1}' > /root/test1.txt #업로드되는.exe파일을 해쉬 값으로 변경시키고 test1.txt에 해쉬코드 적재
- #문제점 위 두 명령어를 실행하게 되면 결과값을 바이트수로 변경했을시에 무조건 바이러스 있는 해쉬로 간주하게됨 문자수232보다 크기 때문
-
-python virustotal.py > output.txt # 바이러스가 있는경우  없는 경우가 나오고 그 결과를 ouput.txt에 넣어줌
-                                                                #python virustotal.py > output1.txt # 바이러스가 있는 경우
-wc -c /root/output.txt #바이러스가 없는 출력물의 바이트(문자)수는 232byte  바이러스가  있으면 292byte  없는것보다 많은 바이트수
-#이 출력물을 비교하고 바이러스 없는 출력물에 비해 바이러스가 있는 출력물의 바이트수(문자수)가 크면 그 파일 삭제하고 해쉬값 삭제
-#예시
-# virustotal.py 실행시 바이러스 오류인지 아닌지 출력 값이 나옴
-# 바이러스가 검출 됐는지 안됐는지에 대한 출력 값을 자기가 정한 .txt 파일에 출력 값을 넣고 
-wc -c output.txt | awk '{print $1}' #로 바이러스 토탈 결과 출력물에대한 바이트 수를 출력
-
-# 조건에서 바이러스 바이트 수에대한 조건을 넣음 그냥 예로들어 output.txt 오류 없는 파일의 바이트 수(문자수)는 232임
-if [wc -c output.txt | awk '{print $1}' -gt 232 ]; then   # 바이러스없는 출력 결과물의 바이트 수보다 크면 바이러스 파일이므로라 삭제
-        sed '$d' /root/output.txt #바이러스가 있는 해쉬값이므로 output.txt에 쌓인 해쉬값이 마지막에 쌓이기 때문에 을 삭제
-        rm /uploadfile/*.* #바이러스 파일이므로 파일 삭제
-elif[wc -c output.txt | awk '{print $1}' -le 232 ]; then #바이러스없는 출력 결과물의 바이트 수바다 작거나 같으면 아무 이상 없음
-                                                                #PEviwer PEinfo 실행
-      
-        rm/uploadfile/*.* #업로드된 파일을 모두 지우는 이유는 업로드경로상에 파일이 남아있으면 test1.txt에 해쉬값이 계속 쌓이기 때문에
-                          #바이러스 토탈에서 바이러스가 있든 없든 같은 파일 해쉬값을 분석 하기 때문임
-
-fi     
