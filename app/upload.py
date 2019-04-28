@@ -57,7 +57,15 @@ def upload_file():
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
-      return render_template('pack_protector.html')
+      TXT = open("/root/TorF.txt",'r');
+      line = TXT.readline()
+      TXT.close()
+      if line=='None':
+      	return render_template('pack_protector.html')
+      else:
+	os.system('rm '+f.filename);
+	return "Virus detected"
+	
 
 @app.route('/pack_download', methods = ['GET', 'POST'])
 def pack_download_file():
@@ -65,22 +73,27 @@ def pack_download_file():
     try:
         path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename+".7z"
         os.system('upx '+f.filename)
-        os.system('7zr a '+f.filename+'.7z '+f.filename)
+        os.system('7z a '+f.filename+'.7z '+f.filename)
+	os.system('rm '+f.filename)
         return send_file(path,as_attachment=True)
     except Exception as e:
-        return "Please upload the file first."
+	os.system('rm '+f.filename)
+        return "Please upload the Windows executable"
 
 @app.route('/unpack_download', methods = ['GET', 'POST'])
 def unpack_download_file():
    if request.method == 'POST':
     try:
-        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename
+        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename+".7z"
         os.system('upx -d '+f.filename)
+        os.system('7z a '+f.filename+'.7z '+f.filename)
+	os.system('rm '+f.filename)
         return send_file(path,as_attachment=True)
     except Exception as e:
-        return "Please upload the file first."
+	os.system('rm '+f.filename)
+        return "Please upload the packed Windows executable"
 
 if __name__ == '__main__':
     #서버 실행
-   app.run(host='0.0.0.0', port=5000)
+   app.run(host='0.0.0.0', port=80)
 
