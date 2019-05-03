@@ -1,0 +1,11 @@
+                function FileCheck(obj) {
+                        if (obj.value == "")
+                        {       alert("파일을 선택해주세요");
+                                return;
+                        }
+                        else
+                                return;
+                }
+
+
+onclick="FileCheck(file)"
