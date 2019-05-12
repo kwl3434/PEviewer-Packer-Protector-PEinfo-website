@@ -2,9 +2,20 @@
 import subprocess
 import os
 import sys
-from flask import Flask, render_template, request
+import commands
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+
+from flask import Flask, render_template, request, make_response
 from flask import send_file
 from werkzeug import secure_filename
+
+from functools import wraps, update_wrapper
+from datetime import datetime
+
 app = Flask(__name__)
 main='main.html'
 pack='pack_protector'
@@ -42,17 +53,18 @@ def peinfo_e():
 
 @app.route('/peview')
 def peview_e():
-    return render_template('peview.html')
+    return render_template('peview.html',data='peviewer')
+def peview_ee(Data):
+    return render_template('peview.html',data=Data)
 
 @app.route('/pack_protector', methods = ['GET','POST'])
 def render_file():
-    return render_template('pack_protector.html')
+    return render_template('pack_protector.html',ff="Upload File..")
 
 #파일 업로드 처리
 @app.route('/upload', methods = ['GET', 'POST'])
 def upload_file():
    if request.method == 'POST':
-      global f
       f = request.files['file']
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
@@ -61,7 +73,8 @@ def upload_file():
       line = TXT.readline()
       TXT.close()
       if line=='None':
-      	return render_template('pack_protector.html')
+	os.system('chown hide '+f.filename)
+      	return render_template('pack_protector.html',ff=f.filename)
       else:
 	os.system('rm '+f.filename);
 	return "Virus detected"
@@ -70,30 +83,34 @@ def upload_file():
 @app.route('/pack_download', methods = ['GET', 'POST'])
 def pack_download_file():
    if request.method == 'POST':
-    try:
-        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename+".7z"
-        os.system('upx '+f.filename)
-        os.system('7z a '+f.filename+'.7z '+f.filename)
-	os.system('rm '+f.filename)
-        return send_file(path,as_attachment=True)
-    except Exception as e:
-	os.system('rm '+f.filename)
-        return "Please upload the Windows executable"
+	f=request.form['fname']
+	if f=="Upload":
+		return "Please Upload File first"
+	elif f[0]=='/' or f[0]=='.':
+		return "Warning 112"
+	else:
+  		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
+        	os.system('upx '+f)
+	        os.system('7z a '+f+'.7z '+f)
+		os.system('rm '+f)
+        	return send_file(path,as_attachment=True)
 
 @app.route('/unpack_download', methods = ['GET', 'POST'])
 def unpack_download_file():
    if request.method == 'POST':
-    try:
-        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f.filename+".7z"
-        os.system('upx -d '+f.filename)
-        os.system('7z a '+f.filename+'.7z '+f.filename)
-	os.system('rm '+f.filename)
-        return send_file(path,as_attachment=True)
-    except Exception as e:
-	os.system('rm '+f.filename)
-        return "Please upload the packed Windows executable"
-
+	f=request.form['fname']
+	if f=="Upload File..":
+		return "Please Upload File first"
+	elif f[0]=='/' or f[0]=='.':
+		return "Warning 112"
+	else:
+        	path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
+        	os.system('upx -d '+f)
+        	os.system('7z a '+f+'.7z '+f)
+		os.system('rm '+f)
+        	return send_file(path,as_attachment=True)
+	
 if __name__ == '__main__':
     #서버 실행
-   app.run(host='0.0.0.0', port=80)
+   app.run(threaded=True, host='0.0.0.0', port=80)
 

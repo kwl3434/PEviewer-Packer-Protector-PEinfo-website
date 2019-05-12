@@ -84,6 +84,7 @@
                                 <input class="button" type = "file" name = "file" />
                                 <input class="button" type = "submit" />
                         </form>
+			<span>{{ff}}</span>
                         </div>
                 </Div>
                 
@@ -102,9 +103,11 @@
                                 </select>
                                 <form action ="http://gwnup4.koreacentral.cloudapp.azure.com/unpack_download" method = "POST" style="float:right;margin:0;">
                                         <input class="button" type="submit" value="UnPack"/>
+					<input type="hidden" value={{ff}} name="fname"/>
                                 </form>
                                 <form action ="http://gwnup4.koreacentral.cloudapp.azure.com/pack_download" method = "POST"  style="float:right;margin:0;">
                                         <input class="button" type="submit" value="Pack"/>
+					<input type="hidden" value={{ff}} name="fname"/>
                                 </form>
                         </div>
                 </div>

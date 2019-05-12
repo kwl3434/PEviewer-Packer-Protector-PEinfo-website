@@ -1,0 +1,368 @@
+----------Parsing Warnings----------
+
+Byte 0x00 makes up 90.4053% of the file's contents. This may indicate truncation / malformation.
+
+Overlapping offsets in relocation data at RVA: 0x1000
+
+----------DOS_HEADER----------
+
+[IMAGE_DOS_HEADER]
+0x0        0x0   e_magic:                       0x5A4D    
+0x2        0x2   e_cblp:                        0x50      
+0x4        0x4   e_cp:                          0x2       
+0x6        0x6   e_crlc:                        0x0       
+0x8        0x8   e_cparhdr:                     0x4       
+0xA        0xA   e_minalloc:                    0xF       
+0xC        0xC   e_maxalloc:                    0xFFFF    
+0xE        0xE   e_ss:                          0x0       
+0x10       0x10  e_sp:                          0xB8      
+0x12       0x12  e_csum:                        0x0       
+0x14       0x14  e_ip:                          0x0       
+0x16       0x16  e_cs:                          0x0       
+0x18       0x18  e_lfarlc:                      0x40      
+0x1A       0x1A  e_ovno:                        0x1A      
+0x1C       0x1C  e_res:                         
+0x24       0x24  e_oemid:                       0x0       
+0x26       0x26  e_oeminfo:                     0x0       
+0x28       0x28  e_res2:                        
+0x3C       0x3C  e_lfanew:                      0x100     
+
+----------NT_HEADERS----------
+
+[IMAGE_NT_HEADERS]
+0x100      0x0   Signature:                     0x4550    
+
+----------FILE_HEADER----------
+
+[IMAGE_FILE_HEADER]
+0x104      0x0   Machine:                       0x14C     
+0x106      0x2   NumberOfSections:              0x5       
+0x108      0x4   TimeDateStamp:                 0x9839273B [Mon Dec  5 19:47:07 2050 UTC]
+0x10C      0x8   PointerToSymbolTable:          0x0       
+0x110      0xC   NumberOfSymbols:               0x0       
+0x114      0x10  SizeOfOptionalHeader:          0xE0      
+0x116      0x12  Characteristics:               0x818E    
+Flags: IMAGE_FILE_32BIT_MACHINE, IMAGE_FILE_BYTES_REVERSED_HI, IMAGE_FILE_BYTES_REVERSED_LO, IMAGE_FILE_EXECUTABLE_IMAGE, IMAGE_FILE_LINE_NUMS_STRIPPED, IMAGE_FILE_LOCAL_SYMS_STRIPPED
+
+----------OPTIONAL_HEADER----------
+
+[IMAGE_OPTIONAL_HEADER]
+0x118      0x0   Magic:                         0x10B     
+0x11A      0x2   MajorLinkerVersion:            0x2       
+0x11B      0x3   MinorLinkerVersion:            0x19      
+0x11C      0x4   SizeOfCode:                    0x200     
+0x120      0x8   SizeOfInitializedData:         0xA00     
+0x124      0xC   SizeOfUninitializedData:       0x0       
+0x128      0x10  AddressOfEntryPoint:           0x1000    
+0x12C      0x14  BaseOfCode:                    0x1000    
+0x130      0x18  BaseOfData:                    0x2000    
+0x134      0x1C  ImageBase:                     0x400000  
+0x138      0x20  SectionAlignment:              0x1000    
+0x13C      0x24  FileAlignment:                 0x200     
+0x140      0x28  MajorOperatingSystemVersion:   0x1       
+0x142      0x2A  MinorOperatingSystemVersion:   0x0       
+0x144      0x2C  MajorImageVersion:             0x0       
+0x146      0x2E  MinorImageVersion:             0x0       
+0x148      0x30  MajorSubsystemVersion:         0x3       
+0x14A      0x32  MinorSubsystemVersion:         0xA       
+0x14C      0x34  Reserved1:                     0x0       
+0x150      0x38  SizeOfImage:                   0x6000    
+0x154      0x3C  SizeOfHeaders:                 0x400     
+0x158      0x40  CheckSum:                      0x0       
+0x15C      0x44  Subsystem:                     0x2       
+0x15E      0x46  DllCharacteristics:            0x0       
+0x160      0x48  SizeOfStackReserve:            0x100000  
+0x164      0x4C  SizeOfStackCommit:             0x2000    
+0x168      0x50  SizeOfHeapReserve:             0x100000  
+0x16C      0x54  SizeOfHeapCommit:              0x1000    
+0x170      0x58  LoaderFlags:                   0x0       
+0x174      0x5C  NumberOfRvaAndSizes:           0x10      
+DllCharacteristics: 
+
+----------PE Sections----------
+
+[IMAGE_SECTION_HEADER]
+0x1F8      0x0   Name:                          CODE
+0x200      0x8   Misc:                          0x1000    
+0x200      0x8   Misc_PhysicalAddress:          0x1000    
+0x200      0x8   Misc_VirtualSize:              0x1000    
+0x204      0xC   VirtualAddress:                0x1000    
+0x208      0x10  SizeOfRawData:                 0x200     
+0x20C      0x14  PointerToRawData:              0x600     
+0x210      0x18  PointerToRelocations:          0x0       
+0x214      0x1C  PointerToLinenumbers:          0x0       
+0x218      0x20  NumberOfRelocations:           0x0       
+0x21A      0x22  NumberOfLinenumbers:           0x0       
+0x21C      0x24  Characteristics:               0x60000020
+Flags: IMAGE_SCN_CNT_CODE, IMAGE_SCN_MEM_EXECUTE, IMAGE_SCN_MEM_READ
+Entropy: 1.170090 (Min=0.0, Max=8.0)
+MD5     hash: 814158767ff7be97c825b03c38aede92
+SHA-1   hash: 67f5ee0570bd767fb8a42332c114bdb2214c34ec
+SHA-256 hash: 38c1f7f314fb5dd2a25f762db18372b3b6282ad50035466773f66a7925f6b658
+SHA-512 hash: 9fa76af3f6d6590e160fb8ecdf7ffd3dfc76bbe847c9cc03dc03b197eec5f054d505fe98fc57f605c93688529833f7c0569e46c2febde4e63ca1664768f80ab0
+
+[IMAGE_SECTION_HEADER]
+0x220      0x0   Name:                          DATA
+0x228      0x8   Misc:                          0x1000    
+0x228      0x8   Misc_PhysicalAddress:          0x1000    
+0x228      0x8   Misc_VirtualSize:              0x1000    
+0x22C      0xC   VirtualAddress:                0x2000    
+0x230      0x10  SizeOfRawData:                 0x200     
+0x234      0x14  PointerToRawData:              0x800     
+0x238      0x18  PointerToRelocations:          0x0       
+0x23C      0x1C  PointerToLinenumbers:          0x0       
+0x240      0x20  NumberOfRelocations:           0x0       
+0x242      0x22  NumberOfLinenumbers:           0x0       
+0x244      0x24  Characteristics:               0xC0000040
+Flags: IMAGE_SCN_CNT_INITIALIZED_DATA, IMAGE_SCN_MEM_READ, IMAGE_SCN_MEM_WRITE
+Entropy: 2.210439 (Min=0.0, Max=8.0)
+MD5     hash: 533c0a1f451e3095311732442f5b6b17
+SHA-1   hash: 00b148976a2bfddc8c376eb29b54c9ae938631a2
+SHA-256 hash: babadf33c91e571efa4e80c6425dcd91c006995595578c4269004908b6326d14
+SHA-512 hash: 3b0a4ad79f81f4ee9b8b9dd6c28ada68d740b5e83c8b3cb9f5996c7cfeaef7bf081d4ee7f012190483fe4c84ca29e300dc5258bbf09b08f66e34c843134c668a
+
+[IMAGE_SECTION_HEADER]
+0x248      0x0   Name:                          .idata
+0x250      0x8   Misc:                          0x1000    
+0x250      0x8   Misc_PhysicalAddress:          0x1000    
+0x250      0x8   Misc_VirtualSize:              0x1000    
+0x254      0xC   VirtualAddress:                0x3000    
+0x258      0x10  SizeOfRawData:                 0x200     
+0x25C      0x14  PointerToRawData:              0xA00     
+0x260      0x18  PointerToRelocations:          0x0       
+0x264      0x1C  PointerToLinenumbers:          0x0       
+0x268      0x20  NumberOfRelocations:           0x0       
+0x26A      0x22  NumberOfLinenumbers:           0x0       
+0x26C      0x24  Characteristics:               0xC0000040
+Flags: IMAGE_SCN_CNT_INITIALIZED_DATA, IMAGE_SCN_MEM_READ, IMAGE_SCN_MEM_WRITE
+Entropy: 1.407813 (Min=0.0, Max=8.0)
+MD5     hash: 1306d68049a3afb6486b7b399e0021db
+SHA-1   hash: ddee173415b447399bf2322dd858aec83641c6dc
+SHA-256 hash: 939133316c727c6855969d401f1c16175eebd1b5a16af0653ea2c9bb0f240db3
+SHA-512 hash: 0d0fb6112291f2714e1a31721c6727d37429a4aa728ff10438a3e589b5cb523e133089cff9537999b1fe466b2a1643149bbf9b21571056cf12fb698b9820fa00
+
+[IMAGE_SECTION_HEADER]
+0x270      0x0   Name:                          .reloc
+0x278      0x8   Misc:                          0x1000    
+0x278      0x8   Misc_PhysicalAddress:          0x1000    
+0x278      0x8   Misc_VirtualSize:              0x1000    
+0x27C      0xC   VirtualAddress:                0x4000    
+0x280      0x10  SizeOfRawData:                 0x200     
+0x284      0x14  PointerToRawData:              0xC00     
+0x288      0x18  PointerToRelocations:          0x0       
+0x28C      0x1C  PointerToLinenumbers:          0x0       
+0x290      0x20  NumberOfRelocations:           0x0       
+0x292      0x22  NumberOfLinenumbers:           0x0       
+0x294      0x24  Characteristics:               0x50000040
+Flags: IMAGE_SCN_CNT_INITIALIZED_DATA, IMAGE_SCN_MEM_READ, IMAGE_SCN_MEM_SHARED
+Entropy: 0.373034 (Min=0.0, Max=8.0)
+MD5     hash: dae1d7bcbe29a072717b91dcc26b2fb0
+SHA-1   hash: 1374fa1e7ec79b76ab6b8b3d1c9c54225f65d89f
+SHA-256 hash: 03b72868c7120968d0bce6edf08f59eadb4e083fed0770b1583e0fc2b50637cd
+SHA-512 hash: 0934a08ef3ec22984ac6023b4a7a6437dc06a84e2f8d74dad99305965db3beba61366260e1b6cc759aebbbfe1d3580f08a58e2f17171973b0d87d412ef8e1b86
+
+[IMAGE_SECTION_HEADER]
+0x298      0x0   Name:                          .rsrc
+0x2A0      0x8   Misc:                          0x1000    
+0x2A0      0x8   Misc_PhysicalAddress:          0x1000    
+0x2A0      0x8   Misc_VirtualSize:              0x1000    
+0x2A4      0xC   VirtualAddress:                0x5000    
+0x2A8      0x10  SizeOfRawData:                 0x400     
+0x2AC      0x14  PointerToRawData:              0xE00     
+0x2B0      0x18  PointerToRelocations:          0x0       
+0x2B4      0x1C  PointerToLinenumbers:          0x0       
+0x2B8      0x20  NumberOfRelocations:           0x0       
+0x2BA      0x22  NumberOfLinenumbers:           0x0       
+0x2BC      0x24  Characteristics:               0x50000040
+Flags: IMAGE_SCN_CNT_INITIALIZED_DATA, IMAGE_SCN_MEM_READ, IMAGE_SCN_MEM_SHARED
+Entropy: 2.528212 (Min=0.0, Max=8.0)
+MD5     hash: cac327a5fef0226596cc516f7220a1e0
+SHA-1   hash: 330f7cdb26e1f8979738fd670ec30364bd532d86
+SHA-256 hash: ce8cbc4cd8859072836f8d699e427b7b24aa60508fcdf05b4a81fc0601984f50
+SHA-512 hash: 212feb8cb715c048278abcf032b0763b79b6a0ce7e2ff5c0d6ef07815f3cb5e740c31ec49e9dd0c2658192259e17a5f8f784673ce5cdc5e31cda349f63bbc537
+
+----------Directories----------
+
+[IMAGE_DIRECTORY_ENTRY_EXPORT]
+0x178      0x0   VirtualAddress:                0x0       
+0x17C      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_IMPORT]
+0x180      0x0   VirtualAddress:                0x3000    
+0x184      0x4   Size:                          0xA8      
+[IMAGE_DIRECTORY_ENTRY_RESOURCE]
+0x188      0x0   VirtualAddress:                0x5000    
+0x18C      0x4   Size:                          0x400     
+[IMAGE_DIRECTORY_ENTRY_EXCEPTION]
+0x190      0x0   VirtualAddress:                0x0       
+0x194      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_SECURITY]
+0x198      0x0   VirtualAddress:                0x0       
+0x19C      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_BASERELOC]
+0x1A0      0x0   VirtualAddress:                0x4000    
+0x1A4      0x4   Size:                          0x20      
+[IMAGE_DIRECTORY_ENTRY_DEBUG]
+0x1A8      0x0   VirtualAddress:                0x0       
+0x1AC      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_COPYRIGHT]
+0x1B0      0x0   VirtualAddress:                0x0       
+0x1B4      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_GLOBALPTR]
+0x1B8      0x0   VirtualAddress:                0x0       
+0x1BC      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_TLS]
+0x1C0      0x0   VirtualAddress:                0x0       
+0x1C4      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG]
+0x1C8      0x0   VirtualAddress:                0x0       
+0x1CC      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT]
+0x1D0      0x0   VirtualAddress:                0x0       
+0x1D4      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_IAT]
+0x1D8      0x0   VirtualAddress:                0x0       
+0x1DC      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT]
+0x1E0      0x0   VirtualAddress:                0x0       
+0x1E4      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR]
+0x1E8      0x0   VirtualAddress:                0x0       
+0x1EC      0x4   Size:                          0x0       
+[IMAGE_DIRECTORY_ENTRY_RESERVED]
+0x1F0      0x0   VirtualAddress:                0x0       
+0x1F4      0x4   Size:                          0x0       
+
+----------Version Information----------
+
+[VS_VERSIONINFO]
+0xE58      0x0   Length:                        0x290     
+0xE5A      0x2   ValueLength:                   0x34      
+0xE5C      0x4   Type:                          0x0       
+
+[VS_FIXEDFILEINFO]
+0xE80      0x0   Signature:                     0xFEEF04BD
+0xE84      0x4   StrucVersion:                  0x10000   
+0xE88      0x8   FileVersionMS:                 0x10000   
+0xE8C      0xC   FileVersionLS:                 0x0       
+0xE90      0x10  ProductVersionMS:              0x10000   
+0xE94      0x14  ProductVersionLS:              0x0       
+0xE98      0x18  FileFlagsMask:                 0x0       
+0xE9C      0x1C  FileFlags:                     0x0       
+0xEA0      0x20  FileOS:                        0x40004   
+0xEA4      0x24  FileType:                      0x1       
+0xEA8      0x28  FileSubtype:                   0x0       
+0xEAC      0x2C  FileDateMS:                    0x0       
+0xEB0      0x30  FileDateLS:                    0x0       
+
+[StringFileInfo]
+0xEB4      0x0   Length:                        0x1EE     
+0xEB6      0x2   ValueLength:                   0x0       
+0xEB8      0x4   Type:                          0x0       
+
+  [StringTable]
+  0xED8      0x0   Length:                        0x1CA     
+  0xEDA      0x2   ValueLength:                   0x0       
+  0xEDC      0x4   Type:                          0x0       
+  LangID: 040904E4
+
+    CompanyName: learn2crack
+    FileDescription: abex' 1st crackme
+    FileVersion: 1.00
+    InternalName: abex' 1std crackme
+    LegalCopyright: Copyright \xc2\xa9 abex/learn2crack 1999
+    OriginalFilename: abexcrackme1.exe
+
+[VarFileInfo]
+0x10A4     0x0   Length:                        0x44      
+0x10A6     0x2   ValueLength:                   0x0       
+0x10A8     0x4   Type:                          0x0       
+
+  [Var]
+  0x10C4     0x0   Length:                        0x24      
+  0x10C6     0x2   ValueLength:                   0x4       
+  0x10C8     0x4   Type:                          0x0       
+    Translation: 0x0409 0x04e4
+
+----------Imported symbols----------
+
+[IMAGE_IMPORT_DESCRIPTOR]
+0xA00      0x0   OriginalFirstThunk:            0x303C    
+0xA00      0x0   Characteristics:               0x303C    
+0xA04      0x4   TimeDateStamp:                 0x0        [Thu Jan  1 00:00:00 1970 UTC]
+0xA08      0x8   ForwarderChain:                0x0       
+0xA0C      0xC   Name:                          0x3064    
+0xA10      0x10  FirstThunk:                    0x3050    
+
+KERNEL32.dll.GetDriveTypeA Hint[0]
+KERNEL32.dll.ExitProcess Hint[0]
+
+[IMAGE_IMPORT_DESCRIPTOR]
+0xA14      0x0   OriginalFirstThunk:            0x3048    
+0xA14      0x0   Characteristics:               0x3048    
+0xA18      0x4   TimeDateStamp:                 0x0        [Thu Jan  1 00:00:00 1970 UTC]
+0xA1C      0x8   ForwarderChain:                0x0       
+0xA20      0xC   Name:                          0x3071    
+0xA24      0x10  FirstThunk:                    0x305C    
+
+USER32.dll.MessageBoxA Hint[0]
+
+----------Resource directory----------
+
+[IMAGE_RESOURCE_DIRECTORY]
+0xE00      0x0   Characteristics:               0x0       
+0xE04      0x4   TimeDateStamp:                 0x37EF86DC [Mon Sep 27 15:01:48 1999 UTC]
+0xE08      0x8   MajorVersion:                  0x0       
+0xE0A      0xA   MinorVersion:                  0x0       
+0xE0C      0xC   NumberOfNamedEntries:          0x0       
+0xE0E      0xE   NumberOfIdEntries:             0x1       
+  Id: [0x10] (RT_VERSION)
+  [IMAGE_RESOURCE_DIRECTORY_ENTRY]
+  0xE10      0x0   Name:                          0x10      
+  0xE14      0x4   OffsetToData:                  0x80000018
+    [IMAGE_RESOURCE_DIRECTORY]
+    0xE18      0x0   Characteristics:               0x0       
+    0xE1C      0x4   TimeDateStamp:                 0x37EF86DC [Mon Sep 27 15:01:48 1999 UTC]
+    0xE20      0x8   MajorVersion:                  0x0       
+    0xE22      0xA   MinorVersion:                  0x0       
+    0xE24      0xC   NumberOfNamedEntries:          0x0       
+    0xE26      0xE   NumberOfIdEntries:             0x1       
+      Id: [0x1]
+      [IMAGE_RESOURCE_DIRECTORY_ENTRY]
+      0xE28      0x0   Name:                          0x1       
+      0xE2C      0x4   OffsetToData:                  0x80000030
+        [IMAGE_RESOURCE_DIRECTORY]
+        0xE30      0x0   Characteristics:               0x0       
+        0xE34      0x4   TimeDateStamp:                 0x37EF86DC [Mon Sep 27 15:01:48 1999 UTC]
+        0xE38      0x8   MajorVersion:                  0x0       
+        0xE3A      0xA   MinorVersion:                  0x0       
+        0xE3C      0xC   NumberOfNamedEntries:          0x0       
+        0xE3E      0xE   NumberOfIdEntries:             0x1       
+        \--- LANG [0,0][LANG_NEUTRAL,SUBLANG_NEUTRAL]
+          [IMAGE_RESOURCE_DIRECTORY_ENTRY]
+          0xE40      0x0   Name:                          0x0       
+          0xE44      0x4   OffsetToData:                  0x48      
+            [IMAGE_RESOURCE_DATA_ENTRY]
+            0xE48      0x0   OffsetToData:                  0x5058    
+            0xE4C      0x4   Size:                          0x290     
+            0xE50      0x8   CodePage:                      0x0       
+            0xE54      0xC   Reserved:                      0x0       
+
+
+----------Base relocations----------
+
+[IMAGE_BASE_RELOCATION]
+0xC00      0x0   VirtualAddress:                0x1000    
+0xC04      0x4   SizeOfBlock:                   0x20      
+    00001003h HIGHLOW
+    00001008h HIGHLOW
+    00001014h HIGHLOW
+    0000102Bh HIGHLOW
+    00001030h HIGHLOW
+    00001040h HIGHLOW
+    00001045h HIGHLOW
+    00001057h HIGHLOW
+    0000105Dh HIGHLOW
+    00001063h HIGHLOW
+    00001000h ABSOLUTE
+
+
