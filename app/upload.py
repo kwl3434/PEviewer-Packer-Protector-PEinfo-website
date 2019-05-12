@@ -66,6 +66,8 @@ def render_file():
 def upload_file():
    if request.method == 'POST':
       f = request.files['file']
+      global F
+      F=f.filename;
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
@@ -86,7 +88,7 @@ def pack_download_file():
 	f=request.form['fname']
 	if f=="Upload":
 		return "Please Upload File first"
-	elif f[0]=='/' or f[0]=='.':
+	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
 		return "Warning 112"
 	else:
   		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
@@ -101,7 +103,7 @@ def unpack_download_file():
 	f=request.form['fname']
 	if f=="Upload File..":
 		return "Please Upload File first"
-	elif f[0]=='/' or f[0]=='.':
+	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
 		return "Warning 112"
 	else:
         	path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
