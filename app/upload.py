@@ -66,8 +66,6 @@ def render_file():
 def upload_file():
    if request.method == 'POST':
       f = request.files['file']
-      global F
-      F=f.filename;
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
