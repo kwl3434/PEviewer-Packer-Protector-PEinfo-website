@@ -138,11 +138,15 @@
                         <br>
                         <div  class = "ppp" style="margin: 5px;">
                                 <select name="protecter">
-                                        <option value="1" selected> Protector </option>
+                                        <option value="1" selected> VMProtector </option>
                                         <option value="2" >Protector </option>
                                         <option value="3">Protector </option>
                                 </select>
-                                <input class="button" type="submit" value="Protect"/>
+				
+                                <form action ="http://p4gwnu.koreacentral.cloudapp.azure.com/protect_download" method = "POST" style="float:right;margin:0;">
+                                	<input class="button" type="submit" value="Protect"/>
+					<input type="hidden" value={{ff}} name="fname"/>
+                                </form>
                         </div>
                 </div>
                 

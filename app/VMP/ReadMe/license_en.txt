@@ -1,0 +1,40 @@
+   VMProtect - protection of the software
+   ------------------------------------------------------------
+
+   License for use and distribution
+   -------------------------------------------------
+
+   1. All copyrights and property rights to VMProtect are exclusively owned
+       by VMProtect Software.
+
+   2. VMProtect is a commercial software. To receive more detailed information 
+       on how to buy the software please write at info@vmpsoft.com
+
+   3. The author reserves the right to cancel the validity of the given 
+       license for any of the further version of demo version of VMProtect.
+
+   4. Usage of VMProtect for commercial purposes is forbidden: rent or sell,
+       include VMProtect into other programs and/or systems, use in software
+       of third parties, provide software protection services to third parties.
+
+   5. VMPROTECT IS DISTRIBUTED 'AS IS'. NO WARRANTY OF ANY 
+       KIND IS EXPRESSED OR IMPLIED. YOU USE THE SOFTWARE 
+       AT YOUR OWN RISK. THE AUTHOR WILL NOT BE RESPONSIBLE
+       FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER
+       KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE.
+
+   6. You are not allowed to modify, create new versions, rent, sell,
+       decompile, disassemble, otherwise reverse engineer, alter, delete
+       or hide trade marks and notices of copyrights, use it to hide malicious
+       code (viruses, trojans, key loggers, etc.) and also use it in software
+       violating the intellectual property rights of third parties (key generators,
+       cracks, patches, loaders, etc.).
+
+   7. Installing and using of VMProtect means that you accept the terms and
+       conditions of this license. Any violation of the terms of this agreement
+       shall result in immediate and automatic termination of this license 
+       without compensation of any charges related with the use of VMProtect
+       and may result in criminal and/or civil prosecution.
+
+   8. If you do not agree with the terms of this license you must remove
+       VMProtect files from your storage devices and cease to use VMProtect.

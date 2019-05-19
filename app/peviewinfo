@@ -1,0 +1,7 @@
+#!/bin/bash
+rm ./uploadfile/*.exe #
+mv *.exe ./uploadfile
+pehash -f html ./uploadfile/*.exe > ./templates/peview1.html
+readpe -f html ./uploadfile/*.exe >> ./tmeplates/peview1.html
+pepack -f html ./uploadfile/*.exe > ./templates/peinfo1.html
+pesec -f html ./uploadfile/*.exe >> ./templates/peinfo1.html

@@ -53,9 +53,10 @@ def peinfo_e():
 
 @app.route('/peview')
 def peview_e():
-    return render_template('peview.html',data='peviewer')
-def peview_ee(Data):
-    return render_template('peview.html',data=Data)
+	#os.system('readpe -f html' +f)
+    return render_template('peview.html') #data='peviewer'
+#def peview_ee(Data):
+   # return render_template('peview.html',data=Data)
 
 @app.route('/pack_protector', methods = ['GET','POST'])
 def render_file():
@@ -69,6 +70,8 @@ def upload_file():
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
+      #os.system('./peviewinfo ')
+     
       TXT = open("/root/TorF.txt",'r');
       line = TXT.readline()
       TXT.close()
@@ -92,7 +95,6 @@ def pack_download_file():
   		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
         	os.system('upx '+f)
 	        os.system('7z a '+f+'.7z '+f)
-		os.system('rm '+f)
         	return send_file(path,as_attachment=True)
 
 @app.route('/unpack_download', methods = ['GET', 'POST'])
@@ -107,9 +109,22 @@ def unpack_download_file():
         	path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
         	os.system('upx -d '+f)
         	os.system('7z a '+f+'.7z '+f)
-		os.system('rm '+f)
         	return send_file(path,as_attachment=True)
 	
+@app.route('/protect_download', methods = ['GET', 'POST'])
+def protect_download_file():
+   if request.method == 'POST':
+	f=request.form['fname']
+	if f=="Upload":
+		return "Please Upload File first"
+	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
+		return "Warning 112"
+	else:
+        	f = os.system('./vmprotect_con '+f)
+        	os.system('7z a '+f+'.7z '+f)
+  		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
+        	return send_file(path,as_attachment=True)
+
 if __name__ == '__main__':
     #서버 실행
    app.run(threaded=True, host='0.0.0.0', port=80)

@@ -1,0 +1,926 @@
+
+ Start Length Name Class
+ 0001:00401000 0000054CCH _TEXT                  CODE
+ 0002:00407000 00000104CH _DATA                  DATA
+ 0003:0040804C 000000174H _BSS                   BSS
+ 0004:00000000 00000009CH _TLS                   TLS
+
+ Address Publics by Name
+
+ 0003:00000158  B672_0
+ 0003:00000160  B678_2
+ 0003:00000168  B684_2
+ 0003:0000016C  B704_2
+ 0001:00000F00  C1_0
+ 0001:0000380C  C631_0
+ 0001:000039EC  C639_0
+ 0001:00003AEC  C641_0
+ 0001:0000427C  C678_0
+ 0001:0000427C  C678_3
+ 0001:0000429C  C678_4
+ 0001:000042A4  C684_0
+ 0001:000042A4  C684_3
+ 0001:000042C4  C684_4
+ 0001:000042CC  C704_0
+ 0001:000042CC  C704_4
+ 0001:000043E0  C706_0
+ 0001:000044F8  C725_0
+ 0001:000044F8  C725_2
+ 0001:00004780  C743_0
+ 0001:00004800  C745_0
+ 0001:000048A8  C989_0
+ 0001:0000409C  CountOfImports(_IMAGE_THUNK_DATA32 *)
+ 0002:00000000  D1_1
+ 0002:00000B7C  D631_1
+ 0002:00000C38  D643_1
+ 0002:00000C5C  D658_0
+ 0002:00000C60  D660_0
+ 0002:00000C64  D668_0
+ 0002:00000C68  D670_1
+ 0002:00000D44  D680_0
+ 0002:00000D48  D682_0
+ 0002:00000D4C  D684_1
+ 0002:00000D50  D688_0
+ 0002:0000016C  D6_1
+ 0002:00000D54  D704_1
+ 0002:00000E3C  D708_0
+ 0002:00000E68  D725_1
+ 0002:0000100C  D743_1
+ 0001:00003EF4  HINSTANCE__ * * PFromRva<HINSTANCE__ * *>(unsigned long)
+ 0001:000041B8  ImgDelayDescr * PFromRva<ImgDelayDescr *>(unsigned long)
+ 0001:000041C8  PFromRva<int _int __stdcall (*)() * _stdcall (*)() *>(unsigned long)
+ 0003:0000012C  Sysinit::B5_2
+ 0001:000013CC  Sysinit::C5_0
+ 0002:000000E0  Sysinit::D5_1
+ 0002:00000138  Sysinit::DataMark
+ 0002:00000140  Sysinit::DelayLoadHelper
+ 0003:0000013C  Sysinit::DllProc
+ 0003:0000013C  Sysinit::DllProcEx
+ 0003:00000130  Sysinit::HInstance
+ 0002:0000014C  Sysinit::HrLoadAllImportsForDll
+ 0003:FFFF7FB4  Sysinit::ImageBase
+ 0003:0000012E  Sysinit::ModuleIsCpp
+ 0003:0000012C  Sysinit::ModuleIsLib
+ 0003:0000012D  Sysinit::ModuleIsPackage
+ 0002:00000134  Sysinit::TlsIndex
+ 0003:0000012F  Sysinit::TlsLast
+ 0002:0000013C  Sysinit::UnloadDelayLoadedDLLPtr
+ 0001:00001958  Sysinit::VclExit()
+ 0001:000018C0  Sysinit::VclInit(bool, bool, int, bool)
+ 0001:0000187C  Sysinit::_16403
+ 0002:00000150  Sysinit::_16412
+ 0001:00001890  Sysinit::_16420
+ 0001:0000189C  Sysinit::_16421
+ 0001:00001988  Sysinit::_16429
+ 0001:00001998  Sysinit::_16430
+ 0001:000019A8  Sysinit::_16431
+ 0001:000019B8  Sysinit::_16432
+ 0001:000019C8  Sysinit::_16433
+ 0001:000019D8  Sysinit::_16434
+ 0001:000019EC  Sysinit::_16435
+ 0001:00001A1C  Sysinit::_16436
+ 0001:00001A34  Sysinit::_16437
+ 0001:00001A5C  Sysinit::_16438
+ 0001:00001A80  Sysinit::_16439
+ 0001:00001A90  Sysinit::_16440
+ 0003:FFFF7FB4  Sysinit::__ImageBase
+ 0001:00001040  Sysinit::__linkproc__ __fastcall GetTls()
+ 0001:000016AC  Sysinit::__linkproc__ __fastcall _FUnloadDelayLoadedDLL2()
+ 0001:000017BC  Sysinit::__linkproc__ __fastcall _HrLoadAllImportsForDll()
+ 0001:000013CC  Sysinit::__linkproc__ __fastcall _delayLoadHelper2()
+ 0003:00000144  Sysinit::__linkproc__ _pfnDliFailureHook2
+ 0003:00000140  Sysinit::__linkproc__ _pfnDliNotifyHook2
+ 0002:00000148  Sysinit::pfnDliFailureHook
+ 0002:00000144  Sysinit::pfnDliNotifyHook
+ 0003:00000114  System.internal.strhlpr::B207_1
+ 0003:00000118  System.win.crtl::B217_2
+ 0002:00000F1C  System::Dateutils::EpochAsJulianDate
+ 0002:00000EEC  System::Dateutils::OneHour
+ 0002:00000F10  System::Dateutils::OneMillisecond
+ 0002:00000EF8  System::Dateutils::OneMinute
+ 0002:00000F04  System::Dateutils::OneSecond
+ 0001:000034FC  System::DynamicArray<Vcl::Forms::TPopupWnd>::DecRefCount()
+ 0001:00003520  System::DynamicArray<Vcl::Forms::TPopupWnd>::FreeData()
+ 0001:0000355C  System::DynamicArray<Vcl::Forms::TPopupWnd>::get_length() const
+ 0001:000034D4  System::DynamicArray<Vcl::Forms::TPopupWnd>::~DynamicArray<Vcl::Forms::TPopupWnd>()
+ 0002:00000E74  System::Math::Infinity
+ 0002:00000EE0  System::Math::MaxComp
+ 0002:00000EB0  System::Math::MaxDouble
+ 0002:00000EC8  System::Math::MaxExtended
+ 0002:00000E98  System::Math::MaxSingle
+ 0002:00000ED4  System::Math::MinComp
+ 0002:00000EA4  System::Math::MinDouble
+ 0002:00000EBC  System::Math::MinExtended
+ 0002:00000E8C  System::Math::MinSingle
+ 0002:00000E68  System::Math::NaN
+ 0002:00000E80  System::Math::NegInfinity
+ 0001:00001C24  System::Sysutils::Exception::Exception(System::Sysutils::Exception&)
+ 0001:00001D18  System::TObject::TObject(System::TObject&)
+ 0002:00000F58  System::Types::CurveKappa
+ 0002:00000F64  System::Types::CurveKappaInv
+ 0002:00000F70  System::Types::Epsilon
+ 0002:00000F74  System::Types::Epsilon2
+ 0002:00000F4C  System::Types::c180
+ 0002:00000F30  System::Types::c180divPI
+ 0002:00000F34  System::Types::c2PI
+ 0002:00000F50  System::Types::c360
+ 0002:00000F40  System::Types::c3PIdiv4
+ 0002:00000F44  System::Types::cInv2PI
+ 0002:00000F48  System::Types::cInv360
+ 0002:00000F54  System::Types::cOneHalf
+ 0002:00000F28  System::Types::cPI
+ 0002:00000F2C  System::Types::cPIdiv180
+ 0002:00000F38  System::Types::cPIdiv2
+ 0002:00000F3C  System::Types::cPIdiv4
+ 0003:00000120  System::Win::Crtl::___errno
+ 0003:0000011C  System::Win::Crtl::__errno
+ 0003:00000118  System::Win::Crtl::_errno
+ 0004:00000000  T704_3
+ 0002:000008D0  TForm1::
+ 0001:000040DC  ULI::Unlink()
+ 0001:0000422C  ULI::operator delete(void *)
+ 0001:0000423C  ULI::~ULI()
+ 0003:00000150  Unit1::B7_2
+ 0003:00000154  Unit1::B7_3
+ 0002:00000238  Unit1::D7_1
+ 0003:00000078  Winapi.activex::B51_2
+ 0003:00000080  Winapi.commctrl::B125_2
+ 0003:000000F4  Winapi.commdlg::B151_1
+ 0003:000000F8  Winapi.dlgs::B157_1
+ 0003:000000FC  Winapi.dwmapi::B161_1
+ 0003:00000100  Winapi.imm::B165_1
+ 0003:000000D8  Winapi.ipexport::B141_1
+ 0003:00000074  Winapi.messages::B41_1
+ 0003:00000108  Winapi.msinkaut::B199_2
+ 0003:000000C8  Winapi.objectarray::B133_2
+ 0003:0000010C  Winapi.peninputpanel::B201_2
+ 0003:000000C4  Winapi.propsys::B131_2
+ 0003:00000010  Winapi.psapi::B29_1
+ 0003:000000DC  Winapi.qos::B143_1
+ 0003:000000D4  Winapi.regstr::B139_1
+ 0003:00000110  Winapi.richedit::B203_1
+ 0003:000000E4  Winapi.shellapi::B147_2
+ 0003:000000F0  Winapi.shlobj::B149_2
+ 0003:000000C0  Winapi.structuredquerycondition::B129_2
+ 0003:00000104  Winapi.tpcshrd::B197_1
+ 0003:000000CC  Winapi.urlmon::B135_2
+ 0003:00000000  Winapi.windows::B21_2
+ 0003:000000D0  Winapi.wininet::B137_1
+ 0003:000000E0  Winapi.winsock2::B145_1
+ 0003:0000007C  Winapi.winsock::B107_1
+ 0003:00000128  Winapi.winspool::B221_1
+ 0002:000000D4  Winapi::Shellapi::_16440
+ 0002:000000D8  Winapi::Shellapi::_16441
+ 0002:000000DC  Winapi::Shellapi::_16442
+ 0001:000011B4  Winapi::Shellapi::_16447
+ 0001:000011A4  Winapi::Shellapi::_NOTIFYICONDATAA::operator ...
+ 0001:000011F0  Winapi::Shellapi::_NOTIFYICONDATAA::operator ...
+ 0003:000000E4  Winapi::Shellapi::_NOTIFYICONDATAA::{1252}...
+ 0001:00001200  Winapi::Shellapi::_NOTIFYICONDATAW::operator ...
+ 0001:000011AC  Winapi::Shellapi::_NOTIFYICONDATAW::operator ...
+ 0003:000000E8  Winapi::Shellapi::_NOTIFYICONDATAW::{1252}...
+ 0002:000000C8  Winapi::Windows::_17377
+ 0002:000000CC  Winapi::Windows::_17378
+ 0002:000000D0  Winapi::Windows::_17379
+ 0001:00001050  Winapi::Windows::_17560
+ 0003:00000150  _Form1
+ 0001:00003F24  _IMAGE_IMPORT_BY_NAME * PFromRva<_IMAGE_IMPORT_BY_NAME *>(unsigned long)
+ 0001:00003F04  _IMAGE_THUNK_DATA32 * PFromRva<_IMAGE_THUNK_DATA32 *>(unsigned long)
+ 0001:00003F14  _IMAGE_THUNK_DATA32 * PFromRva<_IMAGE_THUNK_DATA32 *>(unsigned long)
+ 0001:000041D8  _ShutdownDelayHelp2
+ 0001:00004846  _System__CheckAutoResult
+ 0001:00004850  _System__DynArrayAddRef
+ 0001:0000484B  _System__DynArrayRelease
+ 0001:00004800  _System__LStrAsg
+ 0001:00004805  _System__LStrCat
+ 0001:0000480A  _System__LStrCat3
+ 0001:0000480F  _System__LStrClr
+ 0001:00004814  _System__LStrCmp
+ 0001:00004819  _System__LStrDelete
+ 0001:0000481E  _System__LStrFromArray
+ 0001:00004823  _System__LStrFromPChar
+ 0001:00004841  _System__LStrFromPWCharLen
+ 0001:00004828  _System__LStrFromUStr
+ 0001:0000482D  _System__LStrFromWChar
+ 0001:00004832  _System__LStrFromWStr
+ 0001:00004837  _System__LStrInsert
+ 0001:0000483C  _System__LStrSetLength
+ 0001:0000478D  __AfterConstruction
+ 0001:00004795  __BeforeDestruction
+ 0001:00004780  __ClassCreate
+ 0001:00004788  __ClassDestroy
+ 0003:0000016C  __DestructorCountPtr
+ 0001:00004368  __ExceptInit
+ 0002:00000DF0  __ExceptVarsSize
+ 0001:00004427  __ExceptionHandler
+ 0001:00004419  __ExitExceptBlock
+ 0001:0000469C  __ExitVCL
+ 0001:00003F34  __FUnloadDelayLoadedDLL2
+ 0001:00000F59  __GetExceptDLLinfo
+ 0001:000043B8  __GetExceptDLLinfoInternal
+ 0001:00004100  __HrLoadAllImportsForDll
+ 0001:000043E0  __InitExceptBlockLDTC
+ 0001:00004658  __InitVCL
+ 0002:000000B0  __PackageInfoTable
+ 0002:00000134  __TLS_index
+ 0002:000000A3  __TLS_index4
+ 0002:000000AC  ___CPPdebugHook
+ 0002:000000AC  ___CPPdebugHook_segment
+ 0002:00000D54  ___CPPexceptionList
+ 0001:00003AEC  ___CRTL_VCLLIB_Linkage
+ 0001:00003B7C  ___CRTL_VCL_HookSystem
+ 0001:00003A08  ___CRTL_VCL_Init
+ 0001:00003AF0  ___CRTL_VCL_Sharemem
+ 0002:00000D70  ___ExceptStaticXbuff
+ 0001:00001040  ___System__GetTls
+ 0001:000042F8  ___call_terminate
+ 0003:00000160  ___dll_argc
+ 0003:00000164  ___dll_argv
+ 0003:00000168  ___dll_wargv
+ 0002:00000D58  ___exceptFlags
+ 0002:00000D6C  ___exceptMemAllocVars
+ 0002:00000D68  ___exceptStaticBuffP
+ 0002:00000091  ___isDLL
+ 0002:00000058  ___isGUI
+ 0002:00000090  ___isVCLPackage
+ 0003:0000015C  ___pfnDliFailureHook2
+ 0003:00000158  ___pfnDliNotifyHook2
+ 0002:00000C68  ___puiHead
+ 0002:00000D64  ___throwExceptionName
+ 0002:00000D5C  ___throwFileName
+ 0002:00000D60  ___throwLineNumber
+ 0002:0000009E  ___useDynamicTLS
+ 0004:00000000  ___xxInfo
+ 0002:00000E3C  ___xxPersonality
+ 0001:00000F00  __acrtused
+ 0002:00000D44  __argv_expand_ptr
+ 0002:00000E04  __chtbl__ __call_terminate()
+ 0002:00000174  __chtbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0002:000001A8  __chtbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0001:000047B1  __currMul
+ 0001:00003BBC  __delayLoadHelper2
+ 0002:00000220  __ectbl__ System::Sysutils::Exception::Exception(System::Sysutils::Exception&)
+ 0002:0000022C  __ectbl__ System::TObject::TObject(System::TObject&)
+ 0002:00000E24  __ectbl__ __call_terminate()
+ 0002:00000E50  __ectbl__ __fastcall System::AnsiStringBase::AnsiStringBase(System::UnicodeString&, int)
+ 0002:000008AC  __ectbl__ __fastcall System::AnsiStringT<0>::AnsiStringT<0>(System::UnicodeString&)
+ 0002:00000884  __ectbl__ __fastcall System::AnsiStringT<0>::~AnsiStringT<0>()
+ 0002:000008C4  __ectbl__ __fastcall System::TVarRec::TVarRec()
+ 0002:0000085C  __ectbl__ __fastcall System::UnicodeString::UnicodeString()
+ 0002:00000FF4  __ectbl__ __fastcall System::UnicodeString::UnicodeString(System::UnicodeString&)
+ 0002:00000FCC  __ectbl__ __fastcall System::UnicodeString::UnicodeString(const char *)
+ 0002:00000F98  __ectbl__ __fastcall System::setLStrData(System::AnsiStringT<0> *, unsigned int, const char *)
+ 0002:000004CC  __ectbl__ __fastcall TForm1::TForm1(System::Classes::TComponent *)
+ 0002:0000050C  __ectbl__ __fastcall TForm1::btTryClick(System::TObject *)
+ 0002:00000740  __ectbl__ __fastcall TForm1::edSerialNumberChange(System::TObject *)
+ 0002:00000B20  __ectbl__ __fastcall TForm1::~TForm1()
+ 0002:00000834  __ectbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *)
+ 0002:00000B3C  __ectbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *, int)
+ 0002:00000B64  __ectbl__ __fastcall Vcl::Forms::TForm::~TForm()
+ 0002:00000D38  __ectbl__ __stdcall __FUnloadDelayLoadedDLL2(const char *)
+ 0002:00000CCC  __ectbl__ __stdcall __delayLoadHelper2(ImgDelayDescr *, int __stdcall (*)() *)
+ 0002:000001D8  __ectbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0001:00001AA0  __fastcall Sysinit::Finalization()
+ 0001:00001AB0  __fastcall Sysinit::initialization()
+ 0001:00004478  __fastcall System::AnsiStringBase::AnsiStringBase(System::UnicodeString&, int)
+ 0001:000044CC  __fastcall System::AnsiStringBase::~AnsiStringBase()
+ 0001:00002E08  __fastcall System::AnsiStringT<0>::AnsiStringT<0>(System::UnicodeString&)
+ 0001:00002DB4  __fastcall System::AnsiStringT<0>::~AnsiStringT<0>()
+ 0001:000036C0  __fastcall System::DelphiInterface<System::IInterface>::~DelphiInterface<System::IInterface>()
+ 0001:000036EC  __fastcall System::DelphiInterface<Vcl::Controls::IDockManager>::~DelphiInterface<Vcl::Controls::IDockManager>()
+ 0001:0000342C  __fastcall System::DelphiInterface<Vcl::Forms::IDesignerHook>::~DelphiInterface<Vcl::Forms::IDesignerHook>()
+ 0001:00003400  __fastcall System::DelphiInterface<Vcl::Forms::IOleForm>::~DelphiInterface<Vcl::Forms::IOleForm>()
+ 0001:000048A0  __fastcall System::FindDynaInst(void *, int)
+ 0001:0000139C  __fastcall System::Internal::Strhlpr::Finalization()
+ 0001:0000137C  __fastcall System::Internal::Strhlpr::UnicodeAssign(System::UnicodeString&, System::UnicodeString&)
+ 0001:00001390  __fastcall System::Internal::Strhlpr::UnicodeFree(System::UnicodeString&)
+ 0001:00001304  __fastcall System::Internal::Strhlpr::UnicodeFromPChar(System::UnicodeString&, char *, bool)
+ 0001:00001368  __fastcall System::Internal::Strhlpr::UnicodeFromUTF8(System::UnicodeString&, const char *)
+ 0001:000012B0  __fastcall System::Internal::Strhlpr::WideFromUTF8(System::WideString&, const char *)
+ 0001:000013A4  __fastcall System::Internal::Strhlpr::initialization()
+ 0001:00002FDC  __fastcall System::OpenArray<System::TVarRec>::~OpenArray<System::TVarRec>()
+ 0001:00004869  __fastcall System::TMetaClass::ClassInfo()
+ 0001:0000485F  __fastcall System::TMetaClass::ClassName()
+ 0001:00004896  __fastcall System::TMetaClass::ClassNameIs(const System::UnicodeString)
+ 0001:00004864  __fastcall System::TMetaClass::ClassParent()
+ 0001:0000488C  __fastcall System::TMetaClass::GetInterfaceEntry(_GUID&)
+ 0001:00004891  __fastcall System::TMetaClass::GetInterfaceTable()
+ 0001:0000486E  __fastcall System::TMetaClass::InheritsFrom(System::TMetaClass *)
+ 0001:0000485A  __fastcall System::TMetaClass::InitInstance(void *)
+ 0001:00004855  __fastcall System::TMetaClass::InstanceSize()
+ 0001:00004887  __fastcall System::TMetaClass::MethodAddress(System::SmallString<255>&)
+ 0001:0000489B  __fastcall System::TMetaClass::MethodAddress(const System::UnicodeString)
+ 0001:00004873  __fastcall System::TMetaClass::MethodName(void *)
+ 0001:00004878  __fastcall System::TMetaClass::QualifiedClassName()
+ 0001:0000487D  __fastcall System::TMetaClass::UnitName()
+ 0001:00004882  __fastcall System::TMetaClass::UnitScope()
+ 0001:00002E48  __fastcall System::TVarRec::TVarRec()
+ 0001:00001F70  __fastcall System::UnicodeString::UnicodeString()
+ 0001:000046E8  __fastcall System::UnicodeString::UnicodeString(System::UnicodeString&)
+ 0001:000046A8  __fastcall System::UnicodeString::UnicodeString(const char *)
+ 0001:00004758  __fastcall System::UnicodeString::~UnicodeString()
+ 0001:000013AC  __fastcall System::Win::Crtl::Finalization()
+ 0001:000013B4  __fastcall System::Win::Crtl::initialization()
+ 0001:00004624  __fastcall System::__linkStrModEvalRoutines()
+ 0001:00004590  __fastcall System::setLStrData(System::AnsiStringT<0> *, unsigned int, const char *)
+ 0001:00004578  __fastcall System::setUStrData(System::UnicodeString&, const char *)
+ 0001:00004584  __fastcall System::setWStrData(System::WideString&, const char *)
+ 0001:00001DAC  __fastcall TForm1::TForm1(System::Classes::TComponent *)
+ 0001:00001FA0  __fastcall TForm1::btCloseClick(System::TObject *)
+ 0001:00001ED4  __fastcall TForm1::btTryClick(System::TObject *)
+ 0001:00001FA8  __fastcall TForm1::edSerialNumberChange(System::TObject *)
+ 0001:000030D0  __fastcall TForm1::~TForm1()
+ 0001:000048A8  __fastcall Vcl::Forms::TApplication::MessageBoxA(const wchar_t *, const wchar_t *, int)
+ 0001:000048AD  __fastcall Vcl::Forms::TApplication::MessageBoxW(const wchar_t *, const wchar_t *, int)
+ 0001:00001E64  __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *)
+ 0001:00003118  __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *, int)
+ 0001:00003178  __fastcall Vcl::Forms::TForm::~TForm()
+ 0001:000010E4  __fastcall Winapi::Activex::Finalization()
+ 0001:000010EC  __fastcall Winapi::Activex::initialization()
+ 0001:00001104  __fastcall Winapi::Commctrl::Finalization()
+ 0001:0000110C  __fastcall Winapi::Commctrl::initialization()
+ 0001:00001230  __fastcall Winapi::Commdlg::Finalization()
+ 0001:00001238  __fastcall Winapi::Commdlg::initialization()
+ 0001:00001240  __fastcall Winapi::Dlgs::Finalization()
+ 0001:00001248  __fastcall Winapi::Dlgs::initialization()
+ 0001:00001250  __fastcall Winapi::Dwmapi::Finalization()
+ 0001:00001258  __fastcall Winapi::Dwmapi::initialization()
+ 0001:00001260  __fastcall Winapi::Imm::Finalization()
+ 0001:00001268  __fastcall Winapi::Imm::initialization()
+ 0001:00001174  __fastcall Winapi::Ipexport::Finalization()
+ 0001:0000117C  __fastcall Winapi::Ipexport::initialization()
+ 0001:000010D4  __fastcall Winapi::Messages::Finalization()
+ 0001:000010DC  __fastcall Winapi::Messages::initialization()
+ 0001:00001280  __fastcall Winapi::Msinkaut::Finalization()
+ 0001:00001288  __fastcall Winapi::Msinkaut::initialization()
+ 0001:00001134  __fastcall Winapi::Objectarray::Finalization()
+ 0001:0000113C  __fastcall Winapi::Objectarray::initialization()
+ 0001:00001290  __fastcall Winapi::Peninputpanel::Finalization()
+ 0001:00001298  __fastcall Winapi::Peninputpanel::initialization()
+ 0001:00001124  __fastcall Winapi::Propsys::Finalization()
+ 0001:0000112C  __fastcall Winapi::Propsys::initialization()
+ 0001:000010C4  __fastcall Winapi::Psapi::Finalization()
+ 0001:000010CC  __fastcall Winapi::Psapi::initialization()
+ 0001:00001184  __fastcall Winapi::Qos::Finalization()
+ 0001:0000118C  __fastcall Winapi::Qos::initialization()
+ 0001:00001164  __fastcall Winapi::Regstr::Finalization()
+ 0001:0000116C  __fastcall Winapi::Regstr::initialization()
+ 0001:000012A0  __fastcall Winapi::Richedit::Finalization()
+ 0001:000012A8  __fastcall Winapi::Richedit::initialization()
+ 0001:00001210  __fastcall Winapi::Shellapi::Finalization()
+ 0001:00001218  __fastcall Winapi::Shellapi::initialization()
+ 0001:00001220  __fastcall Winapi::Shlobj::Finalization()
+ 0001:00001228  __fastcall Winapi::Shlobj::initialization()
+ 0001:00001114  __fastcall Winapi::Structuredquerycondition::Finalization()
+ 0001:0000111C  __fastcall Winapi::Structuredquerycondition::initialization()
+ 0001:00001270  __fastcall Winapi::Tpcshrd::Finalization()
+ 0001:00001278  __fastcall Winapi::Tpcshrd::initialization()
+ 0001:00001144  __fastcall Winapi::Urlmon::Finalization()
+ 0001:0000114C  __fastcall Winapi::Urlmon::initialization()
+ 0001:0000108C  __fastcall Winapi::Windows::Finalization()
+ 0001:000010AC  __fastcall Winapi::Windows::initialization()
+ 0001:00001154  __fastcall Winapi::Wininet::Finalization()
+ 0001:0000115C  __fastcall Winapi::Wininet::initialization()
+ 0001:00001194  __fastcall Winapi::Winsock2::Finalization()
+ 0001:0000119C  __fastcall Winapi::Winsock2::initialization()
+ 0001:000010F4  __fastcall Winapi::Winsock::Finalization()
+ 0001:000010FC  __fastcall Winapi::Winsock::initialization()
+ 0001:000013BC  __fastcall Winapi::Winspool::Finalization()
+ 0001:000013C4  __fastcall Winapi::Winspool::initialization()
+ 0002:00000C60  __fileinfo
+ 0002:00000C5C  __fmode
+ 0001:00000F66  __getHInstance
+ 0002:000000A7  __hInstance
+ 0002:0000103C  __indStub:39222
+ 0002:00001038  __indStub:39223
+ 0002:00001040  __indStub:39224
+ 0002:00001044  __indStub:39225
+ 0002:00001048  __indStub:39226
+ 0002:00001034  __indStub:39307
+ 0001:00000F5E  __isDLL
+ 0001:000037FC  __linkproc__ Unit1::Finalize
+ 0001:000037EC  __linkproc__ Unit1::Initialize
+ 0001:0000406C  __memcmp(const void *, const void *, unsigned int)
+ 0001:000040B4  __memcpy(void *, const void *, unsigned int)
+ 0002:00000E40  __odtbl__ __fastcall System::AnsiStringBase::AnsiStringBase(System::UnicodeString&, int)
+ 0002:0000089C  __odtbl__ __fastcall System::AnsiStringT<0>::AnsiStringT<0>(System::UnicodeString&)
+ 0002:00000874  __odtbl__ __fastcall System::AnsiStringT<0>::~AnsiStringT<0>()
+ 0002:0000084C  __odtbl__ __fastcall System::UnicodeString::UnicodeString()
+ 0002:00000FE4  __odtbl__ __fastcall System::UnicodeString::UnicodeString(System::UnicodeString&)
+ 0002:00000FBC  __odtbl__ __fastcall System::UnicodeString::UnicodeString(const char *)
+ 0002:00000F78  __odtbl__ __fastcall System::setLStrData(System::AnsiStringT<0> *, unsigned int, const char *)
+ 0002:000004AC  __odtbl__ __fastcall TForm1::TForm1(System::Classes::TComponent *)
+ 0002:000004F0  __odtbl__ __fastcall TForm1::btTryClick(System::TObject *)
+ 0002:00000524  __odtbl__ __fastcall TForm1::edSerialNumberChange(System::TObject *)
+ 0002:00000824  __odtbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *)
+ 0002:00000B2C  __odtbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *, int)
+ 0002:00000B54  __odtbl__ __fastcall Vcl::Forms::TForm::~TForm()
+ 0002:00000CBC  __odtbl__ __stdcall __delayLoadHelper2(ImgDelayDescr *, int __stdcall (*)() *)
+ 0002:000001C8  __odtbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0001:000047A4  __roundToInt64
+ 0001:00004058  __strlen(const char *)
+ 0001:00003004  __tpdsc__ System::AnsiStringBase
+ 0001:00004450  __tpdsc__ System::AnsiStringBase *
+ 0001:00002E74  __tpdsc__ System::AnsiStringT<0>
+ 0001:00002F64  __tpdsc__ System::AnsiStringT<0> *
+ 0001:00003718  __tpdsc__ System::Classes::TComponent
+ 0001:00003784  __tpdsc__ System::Classes::TPersistent
+ 0001:00003658  __tpdsc__ System::DelphiInterface<System::IInterface>
+ 0001:000035E4  __tpdsc__ System::DelphiInterface<Vcl::Controls::IDockManager>
+ 0001:000032BC  __tpdsc__ System::DelphiInterface<Vcl::Forms::IDesignerHook>
+ 0001:0000332C  __tpdsc__ System::DelphiInterface<Vcl::Forms::IOleForm>
+ 0001:00003398  __tpdsc__ System::DynamicArray<Vcl::Forms::TPopupWnd>
+ 0001:00002ED4  __tpdsc__ System::OpenArray<System::TVarRec>
+ 0001:00001BB8  __tpdsc__ System::Sysutils::Exception
+ 0001:00001CAC  __tpdsc__ System::Sysutils::Exception&
+ 0001:00001D60  __tpdsc__ System::TObject
+ 0001:00001CC4  __tpdsc__ System::UnicodeString
+ 0001:00002F48  __tpdsc__ System::UnicodeString *
+ 0001:00003058  __tpdsc__ TForm1
+ 0001:000030A8  __tpdsc__ TForm1
+ 0001:00001EBC  __tpdsc__ TForm1 *
+ 0001:000041E0  __tpdsc__ ULI
+ 0001:00003ED0  __tpdsc__ ULI *
+ 0001:00004260  __tpdsc__ UnloadInfo
+ 0001:00003574  __tpdsc__ Vcl::Controls::TControl
+ 0001:00003458  __tpdsc__ Vcl::Controls::TWinControl
+ 0001:000031D0  __tpdsc__ Vcl::Forms::TCustomForm
+ 0001:00002F80  __tpdsc__ Vcl::Forms::TForm
+ 0001:00002F34  __tpdsc__ Vcl::Forms::TForm *
+ 0001:00003250  __tpdsc__ Vcl::Forms::TScrollingWinControl
+ 0002:00000C64  __turboFloat
+ 0002:00000D48  __wargv_expand_ptr
+ 0002:00000D4C  __wsetargv__
+ 0002:00000D50  __wsetenvp__
+ 0001:0000380C  _vector_new_ldtc_(void *, unsigned int, unsigned int, unsigned int, void *, unsigned int, void *)
+ 0001:00003EE4  const char * PFromRva<const char *>(unsigned long)
+ 0001:000047CE  memchr
+ 0001:000047DA  memcpy
+ 0001:000047D4  memset
+ 0001:000047E0  sprintf
+ 0001:000047F2  strcat
+ 0001:000047E6  strcpy
+ 0001:000047F8  strerror
+ 0001:000047EC  strlen
+ 0001:00001AB8  wWinMain
+ 0001:000047C8  wcstombs
+
+ Address Publics by Value
+
+ 0001:00000F00  C1_0
+ 0001:00000F00  __acrtused
+ 0001:00000F59  __GetExceptDLLinfo
+ 0001:00000F5E  __isDLL
+ 0001:00000F66  __getHInstance
+ 0001:00001040  ___System__GetTls
+ 0001:00001040  Sysinit::__linkproc__ __fastcall GetTls()
+ 0001:00001050  Winapi::Windows::_17560
+ 0001:0000108C  __fastcall Winapi::Windows::Finalization()
+ 0001:000010AC  __fastcall Winapi::Windows::initialization()
+ 0001:000010C4  __fastcall Winapi::Psapi::Finalization()
+ 0001:000010CC  __fastcall Winapi::Psapi::initialization()
+ 0001:000010D4  __fastcall Winapi::Messages::Finalization()
+ 0001:000010DC  __fastcall Winapi::Messages::initialization()
+ 0001:000010E4  __fastcall Winapi::Activex::Finalization()
+ 0001:000010EC  __fastcall Winapi::Activex::initialization()
+ 0001:000010F4  __fastcall Winapi::Winsock::Finalization()
+ 0001:000010FC  __fastcall Winapi::Winsock::initialization()
+ 0001:00001104  __fastcall Winapi::Commctrl::Finalization()
+ 0001:0000110C  __fastcall Winapi::Commctrl::initialization()
+ 0001:00001114  __fastcall Winapi::Structuredquerycondition::Finalization()
+ 0001:0000111C  __fastcall Winapi::Structuredquerycondition::initialization()
+ 0001:00001124  __fastcall Winapi::Propsys::Finalization()
+ 0001:0000112C  __fastcall Winapi::Propsys::initialization()
+ 0001:00001134  __fastcall Winapi::Objectarray::Finalization()
+ 0001:0000113C  __fastcall Winapi::Objectarray::initialization()
+ 0001:00001144  __fastcall Winapi::Urlmon::Finalization()
+ 0001:0000114C  __fastcall Winapi::Urlmon::initialization()
+ 0001:00001154  __fastcall Winapi::Wininet::Finalization()
+ 0001:0000115C  __fastcall Winapi::Wininet::initialization()
+ 0001:00001164  __fastcall Winapi::Regstr::Finalization()
+ 0001:0000116C  __fastcall Winapi::Regstr::initialization()
+ 0001:00001174  __fastcall Winapi::Ipexport::Finalization()
+ 0001:0000117C  __fastcall Winapi::Ipexport::initialization()
+ 0001:00001184  __fastcall Winapi::Qos::Finalization()
+ 0001:0000118C  __fastcall Winapi::Qos::initialization()
+ 0001:00001194  __fastcall Winapi::Winsock2::Finalization()
+ 0001:0000119C  __fastcall Winapi::Winsock2::initialization()
+ 0001:000011A4  Winapi::Shellapi::_NOTIFYICONDATAA::operator ...
+ 0001:000011AC  Winapi::Shellapi::_NOTIFYICONDATAW::operator ...
+ 0001:000011B4  Winapi::Shellapi::_16447
+ 0001:000011F0  Winapi::Shellapi::_NOTIFYICONDATAA::operator ...
+ 0001:00001200  Winapi::Shellapi::_NOTIFYICONDATAW::operator ...
+ 0001:00001210  __fastcall Winapi::Shellapi::Finalization()
+ 0001:00001218  __fastcall Winapi::Shellapi::initialization()
+ 0001:00001220  __fastcall Winapi::Shlobj::Finalization()
+ 0001:00001228  __fastcall Winapi::Shlobj::initialization()
+ 0001:00001230  __fastcall Winapi::Commdlg::Finalization()
+ 0001:00001238  __fastcall Winapi::Commdlg::initialization()
+ 0001:00001240  __fastcall Winapi::Dlgs::Finalization()
+ 0001:00001248  __fastcall Winapi::Dlgs::initialization()
+ 0001:00001250  __fastcall Winapi::Dwmapi::Finalization()
+ 0001:00001258  __fastcall Winapi::Dwmapi::initialization()
+ 0001:00001260  __fastcall Winapi::Imm::Finalization()
+ 0001:00001268  __fastcall Winapi::Imm::initialization()
+ 0001:00001270  __fastcall Winapi::Tpcshrd::Finalization()
+ 0001:00001278  __fastcall Winapi::Tpcshrd::initialization()
+ 0001:00001280  __fastcall Winapi::Msinkaut::Finalization()
+ 0001:00001288  __fastcall Winapi::Msinkaut::initialization()
+ 0001:00001290  __fastcall Winapi::Peninputpanel::Finalization()
+ 0001:00001298  __fastcall Winapi::Peninputpanel::initialization()
+ 0001:000012A0  __fastcall Winapi::Richedit::Finalization()
+ 0001:000012A8  __fastcall Winapi::Richedit::initialization()
+ 0001:000012B0  __fastcall System::Internal::Strhlpr::WideFromUTF8(System::WideString&, const char *)
+ 0001:00001304  __fastcall System::Internal::Strhlpr::UnicodeFromPChar(System::UnicodeString&, char *, bool)
+ 0001:00001368  __fastcall System::Internal::Strhlpr::UnicodeFromUTF8(System::UnicodeString&, const char *)
+ 0001:0000137C  __fastcall System::Internal::Strhlpr::UnicodeAssign(System::UnicodeString&, System::UnicodeString&)
+ 0001:00001390  __fastcall System::Internal::Strhlpr::UnicodeFree(System::UnicodeString&)
+ 0001:0000139C  __fastcall System::Internal::Strhlpr::Finalization()
+ 0001:000013A4  __fastcall System::Internal::Strhlpr::initialization()
+ 0001:000013AC  __fastcall System::Win::Crtl::Finalization()
+ 0001:000013B4  __fastcall System::Win::Crtl::initialization()
+ 0001:000013BC  __fastcall Winapi::Winspool::Finalization()
+ 0001:000013C4  __fastcall Winapi::Winspool::initialization()
+ 0001:000013CC  Sysinit::C5_0
+ 0001:000013CC  Sysinit::__linkproc__ __fastcall _delayLoadHelper2()
+ 0001:000016AC  Sysinit::__linkproc__ __fastcall _FUnloadDelayLoadedDLL2()
+ 0001:000017BC  Sysinit::__linkproc__ __fastcall _HrLoadAllImportsForDll()
+ 0001:0000187C  Sysinit::_16403
+ 0001:00001890  Sysinit::_16420
+ 0001:0000189C  Sysinit::_16421
+ 0001:000018C0  Sysinit::VclInit(bool, bool, int, bool)
+ 0001:00001958  Sysinit::VclExit()
+ 0001:00001988  Sysinit::_16429
+ 0001:00001998  Sysinit::_16430
+ 0001:000019A8  Sysinit::_16431
+ 0001:000019B8  Sysinit::_16432
+ 0001:000019C8  Sysinit::_16433
+ 0001:000019D8  Sysinit::_16434
+ 0001:000019EC  Sysinit::_16435
+ 0001:00001A1C  Sysinit::_16436
+ 0001:00001A34  Sysinit::_16437
+ 0001:00001A5C  Sysinit::_16438
+ 0001:00001A80  Sysinit::_16439
+ 0001:00001A90  Sysinit::_16440
+ 0001:00001AA0  __fastcall Sysinit::Finalization()
+ 0001:00001AB0  __fastcall Sysinit::initialization()
+ 0001:00001AB8  wWinMain
+ 0001:00001BB8  __tpdsc__ System::Sysutils::Exception
+ 0001:00001C24  System::Sysutils::Exception::Exception(System::Sysutils::Exception&)
+ 0001:00001CAC  __tpdsc__ System::Sysutils::Exception&
+ 0001:00001CC4  __tpdsc__ System::UnicodeString
+ 0001:00001D18  System::TObject::TObject(System::TObject&)
+ 0001:00001D60  __tpdsc__ System::TObject
+ 0001:00001DAC  __fastcall TForm1::TForm1(System::Classes::TComponent *)
+ 0001:00001E64  __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *)
+ 0001:00001EBC  __tpdsc__ TForm1 *
+ 0001:00001ED4  __fastcall TForm1::btTryClick(System::TObject *)
+ 0001:00001F70  __fastcall System::UnicodeString::UnicodeString()
+ 0001:00001FA0  __fastcall TForm1::btCloseClick(System::TObject *)
+ 0001:00001FA8  __fastcall TForm1::edSerialNumberChange(System::TObject *)
+ 0001:00002DB4  __fastcall System::AnsiStringT<0>::~AnsiStringT<0>()
+ 0001:00002E08  __fastcall System::AnsiStringT<0>::AnsiStringT<0>(System::UnicodeString&)
+ 0001:00002E48  __fastcall System::TVarRec::TVarRec()
+ 0001:00002E74  __tpdsc__ System::AnsiStringT<0>
+ 0001:00002ED4  __tpdsc__ System::OpenArray<System::TVarRec>
+ 0001:00002F34  __tpdsc__ Vcl::Forms::TForm *
+ 0001:00002F48  __tpdsc__ System::UnicodeString *
+ 0001:00002F64  __tpdsc__ System::AnsiStringT<0> *
+ 0001:00002F80  __tpdsc__ Vcl::Forms::TForm
+ 0001:00002FDC  __fastcall System::OpenArray<System::TVarRec>::~OpenArray<System::TVarRec>()
+ 0001:00003004  __tpdsc__ System::AnsiStringBase
+ 0001:00003058  __tpdsc__ TForm1
+ 0001:000030A8  __tpdsc__ TForm1
+ 0001:000030D0  __fastcall TForm1::~TForm1()
+ 0001:00003118  __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *, int)
+ 0001:00003178  __fastcall Vcl::Forms::TForm::~TForm()
+ 0001:000031D0  __tpdsc__ Vcl::Forms::TCustomForm
+ 0001:00003250  __tpdsc__ Vcl::Forms::TScrollingWinControl
+ 0001:000032BC  __tpdsc__ System::DelphiInterface<Vcl::Forms::IDesignerHook>
+ 0001:0000332C  __tpdsc__ System::DelphiInterface<Vcl::Forms::IOleForm>
+ 0001:00003398  __tpdsc__ System::DynamicArray<Vcl::Forms::TPopupWnd>
+ 0001:00003400  __fastcall System::DelphiInterface<Vcl::Forms::IOleForm>::~DelphiInterface<Vcl::Forms::IOleForm>()
+ 0001:0000342C  __fastcall System::DelphiInterface<Vcl::Forms::IDesignerHook>::~DelphiInterface<Vcl::Forms::IDesignerHook>()
+ 0001:00003458  __tpdsc__ Vcl::Controls::TWinControl
+ 0001:000034D4  System::DynamicArray<Vcl::Forms::TPopupWnd>::~DynamicArray<Vcl::Forms::TPopupWnd>()
+ 0001:000034FC  System::DynamicArray<Vcl::Forms::TPopupWnd>::DecRefCount()
+ 0001:00003520  System::DynamicArray<Vcl::Forms::TPopupWnd>::FreeData()
+ 0001:0000355C  System::DynamicArray<Vcl::Forms::TPopupWnd>::get_length() const
+ 0001:00003574  __tpdsc__ Vcl::Controls::TControl
+ 0001:000035E4  __tpdsc__ System::DelphiInterface<Vcl::Controls::IDockManager>
+ 0001:00003658  __tpdsc__ System::DelphiInterface<System::IInterface>
+ 0001:000036C0  __fastcall System::DelphiInterface<System::IInterface>::~DelphiInterface<System::IInterface>()
+ 0001:000036EC  __fastcall System::DelphiInterface<Vcl::Controls::IDockManager>::~DelphiInterface<Vcl::Controls::IDockManager>()
+ 0001:00003718  __tpdsc__ System::Classes::TComponent
+ 0001:00003784  __tpdsc__ System::Classes::TPersistent
+ 0001:000037EC  __linkproc__ Unit1::Initialize
+ 0001:000037FC  __linkproc__ Unit1::Finalize
+ 0001:0000380C  _vector_new_ldtc_(void *, unsigned int, unsigned int, unsigned int, void *, unsigned int, void *)
+ 0001:0000380C  C631_0
+ 0001:000039EC  C639_0
+ 0001:00003A08  ___CRTL_VCL_Init
+ 0001:00003AEC  ___CRTL_VCLLIB_Linkage
+ 0001:00003AEC  C641_0
+ 0001:00003AF0  ___CRTL_VCL_Sharemem
+ 0001:00003B7C  ___CRTL_VCL_HookSystem
+ 0001:00003BBC  __delayLoadHelper2
+ 0001:00003ED0  __tpdsc__ ULI *
+ 0001:00003EE4  const char * PFromRva<const char *>(unsigned long)
+ 0001:00003EF4  HINSTANCE__ * * PFromRva<HINSTANCE__ * *>(unsigned long)
+ 0001:00003F04  _IMAGE_THUNK_DATA32 * PFromRva<_IMAGE_THUNK_DATA32 *>(unsigned long)
+ 0001:00003F14  _IMAGE_THUNK_DATA32 * PFromRva<_IMAGE_THUNK_DATA32 *>(unsigned long)
+ 0001:00003F24  _IMAGE_IMPORT_BY_NAME * PFromRva<_IMAGE_IMPORT_BY_NAME *>(unsigned long)
+ 0001:00003F34  __FUnloadDelayLoadedDLL2
+ 0001:00004058  __strlen(const char *)
+ 0001:0000406C  __memcmp(const void *, const void *, unsigned int)
+ 0001:0000409C  CountOfImports(_IMAGE_THUNK_DATA32 *)
+ 0001:000040B4  __memcpy(void *, const void *, unsigned int)
+ 0001:000040DC  ULI::Unlink()
+ 0001:00004100  __HrLoadAllImportsForDll
+ 0001:000041B8  ImgDelayDescr * PFromRva<ImgDelayDescr *>(unsigned long)
+ 0001:000041C8  PFromRva<int _int __stdcall (*)() * _stdcall (*)() *>(unsigned long)
+ 0001:000041D8  _ShutdownDelayHelp2
+ 0001:000041E0  __tpdsc__ ULI
+ 0001:0000422C  ULI::operator delete(void *)
+ 0001:0000423C  ULI::~ULI()
+ 0001:00004260  __tpdsc__ UnloadInfo
+ 0001:0000427C  C678_3
+ 0001:0000427C  C678_0
+ 0001:0000429C  C678_4
+ 0001:000042A4  C684_0
+ 0001:000042A4  C684_3
+ 0001:000042C4  C684_4
+ 0001:000042CC  C704_4
+ 0001:000042CC  C704_0
+ 0001:000042F8  ___call_terminate
+ 0001:00004368  __ExceptInit
+ 0001:000043B8  __GetExceptDLLinfoInternal
+ 0001:000043E0  __InitExceptBlockLDTC
+ 0001:000043E0  C706_0
+ 0001:00004419  __ExitExceptBlock
+ 0001:00004427  __ExceptionHandler
+ 0001:00004450  __tpdsc__ System::AnsiStringBase *
+ 0001:00004478  __fastcall System::AnsiStringBase::AnsiStringBase(System::UnicodeString&, int)
+ 0001:000044CC  __fastcall System::AnsiStringBase::~AnsiStringBase()
+ 0001:000044F8  C725_2
+ 0001:000044F8  C725_0
+ 0001:00004578  __fastcall System::setUStrData(System::UnicodeString&, const char *)
+ 0001:00004584  __fastcall System::setWStrData(System::WideString&, const char *)
+ 0001:00004590  __fastcall System::setLStrData(System::AnsiStringT<0> *, unsigned int, const char *)
+ 0001:00004624  __fastcall System::__linkStrModEvalRoutines()
+ 0001:00004658  __InitVCL
+ 0001:0000469C  __ExitVCL
+ 0001:000046A8  __fastcall System::UnicodeString::UnicodeString(const char *)
+ 0001:000046E8  __fastcall System::UnicodeString::UnicodeString(System::UnicodeString&)
+ 0001:00004758  __fastcall System::UnicodeString::~UnicodeString()
+ 0001:00004780  C743_0
+ 0001:00004780  __ClassCreate
+ 0001:00004788  __ClassDestroy
+ 0001:0000478D  __AfterConstruction
+ 0001:00004795  __BeforeDestruction
+ 0001:000047A4  __roundToInt64
+ 0001:000047B1  __currMul
+ 0001:000047C8  wcstombs
+ 0001:000047CE  memchr
+ 0001:000047D4  memset
+ 0001:000047DA  memcpy
+ 0001:000047E0  sprintf
+ 0001:000047E6  strcpy
+ 0001:000047EC  strlen
+ 0001:000047F2  strcat
+ 0001:000047F8  strerror
+ 0001:00004800  _System__LStrAsg
+ 0001:00004800  C745_0
+ 0001:00004805  _System__LStrCat
+ 0001:0000480A  _System__LStrCat3
+ 0001:0000480F  _System__LStrClr
+ 0001:00004814  _System__LStrCmp
+ 0001:00004819  _System__LStrDelete
+ 0001:0000481E  _System__LStrFromArray
+ 0001:00004823  _System__LStrFromPChar
+ 0001:00004828  _System__LStrFromUStr
+ 0001:0000482D  _System__LStrFromWChar
+ 0001:00004832  _System__LStrFromWStr
+ 0001:00004837  _System__LStrInsert
+ 0001:0000483C  _System__LStrSetLength
+ 0001:00004841  _System__LStrFromPWCharLen
+ 0001:00004846  _System__CheckAutoResult
+ 0001:0000484B  _System__DynArrayRelease
+ 0001:00004850  _System__DynArrayAddRef
+ 0001:00004855  __fastcall System::TMetaClass::InstanceSize()
+ 0001:0000485A  __fastcall System::TMetaClass::InitInstance(void *)
+ 0001:0000485F  __fastcall System::TMetaClass::ClassName()
+ 0001:00004864  __fastcall System::TMetaClass::ClassParent()
+ 0001:00004869  __fastcall System::TMetaClass::ClassInfo()
+ 0001:0000486E  __fastcall System::TMetaClass::InheritsFrom(System::TMetaClass *)
+ 0001:00004873  __fastcall System::TMetaClass::MethodName(void *)
+ 0001:00004878  __fastcall System::TMetaClass::QualifiedClassName()
+ 0001:0000487D  __fastcall System::TMetaClass::UnitName()
+ 0001:00004882  __fastcall System::TMetaClass::UnitScope()
+ 0001:00004887  __fastcall System::TMetaClass::MethodAddress(System::SmallString<255>&)
+ 0001:0000488C  __fastcall System::TMetaClass::GetInterfaceEntry(_GUID&)
+ 0001:00004891  __fastcall System::TMetaClass::GetInterfaceTable()
+ 0001:00004896  __fastcall System::TMetaClass::ClassNameIs(const System::UnicodeString)
+ 0001:0000489B  __fastcall System::TMetaClass::MethodAddress(const System::UnicodeString)
+ 0001:000048A0  __fastcall System::FindDynaInst(void *, int)
+ 0001:000048A8  __fastcall Vcl::Forms::TApplication::MessageBoxA(const wchar_t *, const wchar_t *, int)
+ 0001:000048A8  C989_0
+ 0001:000048AD  __fastcall Vcl::Forms::TApplication::MessageBoxW(const wchar_t *, const wchar_t *, int)
+ 0002:00000000  D1_1
+ 0002:00000058  ___isGUI
+ 0002:00000090  ___isVCLPackage
+ 0002:00000091  ___isDLL
+ 0002:0000009E  ___useDynamicTLS
+ 0002:000000A3  __TLS_index4
+ 0002:000000A7  __hInstance
+ 0002:000000AC  ___CPPdebugHook
+ 0002:000000AC  ___CPPdebugHook_segment
+ 0002:000000B0  __PackageInfoTable
+ 0002:000000C8  Winapi::Windows::_17377
+ 0002:000000CC  Winapi::Windows::_17378
+ 0002:000000D0  Winapi::Windows::_17379
+ 0002:000000D4  Winapi::Shellapi::_16440
+ 0002:000000D8  Winapi::Shellapi::_16441
+ 0002:000000DC  Winapi::Shellapi::_16442
+ 0002:000000E0  Sysinit::D5_1
+ 0002:00000134  __TLS_index
+ 0002:00000134  Sysinit::TlsIndex
+ 0002:00000138  Sysinit::DataMark
+ 0002:0000013C  Sysinit::UnloadDelayLoadedDLLPtr
+ 0002:00000140  Sysinit::DelayLoadHelper
+ 0002:00000144  Sysinit::pfnDliNotifyHook
+ 0002:00000148  Sysinit::pfnDliFailureHook
+ 0002:0000014C  Sysinit::HrLoadAllImportsForDll
+ 0002:00000150  Sysinit::_16412
+ 0002:0000016C  D6_1
+ 0002:00000174  __chtbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0002:000001A8  __chtbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0002:000001C8  __odtbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0002:000001D8  __ectbl__ __stdcall wWinMain(HINSTANCE__ *, HINSTANCE__ *, wchar_t *, int)
+ 0002:00000220  __ectbl__ System::Sysutils::Exception::Exception(System::Sysutils::Exception&)
+ 0002:0000022C  __ectbl__ System::TObject::TObject(System::TObject&)
+ 0002:00000238  Unit1::D7_1
+ 0002:000004AC  __odtbl__ __fastcall TForm1::TForm1(System::Classes::TComponent *)
+ 0002:000004CC  __ectbl__ __fastcall TForm1::TForm1(System::Classes::TComponent *)
+ 0002:000004F0  __odtbl__ __fastcall TForm1::btTryClick(System::TObject *)
+ 0002:0000050C  __ectbl__ __fastcall TForm1::btTryClick(System::TObject *)
+ 0002:00000524  __odtbl__ __fastcall TForm1::edSerialNumberChange(System::TObject *)
+ 0002:00000740  __ectbl__ __fastcall TForm1::edSerialNumberChange(System::TObject *)
+ 0002:00000824  __odtbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *)
+ 0002:00000834  __ectbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *)
+ 0002:0000084C  __odtbl__ __fastcall System::UnicodeString::UnicodeString()
+ 0002:0000085C  __ectbl__ __fastcall System::UnicodeString::UnicodeString()
+ 0002:00000874  __odtbl__ __fastcall System::AnsiStringT<0>::~AnsiStringT<0>()
+ 0002:00000884  __ectbl__ __fastcall System::AnsiStringT<0>::~AnsiStringT<0>()
+ 0002:0000089C  __odtbl__ __fastcall System::AnsiStringT<0>::AnsiStringT<0>(System::UnicodeString&)
+ 0002:000008AC  __ectbl__ __fastcall System::AnsiStringT<0>::AnsiStringT<0>(System::UnicodeString&)
+ 0002:000008C4  __ectbl__ __fastcall System::TVarRec::TVarRec()
+ 0002:000008D0  TForm1::
+ 0002:00000B20  __ectbl__ __fastcall TForm1::~TForm1()
+ 0002:00000B2C  __odtbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *, int)
+ 0002:00000B3C  __ectbl__ __fastcall Vcl::Forms::TForm::TForm(System::Classes::TComponent *, int)
+ 0002:00000B54  __odtbl__ __fastcall Vcl::Forms::TForm::~TForm()
+ 0002:00000B64  __ectbl__ __fastcall Vcl::Forms::TForm::~TForm()
+ 0002:00000B7C  D631_1
+ 0002:00000C38  D643_1
+ 0002:00000C5C  D658_0
+ 0002:00000C5C  __fmode
+ 0002:00000C60  D660_0
+ 0002:00000C60  __fileinfo
+ 0002:00000C64  __turboFloat
+ 0002:00000C64  D668_0
+ 0002:00000C68  D670_1
+ 0002:00000C68  ___puiHead
+ 0002:00000CBC  __odtbl__ __stdcall __delayLoadHelper2(ImgDelayDescr *, int __stdcall (*)() *)
+ 0002:00000CCC  __ectbl__ __stdcall __delayLoadHelper2(ImgDelayDescr *, int __stdcall (*)() *)
+ 0002:00000D38  __ectbl__ __stdcall __FUnloadDelayLoadedDLL2(const char *)
+ 0002:00000D44  D680_0
+ 0002:00000D44  __argv_expand_ptr
+ 0002:00000D48  D682_0
+ 0002:00000D48  __wargv_expand_ptr
+ 0002:00000D4C  __wsetargv__
+ 0002:00000D4C  D684_1
+ 0002:00000D50  D688_0
+ 0002:00000D50  __wsetenvp__
+ 0002:00000D54  ___CPPexceptionList
+ 0002:00000D54  D704_1
+ 0002:00000D58  ___exceptFlags
+ 0002:00000D5C  ___throwFileName
+ 0002:00000D60  ___throwLineNumber
+ 0002:00000D64  ___throwExceptionName
+ 0002:00000D68  ___exceptStaticBuffP
+ 0002:00000D6C  ___exceptMemAllocVars
+ 0002:00000D70  ___ExceptStaticXbuff
+ 0002:00000DF0  __ExceptVarsSize
+ 0002:00000E04  __chtbl__ __call_terminate()
+ 0002:00000E24  __ectbl__ __call_terminate()
+ 0002:00000E3C  ___xxPersonality
+ 0002:00000E3C  D708_0
+ 0002:00000E40  __odtbl__ __fastcall System::AnsiStringBase::AnsiStringBase(System::UnicodeString&, int)
+ 0002:00000E50  __ectbl__ __fastcall System::AnsiStringBase::AnsiStringBase(System::UnicodeString&, int)
+ 0002:00000E68  System::Math::NaN
+ 0002:00000E68  D725_1
+ 0002:00000E74  System::Math::Infinity
+ 0002:00000E80  System::Math::NegInfinity
+ 0002:00000E8C  System::Math::MinSingle
+ 0002:00000E98  System::Math::MaxSingle
+ 0002:00000EA4  System::Math::MinDouble
+ 0002:00000EB0  System::Math::MaxDouble
+ 0002:00000EBC  System::Math::MinExtended
+ 0002:00000EC8  System::Math::MaxExtended
+ 0002:00000ED4  System::Math::MinComp
+ 0002:00000EE0  System::Math::MaxComp
+ 0002:00000EEC  System::Dateutils::OneHour
+ 0002:00000EF8  System::Dateutils::OneMinute
+ 0002:00000F04  System::Dateutils::OneSecond
+ 0002:00000F10  System::Dateutils::OneMillisecond
+ 0002:00000F1C  System::Dateutils::EpochAsJulianDate
+ 0002:00000F28  System::Types::cPI
+ 0002:00000F2C  System::Types::cPIdiv180
+ 0002:00000F30  System::Types::c180divPI
+ 0002:00000F34  System::Types::c2PI
+ 0002:00000F38  System::Types::cPIdiv2
+ 0002:00000F3C  System::Types::cPIdiv4
+ 0002:00000F40  System::Types::c3PIdiv4
+ 0002:00000F44  System::Types::cInv2PI
+ 0002:00000F48  System::Types::cInv360
+ 0002:00000F4C  System::Types::c180
+ 0002:00000F50  System::Types::c360
+ 0002:00000F54  System::Types::cOneHalf
+ 0002:00000F58  System::Types::CurveKappa
+ 0002:00000F64  System::Types::CurveKappaInv
+ 0002:00000F70  System::Types::Epsilon
+ 0002:00000F74  System::Types::Epsilon2
+ 0002:00000F78  __odtbl__ __fastcall System::setLStrData(System::AnsiStringT<0> *, unsigned int, const char *)
+ 0002:00000F98  __ectbl__ __fastcall System::setLStrData(System::AnsiStringT<0> *, unsigned int, const char *)
+ 0002:00000FBC  __odtbl__ __fastcall System::UnicodeString::UnicodeString(const char *)
+ 0002:00000FCC  __ectbl__ __fastcall System::UnicodeString::UnicodeString(const char *)
+ 0002:00000FE4  __odtbl__ __fastcall System::UnicodeString::UnicodeString(System::UnicodeString&)
+ 0002:00000FF4  __ectbl__ __fastcall System::UnicodeString::UnicodeString(System::UnicodeString&)
+ 0002:0000100C  D743_1
+ 0002:00001034  __indStub:39307
+ 0002:00001038  __indStub:39223
+ 0002:0000103C  __indStub:39222
+ 0002:00001040  __indStub:39224
+ 0002:00001044  __indStub:39225
+ 0002:00001048  __indStub:39226
+ 0003:00000000  Winapi.windows::B21_2
+ 0003:00000010  Winapi.psapi::B29_1
+ 0003:00000074  Winapi.messages::B41_1
+ 0003:00000078  Winapi.activex::B51_2
+ 0003:0000007C  Winapi.winsock::B107_1
+ 0003:00000080  Winapi.commctrl::B125_2
+ 0003:000000C0  Winapi.structuredquerycondition::B129_2
+ 0003:000000C4  Winapi.propsys::B131_2
+ 0003:000000C8  Winapi.objectarray::B133_2
+ 0003:000000CC  Winapi.urlmon::B135_2
+ 0003:000000D0  Winapi.wininet::B137_1
+ 0003:000000D4  Winapi.regstr::B139_1
+ 0003:000000D8  Winapi.ipexport::B141_1
+ 0003:000000DC  Winapi.qos::B143_1
+ 0003:000000E0  Winapi.winsock2::B145_1
+ 0003:000000E4  Winapi::Shellapi::_NOTIFYICONDATAA::{1252}...
+ 0003:000000E4  Winapi.shellapi::B147_2
+ 0003:000000E8  Winapi::Shellapi::_NOTIFYICONDATAW::{1252}...
+ 0003:000000F0  Winapi.shlobj::B149_2
+ 0003:000000F4  Winapi.commdlg::B151_1
+ 0003:000000F8  Winapi.dlgs::B157_1
+ 0003:000000FC  Winapi.dwmapi::B161_1
+ 0003:00000100  Winapi.imm::B165_1
+ 0003:00000104  Winapi.tpcshrd::B197_1
+ 0003:00000108  Winapi.msinkaut::B199_2
+ 0003:0000010C  Winapi.peninputpanel::B201_2
+ 0003:00000110  Winapi.richedit::B203_1
+ 0003:00000114  System.internal.strhlpr::B207_1
+ 0003:00000118  System.win.crtl::B217_2
+ 0003:00000118  System::Win::Crtl::_errno
+ 0003:0000011C  System::Win::Crtl::__errno
+ 0003:00000120  System::Win::Crtl::___errno
+ 0003:00000128  Winapi.winspool::B221_1
+ 0003:0000012C  Sysinit::ModuleIsLib
+ 0003:0000012C  Sysinit::B5_2
+ 0003:0000012D  Sysinit::ModuleIsPackage
+ 0003:0000012E  Sysinit::ModuleIsCpp
+ 0003:0000012F  Sysinit::TlsLast
+ 0003:00000130  Sysinit::HInstance
+ 0003:0000013C  Sysinit::DllProcEx
+ 0003:0000013C  Sysinit::DllProc
+ 0003:00000140  Sysinit::__linkproc__ _pfnDliNotifyHook2
+ 0003:00000144  Sysinit::__linkproc__ _pfnDliFailureHook2
+ 0003:00000150  Unit1::B7_2
+ 0003:00000150  _Form1
+ 0003:00000154  Unit1::B7_3
+ 0003:00000158  ___pfnDliNotifyHook2
+ 0003:00000158  B672_0
+ 0003:0000015C  ___pfnDliFailureHook2
+ 0003:00000160  ___dll_argc
+ 0003:00000160  B678_2
+ 0003:00000164  ___dll_argv
+ 0003:00000168  ___dll_wargv
+ 0003:00000168  B684_2
+ 0003:0000016C  B704_2
+ 0003:0000016C  __DestructorCountPtr
+ 0003:FFFF7FB4  Sysinit::ImageBase
+ 0003:FFFF7FB4  Sysinit::__ImageBase
+ 0004:00000000  T704_3
+ 0004:00000000  ___xxInfo

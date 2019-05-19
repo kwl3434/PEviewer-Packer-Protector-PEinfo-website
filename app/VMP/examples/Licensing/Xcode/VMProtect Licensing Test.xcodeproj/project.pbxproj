@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D89FC27817F948A3001C114D /* libVMProtectSDK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FC27717F948A3001C114D /* libVMProtectSDK.dylib */; };
+		D89FC27A17F94923001C114D /* libVMProtectSDK.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = D89FC27717F948A3001C114D /* libVMProtectSDK.dylib */; };
+		D8B1BC4717F1694200BC50DD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B1BC4617F1694200BC50DD /* Cocoa.framework */; };
+		D8B1BC5117F1694300BC50DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8B1BC4F17F1694300BC50DD /* InfoPlist.strings */; };
+		D8B1BC5317F1694300BC50DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B1BC5217F1694300BC50DD /* main.m */; };
+		D8B1BC5717F1694300BC50DD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D8B1BC5517F1694300BC50DD /* Credits.rtf */; };
+		D8B1BC5A17F1694300BC50DD /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8B1BC5917F1694300BC50DD /* AppDelegate.mm */; };
+		D8B1BC5D17F1694300BC50DD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B1BC5B17F1694300BC50DD /* MainMenu.xib */; };
+		D8B1BC6917F170FB00BC50DD /* VMProtectLicense.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8B1BC6717F170CC00BC50DD /* VMProtectLicense.ini */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8B1BC6517F16D9600BC50DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				D89FC27A17F94923001C114D /* libVMProtectSDK.dylib in CopyFiles */,
+				D8B1BC6917F170FB00BC50DD /* VMProtectLicense.ini in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D89FC27717F948A3001C114D /* libVMProtectSDK.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libVMProtectSDK.dylib; sourceTree = "<group>"; };
+		D89FC27917F948B2001C114D /* VMProtectSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMProtectSDK.h; sourceTree = "<group>"; };
+		D8B1BC4317F1694200BC50DD /* VMProtect Licensing Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VMProtect Licensing Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B1BC4617F1694200BC50DD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D8B1BC4917F1694200BC50DD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D8B1BC4A17F1694200BC50DD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D8B1BC4B17F1694200BC50DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D8B1BC4E17F1694300BC50DD /* VMProtect Licensing Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VMProtect Licensing Test-Info.plist"; sourceTree = "<group>"; };
+		D8B1BC5017F1694300BC50DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8B1BC5217F1694300BC50DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8B1BC5417F1694300BC50DD /* VMProtect Licensing Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VMProtect Licensing Test-Prefix.pch"; sourceTree = "<group>"; };
+		D8B1BC5617F1694300BC50DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D8B1BC5817F1694300BC50DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8B1BC5917F1694300BC50DD /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		D8B1BC5C17F1694300BC50DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D8B1BC6717F170CC00BC50DD /* VMProtectLicense.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VMProtectLicense.ini; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8B1BC4017F1694200BC50DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89FC27817F948A3001C114D /* libVMProtectSDK.dylib in Frameworks */,
+				D8B1BC4717F1694200BC50DD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8B1BC3A17F1694200BC50DD = {
+			isa = PBXGroup;
+			children = (
+				D8B1BC4C17F1694200BC50DD /* VMProtect Licensing Test */,
+				D8B1BC4517F1694200BC50DD /* Frameworks */,
+				D8B1BC4417F1694200BC50DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8B1BC4417F1694200BC50DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8B1BC4317F1694200BC50DD /* VMProtect Licensing Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8B1BC4517F1694200BC50DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8B1BC4617F1694200BC50DD /* Cocoa.framework */,
+				D8B1BC4817F1694200BC50DD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8B1BC4817F1694200BC50DD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8B1BC4917F1694200BC50DD /* AppKit.framework */,
+				D8B1BC4A17F1694200BC50DD /* CoreData.framework */,
+				D8B1BC4B17F1694200BC50DD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D8B1BC4C17F1694200BC50DD /* VMProtect Licensing Test */ = {
+			isa = PBXGroup;
+			children = (
+				D8B1BC5817F1694300BC50DD /* AppDelegate.h */,
+				D8B1BC5917F1694300BC50DD /* AppDelegate.mm */,
+				D8B1BC5B17F1694300BC50DD /* MainMenu.xib */,
+				D8B1BC4D17F1694300BC50DD /* Supporting Files */,
+			);
+			name = "VMProtect Licensing Test";
+			sourceTree = SOURCE_ROOT;
+		};
+		D8B1BC4D17F1694300BC50DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D89FC27717F948A3001C114D /* libVMProtectSDK.dylib */,
+				D89FC27917F948B2001C114D /* VMProtectSDK.h */,
+				D8B1BC6717F170CC00BC50DD /* VMProtectLicense.ini */,
+				D8B1BC4E17F1694300BC50DD /* VMProtect Licensing Test-Info.plist */,
+				D8B1BC4F17F1694300BC50DD /* InfoPlist.strings */,
+				D8B1BC5217F1694300BC50DD /* main.m */,
+				D8B1BC5417F1694300BC50DD /* VMProtect Licensing Test-Prefix.pch */,
+				D8B1BC5517F1694300BC50DD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8B1BC4217F1694200BC50DD /* VMProtect Licensing Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8B1BC6017F1694300BC50DD /* Build configuration list for PBXNativeTarget "VMProtect Licensing Test" */;
+			buildPhases = (
+				D8B1BC3F17F1694200BC50DD /* Sources */,
+				D8B1BC4017F1694200BC50DD /* Frameworks */,
+				D8B1BC4117F1694200BC50DD /* Resources */,
+				D8B1BC6517F16D9600BC50DD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VMProtect Licensing Test";
+			productName = "VMProtect Licensing Test";
+			productReference = D8B1BC4317F1694200BC50DD /* VMProtect Licensing Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8B1BC3B17F1694200BC50DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = vmpsoft;
+			};
+			buildConfigurationList = D8B1BC3E17F1694200BC50DD /* Build configuration list for PBXProject "VMProtect Licensing Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D8B1BC3A17F1694200BC50DD;
+			productRefGroup = D8B1BC4417F1694200BC50DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8B1BC4217F1694200BC50DD /* VMProtect Licensing Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8B1BC4117F1694200BC50DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8B1BC5117F1694300BC50DD /* InfoPlist.strings in Resources */,
+				D8B1BC5717F1694300BC50DD /* Credits.rtf in Resources */,
+				D8B1BC5D17F1694300BC50DD /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8B1BC3F17F1694200BC50DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8B1BC5317F1694300BC50DD /* main.m in Sources */,
+				D8B1BC5A17F1694300BC50DD /* AppDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8B1BC4F17F1694300BC50DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8B1BC5017F1694300BC50DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D8B1BC5517F1694300BC50DD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8B1BC5617F1694300BC50DD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D8B1BC5B17F1694300BC50DD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8B1BC5C17F1694300BC50DD /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8B1BC5E17F1694300BC50DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D8B1BC5F17F1694300BC50DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D8B1BC6117F1694300BC50DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMProtect Licensing Test-Prefix.pch";
+				INFOPLIST_FILE = "VMProtect Licensing Test-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Lib\"",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D8B1BC6217F1694300BC50DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMProtect Licensing Test-Prefix.pch";
+				INFOPLIST_FILE = "VMProtect Licensing Test-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Lib\"",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8B1BC3E17F1694200BC50DD /* Build configuration list for PBXProject "VMProtect Licensing Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8B1BC5E17F1694300BC50DD /* Debug */,
+				D8B1BC5F17F1694300BC50DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8B1BC6017F1694300BC50DD /* Build configuration list for PBXNativeTarget "VMProtect Licensing Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8B1BC6117F1694300BC50DD /* Debug */,
+				D8B1BC6217F1694300BC50DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8B1BC3B17F1694200BC50DD /* Project object */;
+}
