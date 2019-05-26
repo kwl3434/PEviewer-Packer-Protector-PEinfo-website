@@ -1,167 +1,179 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <meta charset="utf-8">
-                <title>Packer And Protecter</title>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="{{ url_for( 'static', filename='script/upload.js' ) }}"></script>
 
-        <link href="https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Pen+Script" rel="stylesheet">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-        <style>
-        .upload{
-                display: inline-block;
-                text-align: center;
-                width: 96%;
-                clear: both;
-        }
-        .uploaddiv{
-                border: 2px solid #BACEB0;
-                width: 96%;
-        }
-        .pp {
-                display: inline-block;
-                text-align: center;
-                clear: both;
-                width: 46%;
-        }
-        .ppp{
-                display: inline-block;
-                text-align: center;
-                border: 2px solid #BACEB0;
-                width: 94%;
-                margin-left: 10px;
-                margin-right: 10px;
-        }
-        .progress {
-                display: inline-block;
-                text-align: center;
-                width: 96%;
-                height: 24vh;
-        }
-        .progress2 {
-                border: 2px solid #BACEB0;
-                display: inline-block;
-                text-align: center;
-                width: 96%;
-        }
-        span{
-                display: inline-block;
-                align : center;
-                background-color:  #BACEB0;
-                color: #263835;
-                font-size: 20px;
-                font-weight: bold;
-                font-family: 'Hi Melody', cursive;
-                padding: 6px;
-        }
-        .button{
-                background-color: #BACEB0;
-                color: #263835;
-                font-size: 18px;
-                font-weight: bold;
-                font-family: 'Hi Melody', cursive;
-        }
-        .totaldiv{
-                width: 100%;
-                margin: 0 auto;
-        }
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-        </style>
-        <script>
-                function jbFunc() {
-                        document.getElementById( 'bar' ).value = '80';
-                }
-                
-                function FileCheck(obj) {
-			var file = obj.upfile.value;
-			var FileFilter = /\.(exe|exe)$/i
-			var extArray = new Array(".exe")
-			var bSubmitCheck = false;
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-			if (obj.value == "") /* 파일이 있는지 없는지 체크 */
-			{ alert("파일을 선택해주세요.");
-			return;}
+		<meta charset="utf-8">
+		<title>Packer And Protecter</title>
 
-			if(obj.upfile.value.match(FileFilter)) /* 확장자명이 exe인지 체크 */
-			{bSubmitChecl = true;}
+		<link href="https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Pen+Script" rel="stylesheet">
 
-			if(bSubmitCheck)
-			{return;}
+		<style>
+	.upload{
+		display: inline-block;
+		text-align: center;
+		width: 96%;
+		clear: both;
+	}
+	.uploaddiv{
+		border: 2px solid #BACEB0;
+		width: 96%;
+	}
+	.pp {
+		display: inline-block;
+		text-align: center;
+		clear: both;
+		width: 46%;
+	}
+	.ppp{
+		display: inline-block;
+		text-align: center;
+		border: 2px solid #BACEB0;
+		width: 94%;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.progress {
+		display: inline-block;
+		text-align: center;
+		width: 96%;
+		height: 24vh;
+	}
+	.progress2 {
+		border: 2px solid #BACEB0;
+		display: inline-block;
+		text-align: center;
+		width: 96%;
+	}
+	span{
+		display: inline-block;
+			align : center;
+		background-color:  #BACEB0;
+		color: #263835;
+		font-size: 20px;
+		font-weight: bold;
+		font-family: 'Hi Melody', cursive;
+		padding: 6px;
+	}
+	.button{
+		background-color: #BACEB0;
+		color: #263835;
+		font-size: 18px;
+		font-weight: bold;
+		font-family: 'Hi Melody', cursive;
+	}
+	.totaldiv{
+		width: 100%;
+		margin: 0 auto;
+	}
 
-			if(bSubmitCheck)
-			{return;}
-			else
-			{alert(".exe 확장자만 업로드 가능합니다")
-                }
+		</style>
+		<script>
+			function jbFunc() {
+				document.getElementById( 'bar' ).value = '80';
+			}
+
+function FileCheck(obj) {
+	var file = obj.upfile.value;
+	var FileFilter = /\.(exe|exe)$/i
+	var extArray = new Array(".exe")
+	var bSubmitCheck = false;
+
+	if (obj.value == "") /* 파일이 있는지 없는지 체크 */
+	{ alert("파일을 선택해주세요.");
+		return;}
+
+	if(obj.upfile.value.match(FileFilter)) /* 확장자명이 exe인지 체크 */
+	{bSubmitChecl = true;}
+
+	if(bSubmitCheck)
+	{return;}
+
+	if(bSubmitCheck)
+	{return;}
+	else
+	{alert(".exe 확장자만 업로드 가능합니다")}
+
+	setTimeout(window.opener.reload(),2000);
+}
 
 
-        </script>
-        </head>
-        <body>
-        <div class="totaldiv">
-                <Div class="upload">
-                        <span> 파일 선택 버튼을 누르고 파일을 선택 후 제출 버튼을 누르세요.</span>
-                        <br>
-                        <div class="uploaddiv" style="margin : 5px;">
-                        <form  action = "http://p4gwnu.koreacentral.cloudapp.azure.com/upload" method = "POST" enctype = "multipart/form-data">
-                                <input class="button" type = "file" name = "file" />
-                                <input class="button" onclick="FileCheck(file)" type = "submit" />
-                        </form>
-			<span>{{ff}}</span>
-                        </div>
-                </Div>
-                
-                <br>
-                <br>
-                <br>
+		</script>
+		<script type="text/javascript">
+			function loading(){
+				$('#loading").show();
+				$("#content").hide();
+			}
+		</script>
+	</head>
+	<body>
+		<div class="totaldiv">
+			<Div class="upload">
+				<span> 파일 선택 버튼을 누르고 파일을 선택 후 제출 버튼을 누르세요.</span>
+				<br>
+				<div  class="uploaddiv" style="margin : 5px;">
+					<form action="http://p4gwnu.koreacentral.cloudapp.azure.com/upload"method = "POST" enctype = "multipart/form-data">
+						<input class="button" type = "file" name = "file" />
+						<input class="button" type = "submit" />
+					</form>
+					<span>{{ff}}</span>
+				</div>
+			</Div>
+			<div class="progress">
+				<div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+					0%
+				</div>
+			</div>
 
-                <Div class = "pp">
-                        <span>팩커를 선택하세요</span>
-                        <br>
-                        <div  class = "ppp" style="margin:5px;">
-                                <select name="packer">
-                                        <option value="1" selected>UPXpacker</option>
-                                        <option value="2" >packer2</option>
-                                        <option value="3">packer3</option>
-                                </select>
-                                <form action ="http://p4gwnu.koreacentral.cloudapp.azure.com/unpack_download" method = "POST" style="float:right;margin:0;">
-                                        <input class="button" type="submit" value="UnPack"/>
+			<br>
+			<br>
+			<br>
+
+			<Div class = "pp">
+				<span>팩커를 선택하세요</span>
+				<br>
+				<div  class = "ppp" style="margin:5px;">
+					<select name="packer">
+						<option value="1" selected>UPXpacker</option>
+						<option value="2" >packer2</option>
+						<option value="3">packer3</option>
+					</select>
+					<form action ="http://p4gwnu.koreacentral.cloudapp.azure.com/unpack_download" method = "POST" style="float:right;margin:0;">
+						<input class="button" onclick="window.location.href='/loading'" type="submit" value="UnPack"/>
+						<input type="hidden" value={{ff}} name="fname"/>
+					</form>
+					<form action ="http://p4gwnu.koreacentral.cloudapp.azure.com/pack_download" method = "POST"  style="float:right;margin:0;">
+						<input class="button" onclick="window.location.href='/loading'" type="submit" value="Pack"/>
+						<input type="hidden" value={{ff}} name="fname"/>
+					</form>
+				</div>
+		</div>
+		<div class = "pp">
+			<span>프로텍터를 선택하세요 </span>
+			<br>
+			<div  class = "ppp" style="margin: 5px;">
+				<select name="protecter">
+					<option value="1" selected> VMProtector </option>
+					<option value="2" >Protector </option>
+					<option value="3">Protector </option>
+				</select>
+
+				<form action ="http://p4gwnu.koreacentral.cloudapp.azure.com/protect_download" method = "POST" style="float:right;margin:0;">
+					<input class="button" type="submit" value="Protect"/>
 					<input type="hidden" value={{ff}} name="fname"/>
-                                </form>
-                                <form action ="http://p4gwnu.koreacentral.cloudapp.azure.com/pack_download" method = "POST"  style="float:right;margin:0;">
-                                        <input class="button" type="submit" value="Pack"/>
-					<input type="hidden" value={{ff}} name="fname"/>
-                                </form>
-                        </div>
-                </div>
-                <div class = "pp">
-                        <span>프로텍터를 선택하세요 </span>
-                        <br>
-                        <div  class = "ppp" style="margin: 5px;">
-                                <select name="protecter">
-                                        <option value="1" selected> VMProtector </option>
-                                        <option value="2" >Protector </option>
-                                        <option value="3">Protector </option>
-                                </select>
-				
-                                <form action ="http://p4gwnu.koreacentral.cloudapp.azure.com/protect_download" method = "POST" style="float:right;margin:0;">
-                                	<input class="button" type="submit" value="Protect"/>
-					<input type="hidden" value={{ff}} name="fname"/>
-                                </form>
-                        </div>
-                </div>
-                
-                <br>
-                <br>
-                <br>
-
-                <Div class="progress">
-                        <span>Packing | Unpacking | Protecting 진행상황 </span>
-                        <br>
-                        <div class="progress2" style="margin:5px;">
-                                <progress value="20" max="100" id="bar"></progress>
-                                <button class="button" onclick="jbFunc()">Click</button>
-                        </div>
-                </Div>
-        </div>
-        </body>
+				</form>
+			</div>
+		</div>
+		</div>
+	</body>
 </html>

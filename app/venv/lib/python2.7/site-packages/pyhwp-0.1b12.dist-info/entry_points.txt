@@ -1,0 +1,8 @@
+[console_scripts]
+hwp5html = hwp5.hwp5html:main
+hwp5odt = hwp5.hwp5odt:main
+hwp5proc = hwp5.proc:main
+hwp5spec = hwp5.binspec:main
+hwp5txt = hwp5.hwp5txt:main
+hwp5view = hwp5.hwp5view:main
+

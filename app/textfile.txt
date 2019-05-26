@@ -1,0 +1,142 @@
+DOS Header
+    Magic number:                    0x5a4d (MZ)
+    Bytes in last page:              80
+    Pages in file:                   2
+    Relocations:                     0
+    Size of header in paragraphs:    4
+    Minimum extra paragraphs:        15
+    Maximum extra paragraphs:        65535
+    Initial (relative) SS value:     0
+    Initial SP value:                0xb8
+    Initial IP value:                0
+    Initial (relative) CS value:     0
+    Address of relocation table:     0x40
+    Overlay number:                  0x1a
+    OEM identifier:                  0
+    OEM information:                 0
+    PE header offset:                0x100
+COFF/File header
+    Machine:                         0x14c IMAGE_FILE_MACHINE_I386
+    Number of sections:              5
+    Date/time stamp:                 -1741084869 (Mon, 05 Dec 2050 19:47:07 UTC)
+    Symbol Table offset:             0
+    Number of symbols:               0
+    Size of optional header:         0xe0
+    Characteristics:                 0x818e
+    Characteristics names
+                                         IMAGE_FILE_EXECUTABLE_IMAGE
+                                         IMAGE_FILE_LINE_NUMS_STRIPPED
+                                         IMAGE_FILE_LOCAL_SYMS_STRIPPED
+                                         IMAGE_FILE_BYTES_REVERSED_LO
+                                         IMAGE_FILE_32BIT_MACHINE
+                                         IMAGE_FILE_BYTES_REVERSED_HI
+Optional/Image header
+    Magic number:                    0x10b (PE32)
+    Linker major version:            2
+    Linker minor version:            25
+    Size of .text section:           0x200
+    Size of .data section:           0xa00
+    Size of .bss section:            0
+    Entrypoint:                      0x1000
+    Address of .text section:        0x1000
+    Address of .data section:        0x2000
+    ImageBase:                       0x400000
+    Alignment of sections:           0x1000
+    Alignment factor:                0x200
+    Major version of required OS:    1
+    Minor version of required OS:    0
+    Major version of image:          0
+    Minor version of image:          0
+    Major version of subsystem:      3
+    Minor version of subsystem:      10
+    Size of image:                   0x6000
+    Size of headers:                 0x400
+    Checksum:                        0
+    Subsystem required:              0x2 (IMAGE_SUBSYSTEM_WINDOWS_GUI)
+    DLL characteristics:             0
+    DLL characteristics names
+    Size of stack to reserve:        0x100000
+    Size of stack to commit:         0x2000
+    Size of heap space to reserve:   0x100000
+    Size of heap space to commit:    0x1000
+Data directories
+    Directory
+        IMAGE_DIRECTORY_ENTRY_IMPORT:    0x3000 (168 bytes)
+    Directory
+        IMAGE_DIRECTORY_ENTRY_RESOURCE:  0x5000 (1024 bytes)
+    Directory
+        IMAGE_DIRECTORY_ENTRY_BASERELOC: 0x4000 (32 bytes)
+Imported functions
+    Library
+        Name:                            KERNEL32.dll
+        Functions
+            Function
+                Name:                            GetDriveTypeA
+            Function
+                Name:                            ExitProcess
+    Library
+        Name:                            USER32.dll
+        Functions
+            Function
+                Name:                            MessageBoxA
+Sections
+    Section
+        Name:                            CODE
+        Virtual Address:                 0x1000
+        Physical Address:                0x1000
+        Size:                            0x200 (512 bytes)
+        Pointer To Data:                 0x600
+        Relocations:                     0
+        Characteristics:                 0x60000020
+        Characteristic Names
+                                             IMAGE_SCN_CNT_CODE
+                                             IMAGE_SCN_MEM_EXECUTE
+                                             IMAGE_SCN_MEM_READ
+    Section
+        Name:                            DATA
+        Virtual Address:                 0x2000
+        Physical Address:                0x1000
+        Size:                            0x200 (512 bytes)
+        Pointer To Data:                 0x800
+        Relocations:                     0
+        Characteristics:                 0xc0000040
+        Characteristic Names
+                                             IMAGE_SCN_CNT_INITIALIZED_DATA
+                                             IMAGE_SCN_MEM_READ
+                                             IMAGE_SCN_MEM_WRITE
+    Section
+        Name:                            .idata
+        Virtual Address:                 0x3000
+        Physical Address:                0x1000
+        Size:                            0x200 (512 bytes)
+        Pointer To Data:                 0xa00
+        Relocations:                     0
+        Characteristics:                 0xc0000040
+        Characteristic Names
+                                             IMAGE_SCN_CNT_INITIALIZED_DATA
+                                             IMAGE_SCN_MEM_READ
+                                             IMAGE_SCN_MEM_WRITE
+    Section
+        Name:                            .reloc
+        Virtual Address:                 0x4000
+        Physical Address:                0x1000
+        Size:                            0x200 (512 bytes)
+        Pointer To Data:                 0xc00
+        Relocations:                     0
+        Characteristics:                 0x50000040
+        Characteristic Names
+                                             IMAGE_SCN_CNT_INITIALIZED_DATA
+                                             IMAGE_SCN_MEM_SHARED
+                                             IMAGE_SCN_MEM_READ
+    Section
+        Name:                            .rsrc
+        Virtual Address:                 0x5000
+        Physical Address:                0x1000
+        Size:                            0x400 (1024 bytes)
+        Pointer To Data:                 0xe00
+        Relocations:                     0
+        Characteristics:                 0x50000040
+        Characteristic Names
+                                             IMAGE_SCN_CNT_INITIALIZED_DATA
+                                             IMAGE_SCN_MEM_SHARED
+                                             IMAGE_SCN_MEM_READ
