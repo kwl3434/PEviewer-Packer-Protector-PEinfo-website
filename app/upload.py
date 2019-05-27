@@ -122,11 +122,11 @@ def upload_file():
       #저장할 경로 + 파일명
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
-      #os.system('./peviewinfo ')
       #os.system('pehash -f html '+f.filename+'> ./templates/peview1.html ')
       #os.system('readpe -f html '+f.filename+'>> ./templates/peview1.html ')
       os.system('pepack -f html '+f.filename+'> ./templates/peinfo1.html ')
       os.system('pesec -f html '+f.filename+'>> ./templates/peinfo1.html ')
+      #if f=
       os.system('readpe -f html -h dos '+f.filename+'> ./templates/DOSHEADER.html ')
       #os.system(stubprogram)
       os.system('readpe -f html -h coff '+f.filename+'> ./templates/FILEHEADER.html ')
@@ -199,3 +199,4 @@ if __name__ == '__main__':
    app.run(threaded=True, host='0.0.0.0', port=80)
    
    
+
