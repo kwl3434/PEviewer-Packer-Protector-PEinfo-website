@@ -1,0 +1,4 @@
+[console_scripts]
+rst2html5 = rst2html5_:main
+rst2html5.py = rst2html5_:main
+
