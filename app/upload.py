@@ -20,28 +20,29 @@ from datetime import datetime
 ALLOWED_EXTENSIONS = set(['exe'])
 
 app = Flask(__name__)
-
+UPLOAD_FOLDER = './upload'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 #files = UploadSet('files',ALL)
-
 #app.config['UPLOADED_FILES_DEST'] = 'uploads'
 #configure_uploads(app, files)
+name=os.path.splitext(os.path.basename("/PEviewer-Packer-Protector-PEinfo-website/app/upload/*.exe"))[0]
 
 app.secret_key = 'dont tell anyone'
 main='main.html'
 pack='pack_protector'
 howto='howtouse.html'
 total='total.html'
-#Data='peview1.html'
 peinfo='peinfo'
 peview='peview'
 dosheader='DOSHEADER.html'
 fileheader='FILEHEADER.html'
-sectionheadrsrc='SECTIONHEADRSRC.html'
+#sectionheadrsrc='SECTIONHEADRSRC.html'
 sectionheadupx0='SECTIONHEADUPX0.html'
-sectionheadupx1='SECTIONHEADUPX1.html'
-sectionrsrc='SECTIONRSRC.html'
+#sectionheadupx1='SECTIONHEADUPX1.html'
+#sectionrsrc='SECTIONRSRC.html'
 sectionupx0='SECTIONUPX0.html'
-sectionupx1='SECTIONUPX1.html'
+#sectionupx1='SECTIONUPX1.html'
+stubprogram='STUBPROGRAM.html'
 
 jpg1='1.JPG'
 jpg2='2.JPG'
@@ -94,41 +95,42 @@ def dosheader():
 def fileheader():
 	return render_template('FILEHEADER.html')
 
-@app.route('/OPTIONALHEADER', methods = ['GET', 'POST'])
-def optionalheader():
-	return render_template('OPTIONALHEADER.html')
+#@app.route('/OPTIONALHEADER', methods = ['GET', 'POST'])
+#def optionalheader():
+#	return render_template('OPTIONALHEADER.html')
 
-@app.route('/SECTIONHEADRSRC', methods = ['GET', 'POST'])
-def sectionheadrsrc():
-	return render_template('SECTIONHEADRSRC.html')
+#@app.route('/SECTIONHEADRSRC', methods = ['GET', 'POST'])
+#def sectionheadrsrc():
+#	return render_template('SECTIONHEADRSRC.html')
 
-@app.route('/SECTIONHEADUPX0', methods = ['GET', 'POST'])
+@app.route('/SECTIONHEADUPX0')
 def sectionheadupx0():
 	return render_template('SECTIONHEADUPX0.html')
 
-@app.route('/SECTIONHEADUPX1', methods = ['GET','POST'])
-def sectionheadupx1():
-	return render_template('SECTIONHEADUPX1.html')
+#@app.route('/SECTIONHEADUPX1', methods = ['GET','POST'])
+#def sectionheadupx1():
+	#return render_template('SECTIONHEADUPX1.html')
 
 
-@app.route('/SECTIONUPX0', methods = ['GET','POST'])
+@app.route('/SECTIONUPX0')
 def sectionupx0():
 	return render_template('SECTIONUPX0.html')
 
-@app.route('/SECTIONUPX1')
-def sectionupx1():
-	return render_template('SECTIONUPX1.html')
+@app.route('/STUBPROGRAM')
+def stubprogram():
+	return render_template('STUBPROGRAM.html')
 
-@app.route('/SECTIONRSRC', methods = ['GET','POST'])
-def sectionrsrc():
-	return render_template('SECTIONRSRC.html')
+#@app.route('/SECTIONUPX1')
+#def sectionupx1():
+	#return render_template('SECTIONUPX1.html')
+
+#@app.route('/SECTIONRSRC', methods = ['GET','POST'])
+#def sectionrsrc():
+	#return render_template('SECTIONRSRC.html')
 
 
 @app.route('/pack_protector', methods = ['GET','POST'])
 def render_file():
-    message = "Warning : Please upload the exe file only. korean file name (X)".encode("utf-8", "ignore")
-    flash(message) 
-#flash 이용 업로드 경고문 처리
     return render_template('pack_protector.html',ff="Upload File..")
 
 #파일 업로드 처리
@@ -137,23 +139,28 @@ def upload_file():
    #error = None
    if request.method == 'POST':
       f = request.files['file']
+      
       #저장할 경로 + 파일명
 #try:
+   if f.filename == '':
+      flash('No file selected for uploading')
+      print(name)
+      return render_template('pack_protector.html',ff="Upload File..")
    if f and allowed_file(f.filename):
-      #flash('Upload Successfully!') 
-      f.save(secure_filename(f.filename)) 
+      #flash('Upload Successfully!')
+      f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
-      os.system('pepack -f html '+f.filename+'> ./templates/peinfo1.html ')
-      os.system('pesec -f html '+f.filename+'>> ./templates/peinfo1.html ')
-      os.system('readpe -f html -h dos '+f.filename+'> ./templates/DOSHEADER.html ')
-      os.system('readpe -f html -h coff '+f.filename+'> ./templates/FILEHEADER.html ')
-      os.system('readpe -f html -h optional '+f.filename+'>> ./templates/FILEHEADER.html ')
-      os.system('readpe -f html -S UPX0 '+f.filename+'> ./templates/SECTIONHEADUPX0.html ')
-      os.system('readpe -f html -S UPX1 '+f.filename+'> ./templates/SECTIONHEADUPX1.html ')
-      os.system('readpe -f html -S .rsrc '+f.filename+'> ./templates/SECTIONHEADRSRC.html ')
-      os.system('pehash -f html -s UPX0 '+f.filename+'> ./templates/SECTIONUPX0.html ')
-      os.system('pehash -f html -s UPX1 '+f.filename+'> ./templates/SECTIONUPX1.html ')
-      os.system('pehash -f html -s .rsrc '+f.filename+'> ./templates/SECTIONRSRC.html ')  
+
+      os.system('pepack -f html '+f.filename+'> ./templates/'+f.filename+'peinfo1.html ')
+      os.system('pesec -f html '+f.filename+'>> ./templates/'+f.filename+'peinfo1.html ')
+      os.system('readpe -f html -h dos '+f.filename+'> ./templates/'+f.filename+'DOSHEADER.html ')
+      os.system('readpe -f html -h coff '+f.filename+'> ./templates/'+f.filename+'FILEHEADER.html ')
+      os.system('readpe -f html -h optional '+f.filename+'>> ./templates/'+f.filename+'FILEHEADER.html ')
+     #os.system('pestr -o '+f.filename+'> ./stubprogram.txt ')
+     #os.system('rst2html5 ./stubprogram.txt > ./templates/STUBPROGRAM.html ')
+      os.system('readpe -f html -S UPX0 '+f.filename+'> ./templates/'+f.filename+'SECTIONHEADUPX0.html ')
+      os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTIONUPX0.html ')
+
       flash("Upload and Virus check complete!")
       TXT = open("/root/TorF.txt",'r');
       line = TXT.readline()
@@ -162,44 +169,46 @@ def upload_file():
       	return render_template('pack_protector.html',ff=f.filename)
       else:
         error = 'Please exe file upload!'
-	os.system('rm '+f.filename);
-	return "Virus detected" 
-    
+        flash(error)
+        return render_template('pack_protector.html',ff="Upload File..")
+
 @app.route('/pack_download', methods = ['GET', 'POST'])
 def pack_download_file():
    if request.method == 'POST':
 	f=request.form['fname']
-	if f=="Upload File..":
-		return "Please Upload File first"
+	if f=="Upload":
+                flash("Please Upload File first")
+                return render_template('pack_protector.html',ff="Upload File..")
 	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
 		return "Warning 112"
 	else:
   		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
         	os.system('upx '+f)
 	        os.system('7z a '+f+'.7z '+f)
-                flash("Pack and download complete!")
         	return send_file(path,as_attachment=True)
 
 @app.route('/unpack_download', methods = ['GET', 'POST'])
 def unpack_download_file():
    if request.method == 'POST':
 	f=request.form['fname']
-	if f=="Upload File..":
-		return "Please Upload File first"
+	if f=="Upload":
+                flash("Please Upload File first")
+                return render_template('pack_protector.html',ff="Upload File..")
 	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
 		return "Warning 112"
         else:
         	path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
         	os.system('upx -d '+f)
         	os.system('7z a '+f+'.7z '+f)
-        	return send_file(path,as_attachment=True)
+           	return send_file(path,as_attachment=True)
 
 @app.route('/protect_download', methods = ['GET', 'POST'])
 def protect_download_file():
    if request.method == 'POST':
 	f=request.form['fname']
-	if f=="Upload File..":
-		return "Please Upload File first"
+	if f=="Upload":
+                flash("Please Upload File first")
+                return render_template('pack_protector.html',ff="Upload File..")
 	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
 		return "Warning 112"
 	else:
@@ -208,14 +217,10 @@ def protect_download_file():
         	os.system('./vmprotect_con '+f)
         	os.system('7z a '+ f_list[0] + '.vmp.7z '+ f_list[0] + ".vmp.exe")
   		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+ f_list[0] + ".vmp.7z";
-                #print(path);
-                #print(f_list[0]);
-        	return send_file(path,as_attachment=True)
+                return send_file(path,as_attachment=True)
 
 if __name__ == '__main__':
     #서버 실행
    app.config['TEMPLATES_AUTO_RELOAD'] = True
    app.run(threaded=True, host='0.0.0.0', port=80)
-   
-   
 

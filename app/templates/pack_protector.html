@@ -92,37 +92,6 @@
 	}
 
 		</style>
-		<script>
-			function jbFunc() {
-				document.getElementById( 'bar' ).value = '80';
-			}
-
-function FileCheck(obj) {
-	var file = obj.upfile.value;
-	var FileFilter = /\.(exe|exe)$/i
-	var extArray = new Array(".exe")
-	var bSubmitCheck = false;
-
-	if (obj.value == "") /* 파일이 있는지 없는지 체크 */
-	{ alert("파일을 선택해주세요.");
-		return;}
-
-	if(obj.upfile.value.match(FileFilter)) /* 확장자명이 exe인지 체크 */
-	{bSubmitChecl = true;}
-
-	if(bSubmitCheck)
-	{return;}
-
-	if(bSubmitCheck)
-	{return;}
-	else
-	{alert(".exe 확장자만 업로드 가능합니다")}
-
-	setTimeout(window.opener.reload(),2000);
-}
-
-
-		</script>
 	</head>
 
 
@@ -144,26 +113,19 @@ function FileCheck(obj) {
 			<div class="ppp" style="margin:5px;">
 				<form class="upload" id="upload" action="http://p4gwnu.koreacentral.cloudapp.azure.com/upload" method = "POST" enctype = "multipart/form-data">
 					<input class="button" type = "file" name = "file" />
-					<input onclick="$('#loading').show();" class="button" type = "submit" id = "uploadB" />
-					<span>{{ff}}</span>
+		<!--건들면안됨-->	<input onclick="$('#loading').show();" class="button" type = "submit" id = "uploadB" />
+		<!--건들면안됨-->	<span>{{ff}}</span>
 			<!--	{% if error %}
     				<p class=error><strong>Error:</strong> {{ error }}
-  				{% endif %} -->
+				{% endif %}  -->
 				</form>
 			</div>
 		</Div>
 		<br>
 		<br>
 		<Div class="upload">
-		<!--	<span>업로드 진행도 </span>
-			<br>
-			<div class="ppp" style="height:100px; margin:5px;">
-				<div style="height:60px"> -->
-					<div id="loading" style="display:none;"><img src="{{ url_for( 'static', filename='images/loading.gif') }}" alt="" />Loading!
-					</div>
-			<!--	</div>
-				<span>Loding bar</span>
-			</div>-->
+	<!--건들면안됨--><div id="loading" style="display:none;"><img src="{{ url_for( 'static', filename='images/loading.gif') }}" alt="" />Loading!
+			</div>
 		</Div>
 		<br><br>
 		<Div class = "oo">
@@ -173,15 +135,14 @@ function FileCheck(obj) {
 				<select name="packer">
 					<option value="1" selected>UPXpacker</option>
 					<option value="2" >packer2</option>
-					<option value="3">packer3</option>
 				</select>
 				<form id="unpack" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/unpack_download" method = "POST" style="float:right;margin:0;">
 					<input class="button" type="submit" value="UnPack" id="unpackB"/>
-					<input type="hidden" value={{ff}} name="fname" />
+			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname" />
 				</form>
 				<form id="pack" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/pack_download" method = "POST"  style="float:right;margin:0;">
 					<input class="button" type="submit" value="Pack" id="packB"/>
-					<input type="hidden" value={{ff}} name="fname"/>
+			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname" />
 				</form>
 			</div>
 		</Div>
@@ -191,13 +152,11 @@ function FileCheck(obj) {
 			<div  class = "iii" style="margin: 5px;">
 				<select name="protecter">
 					<option value="1" selected> VMProtector </option>
-					<option value="2" >Protector </option>
-					<option value="3">Protector </option>
 				</select>
 
 				<form id="protect" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/protect_download" method = "POST" style="float:right;margin:0;">
 					<input class="button" type="submit" value="Protect" id="protectB"/>
-					<input type="hidden" value={{ff}} name="fname" id = "protectbutton"/>
+			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname"/>
 				</form>
 			</div>
 			</Div>
