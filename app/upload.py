@@ -25,7 +25,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 #files = UploadSet('files',ALL)
 #app.config['UPLOADED_FILES_DEST'] = 'uploads'
 #configure_uploads(app, files)
-name=os.path.splitext(os.path.basename("/PEviewer-Packer-Protector-PEinfo-website/app/%s", f.filename))[0]
+#name=os.path.splitext(os.path.basename("/PEviewer-Packer-Protector-PEinfo-website/app/%s", f.filename))[0]
 
 app.secret_key = 'dont tell anyone'
 main='main.html'
@@ -139,6 +139,7 @@ def upload_file():
    #error = None
    if request.method == 'POST':
       f = request.files['file']
+      name=os.path.splitext(os.path.basename("/PEviewer-Packer-Protector-PEinfo-website/app/%s", f))[0]
       
       #저장할 경로 + 파일명
 #try:
