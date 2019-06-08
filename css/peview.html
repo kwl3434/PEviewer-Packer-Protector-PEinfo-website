@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+        <style>
+
+                span{
+                        border-radius: 5px;
+                        padding: 5px;
+                        background-color:  #e8c5db;
+                        color: #5e1b46;
+                        font-size: 25px;
+                        font-weight: bold;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        border: 2px solid #8e7685;
+                }
+
+                hr{
+                        border: solid 1px  #5e1b46
+                }
+                #menubar {
+        		text-align: center;
+        	}
+        	#menubar ul a {
+        		margin : 1px;
+        		width : 70%;
+        		height : 30%;
+                        background : #d6a7cb;
+                        border-radius: 5px;
+                        border: 1px solid #411344;
+                        display : inline-block;
+                        list-style-type : none;
+                        padding : 5px 15px;
+        		font-family: 'Roboto Condensed', sans-serif;
+        		font-size: 20px;
+        		font-weight: bold;
+        	  	text-decoration : none;
+                	color : #411344;
+        	}
+                #menubar ul a:hover{
+                        margin : 1px;
+                        width : 70%;
+                        height : 30%;
+                        display : inline-block;
+                        list-style-type : none;
+                        padding : 5px 15px;
+                        border: 1px solid #5e1b46;
+                        background-color: #411344;
+                        color: #e8c5db;
+                }
+
+        </style>
+</head>
+<body style="text-align:center;">
+	<span>PEVIEW</span>
+        <br>
+        <br>
+        <div style="float: left; width: 29%;">
+                <nav id="menubar">
+        		<ul onclick="context.location.href='/DOSHEADER'"><a href="#">IMAGE_DOS_HEADER</a></ul>
+         		<ul onclick="context.location.href='/STUBPROGRAM'"><a href="#">STUB_PROGRAM</a></ul>
+        		<ul onclick="context.location.href='/FILEHEADER'"><a href="#">IMAGE_NT_HEADERS</a></ul>
+                        <ul onclick="context.location.href='/SECTIONHEADUPX0'"><a href="#">IMAGE_SECTION_HEADER</a></ul>
+                        <ul onclick="context.location.href='/SECTIONUPX0'"><a href="#">SECTION</a></ul>
+        	<!--	<ul onclick="context.location.href='/SECTIONUPX1'"><a href="#">SECTION UPX1</a></ul> -->
+        	<!--	<ul onclick="context.location.href='/SECTIONRSRC'"><a href="#">SECTION .rsrc</a></ul> -->
+        	</nav>
+        </div>
+        <div style="border: 2px solid #5e1b46; float: left; width: 68%; ">
+                <iframe name = "context" width="100%" height="800px" frameborder=none marginheight=20 scrolling=yes></iframe>
+        </div>
+
+</body>
+</html>

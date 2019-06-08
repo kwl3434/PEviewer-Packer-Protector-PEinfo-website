@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<title>Packer And Protecter</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+
+		<style>
+		html, body { height:100%; overflow:hidden }
+		.upload{
+			display: inline-block;
+			text-align: center;
+			clear: both;
+			width: 96%;
+			padding: 10px
+		}
+		.loadingbar{
+			display: inline-block;
+			text-align: center;
+			clear: both;
+			width: 96%;
+			padding: 20px;
+		}
+		.protector {
+			display: inline-block;
+			text-align: center;
+			clear: both;
+			width: 46%;
+			margin : 5px;
+		}
+		.packer {
+			display: inline-block;
+			text-align: center;
+			clear: both;
+			width: 46%;
+			margin : 5px;
+		}
+		.deprotect{
+			border-radius: 5px;
+			display: inline-block;
+			text-align: center;
+			border: 2px solid #625a7a;
+			width: 100%;
+			margin-left: 10px;
+			margin-right: 10px;
+			background-color: #e9e2ff;
+		}
+		.depack{
+			border-radius: 5px;
+			display: inline-block;
+			text-align: center;
+			border: 2px solid #625a7a;
+			width: 100%;
+			margin-left: 10px;
+			margin-right: 10px;
+			background-color: #e9e2ff;
+		}
+		.deupload{
+			border-radius: 5px;
+			display: inline-block;
+			text-align: center;
+			border: 2px solid #625a7a;
+			width: 100%;
+			margin-left: 10px;
+			margin-right: 10px;
+			background-color: #e9e2ff;
+		}
+		.progress {
+			border-radius: 5px;
+			display: inline-block;
+			width: 100%;
+			height: 5vh;
+			margin-left: 10px;
+			margin-right: 10px;
+			border: 2px solid #00265b;
+		}
+		span{
+			display: inline-block;
+			color: #02073a;
+			font-size: 20px;
+			font-weight: bold;
+			font-family: 'Sunflower', sans-serif;
+			padding: 6px;
+		}
+		.button{
+			margin: 2px;
+			border-radius: 5px;
+			border: 2px solid #584f72;
+			background-color: #9d8fc6;
+			color: #02073a;
+			font-size: 18px;
+			font-weight: bold;
+			font-family: 'Sunflower', sans-serif;
+		}
+		</style>
+	</head>
+
+	<body style="text-align:center;">
+		<Div class="upload">
+			<span> 파일 선택 버튼을 누르고 파일을 선택 후 제출 버튼을 누르세요.</span>
+			<br>
+			<div class="deupload" style="margin:5px;">
+				<form class="upload" id="upload" action="http://p4gwnu.koreacentral.cloudapp.azure.com/upload" method = "POST" enctype = "multipart/form-data">
+					<input class="button" type = "file" name = "file" />
+		<!--건들면안됨-->	<input onclick="$('#loading').show();" class="button" type = "submit" id = "uploadB" />
+		<!--건들면안됨-->	<span>{{ff}}</span>
+
+	{% with messages = get_flashed_messages() %}
+  	{% if messages %}
+    	{% for message in messages %}
+      	<script>
+	alert('{{ message }}');
+	</script>
+    	{% endfor %}
+  	{% endif %}
+	{% endwith %}
+
+				</form>
+			</div>
+		</Div>
+		<br>
+		<br>
+		<Div class="loadingbar">
+	<!--건들면안됨--><div id="loading" style="display:none;"><img src="{{ url_for( 'static', filename='images/loading.gif') }}" alt="" />Loading!
+			</div>
+		</Div>
+
+		<Div class = "packer">
+			<span>팩커를 선택하세요</span>
+			<br>
+			<div  class = "depack" style="margin:5px;">
+				<select name="packer">
+					<option value="1" selected>UPXpacker</option>
+					<option value="2" >packer2</option>
+				</select>
+				<form id="unpack" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/unpack_download" method = "POST" style="float:right;margin:0;">
+					<input class="button" type="submit" value="UnPack" id="unpackB"/>
+			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname" />
+				</form>
+				<form id="pack" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/pack_download" method = "POST"  style="float:right;margin:0;">
+					<input class="button" type="submit" value="Pack" id="packB"/>
+			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname" />
+				</form>
+			</div>
+		</Div>
+		<div class = "protector">
+			<span>프로텍터를 선택하세요 </span>
+			<div  class = "deprotect" style="margin: 5px;">
+				<select name="protecter">
+					<option value="1" selected> VMProtector </option>
+				</select>
+
+				<form id="protect" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/protect_download" method = "POST" style="float:right;margin:0;">
+					<input class="button" type="submit" value="Protect" id="protectB"/>
+			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname"/>
+				</form>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
