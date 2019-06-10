@@ -3,59 +3,76 @@
 <head>
         <meta charset="utf-8">
         <title></title>
-        <link href="https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Pen+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
         <style>
 
                 span{
-                        background-color:  #BACEB0;
-                        color: #263835;
-                        font-size: 20px;
+                        border-radius: 5px;
+                        padding: 5px;
+                        background-color:  #d6a7cb;
+                        color: #5e1b46;
+                        font-size: 25px;
                         font-weight: bold;
-                        font-family: 'Hi Melody', cursive;
-                        padding: 6px;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        border: 2px solid #5e1b46;
                 }
 
                 hr{
-                        border: solid 2px  #BACEB0;
+                        border: solid 1px  #5e1b46
                 }
                 #menubar {
         		text-align: center;
         	}
-        	#menubar ul {
+        	#menubar ul a {
         		margin : 1px;
-        		width : 70%;
-        		height : 30%;
-
-                        background : #BACEB0;
+        		width : 200px;
+                        background : #e8c5db;
+                        border-radius: 5px;
+                        border: 1px solid #411344;
                         display : inline-block;
                         list-style-type : none;
                         padding : 5px 15px;
-        	}
-        	#menubar ul a {
-        		color : #38514d;
-        		font-family: 'Hi Melody', cursive;
+        		font-family: 'Roboto Condensed', sans-serif;
         		font-size: 20px;
         		font-weight: bold;
         	  	text-decoration : none;
+                	color : #411344;
         	}
+                #menubar ul a:hover{
+                        margin : 1px;
+                        width : 200px;
+                        display : inline-block;
+                        list-style-type : none;
+                        padding : 5px 15px;
+                        border: 1px solid #5e1b46;
+                        background-color: #411344;
+                        color: #e8c5db;
+                }
 
         </style>
 </head>
 <body style="text-align:center;">
-	               <span>PEVIEW</span>
-        <hr>
+	<script>
+		function DOS(){
+			window.location.href=window.parent.frames["pack"].document.unpack.fname.value+'/DOSHEADER';
+		}
+	</script>
+	<span>PEVIEW</span>
+        <br>
+        <br>
         <div style="float: left; width: 29%;">
-        <nav id="menubar">
-		<ul onclick="context.location.href='/DOSHEADER'"><a href="#">IMAGE_DOS_HEADER</a></ul>
- 		<ul onclick="context.location.href='/STUBPROGRAM'"><a href="#">STUB_PROGRAM</a></ul>
-		<ul onclick="context.location.href='/FILEHEADER'"><a href="#">IMAGE_NT_HEADERS</a></ul>
-                <ul onclick="context.location.href='/SECTIONHEADUPX0'"><a href="#">IMAGE_SECTION_HEADER</a></ul>
-                <ul onclick="context.location.href='/SECTIONUPX0'"><a href="#">SECTION</a></ul>
-	<!--	<ul onclick="context.location.href='/SECTIONUPX1'"><a href="#">SECTION UPX1</a></ul> -->
-	<!--	<ul onclick="context.location.href='/SECTIONRSRC'"><a href="#">SECTION .rsrc</a></ul> -->
-	</nav>
+                <nav id="menubar">
+        		<ul onclick="javascript:DOS()"><a href="#">IMAGE_DOS_HEADER</a></ul>
+         		<ul onclick="context.location.href='/STUBPROGRAM'"><a href="#">STUB_PROGRAM</a></ul>
+        		<ul onclick="context.location.href='/FILEHEADER'"><a href="#">IMAGE_NT_HEADERS</a></ul>
+                        <ul onclick="context.location.href='/SECTIONHEADUPX0'"><a href="#">IMAGE_SECTION_HEADER</a></ul>
+                        <ul onclick="context.location.href='/SECTIONUPX0'"><a href="#">SECTION</a></ul>
+        	<!--	<ul onclick="context.location.href='/SECTIONUPX1'"><a href="#">SECTION UPX1</a></ul> -->
+        	<!--	<ul onclick="context.location.href='/SECTIONRSRC'"><a href="#">SECTION .rsrc</a></ul> -->
+        	</nav>
         </div>
-        <div style="border-left: 5px solid #BACEB0; float: left; width: 68%; ">
+        <div style="border: 2px solid #5e1b46; float: left; width: 68%; padding:5px; ">
                 <iframe name = "context" width="100%" height="800px" frameborder=none marginheight=20 scrolling=yes></iframe>
         </div>
 

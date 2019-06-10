@@ -1,0 +1,44 @@
+0x50	This program must be run under Win32
+0x1f8	CODE
+0x21f	`DATA
+0x248	.idata
+0x270	.reloc
+0x297	P.rsrc
+0x621	FFH;
+0x62a	jh5
+0x62f	h; @
+0x63f	jh^
+0x644	hd @
+0x656	%P0@
+0x65c	%T0@
+0x662	%\0@
+0x800	abex' 1st crackme
+0x812	Make me think your HD is a CD-Rom.
+0x835	Error
+0x83b	Nah... This is not a CD-ROM Drive!
+0x85e	YEAH!
+0x864	Ok, I really think that your HD is a CD-ROM! :p
+0xa64	KERNEL32.dll
+0xa71	USER32.dll
+0xa7e	GetDriveTypeA
+0xa8e	ExitProcess
+0xa9c	MessageBoxA
+0xc0d	0+000@0E0W0]0c0
+0xe5e	VS_VERSION_INFO
+0xeba	StringFileInfo
+0xede	040904E4
+0xef6	CompanyName
+0xf10	learn2crack
+0xf32	FileDescription
+0xf54	abex' 1st crackme
+0xf7e	FileVersion
+0xf98	1.00
+0xfaa	InternalName
+0xfc4	abex' 1std crackme
+0xff2	LegalCopyright
+0x1010	Copyright 
+0x1026	 abex/learn2crack 1999
+0x105e	OriginalFilename
+0x1080	abexcrackme1.exe
+0x10aa	VarFileInfo
+0x10ca	Translation
