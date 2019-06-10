@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 import subprocess
-import os
+import os, walk
 import sys
 import commands
 
@@ -8,8 +8,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-
-from flask import Flask, render_template, request, make_response, redirect, url_for, flash
+import threading
+from flask import Flask, render_template, request, make_response, redirect, url_for, flash, Response
 #from flaskext.uploads import UploadSet,configure_uploads,ALL
 from flask import send_file
 from werkzeug import secure_filename
@@ -18,14 +18,27 @@ from functools import wraps, update_wrapper
 from datetime import datetime
 
 ALLOWED_EXTENSIONS = set(['exe'])
-
 app = Flask(__name__)
-UPLOAD_FOLDER = './upload'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-#files = UploadSet('files',ALL)
+
+#extra_dirs = ['/PEviewer-Packer-Protector-PEinfo-website/app/static','/PEviewer-Packer-Protector-PEinfo-website/app/templates']
+#extra_files = extra_dirs[:]
+#for extra_dir in extra_dirs:
+    #for dirname, dirs, files in os.walk(extra_dir):
+        #for filename in files:
+            #filename = os.path.join(dirname, filename)
+            #if os.path.isfile(filename):
+		#extra_files.append(filename)
+#my_loader = jinja2.ChoiceLoader([
+#	app.jinja_loader,
+#	jinja2.FileSystemLoader(['/PEviewer-Packer-Protector-PEinfo-website/app/templates' ]), ])
+#app.jinja_loader = my_loader
+#username = f.filename
+#render_template('templask/%s/DOSHEADER.html' %username)
+
+#UPLOAD_FOLDER = '/PEviewer-Packer-Protector-PEinfo-website/app'
+#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 #app.config['UPLOADED_FILES_DEST'] = 'uploads'
 #configure_uploads(app, files)
-#name=os.path.splitext(os.path.basename("/PEviewer-Packer-Protector-PEinfo-website/app/%s", f.filename))[0]
 
 app.secret_key = 'dont tell anyone'
 main='main.html'
@@ -36,12 +49,8 @@ peinfo='peinfo'
 peview='peview'
 dosheader='DOSHEADER.html'
 fileheader='FILEHEADER.html'
-#sectionheadrsrc='SECTIONHEADRSRC.html'
 sectionheadupx0='SECTIONHEADUPX0.html'
-#sectionheadupx1='SECTIONHEADUPX1.html'
-#sectionrsrc='SECTIONRSRC.html'
 sectionupx0='SECTIONUPX0.html'
-#sectionupx1='SECTIONUPX1.html'
 stubprogram='STUBPROGRAM.html'
 
 jpg1='1.JPG'
@@ -75,59 +84,42 @@ def howtouse():
 def loading():
     return render_template('loading.html')
 
-@app.route('/peinfo')
+@app.route('/peinfo', methods = ['GET', 'POST'])
 def peinfo_e():
-    return render_template('peinfo.html')
+   # with open('/PEviewer-Packer-Protector-PEinfo-website/app/static/peinfo.txt', 'r') as d:
+   #      data = d.read()
+    return render_template('peinfo.html') #data=data
 
 @app.route('/peview', methods = ['GET','POST'])
 def peview_e():
    return render_template('peview.html')
-#return Response(f.read(), mimetype='text/plain')
-#data='peviewer'
-#def peview_ee(Data):
-#return render_template('peview.html',data=Data)
 
-@app.route('/DOSHEADER')
-def dosheader():
-	return render_template('DOSHEADER.html')
-
+@app.route('/DOSHEADER/<f>')
+def dosheader(f):
+	#with open('/PEviewer-Packer-Protector-PEinfo-website/app/static/dosheader.txt', 'r') as f:
+	#data = f.read()
+	return render_template(f+'DOSHEADER.html')
 @app.route('/FILEHEADER')
 def fileheader():
-	return render_template('FILEHEADER.html')
-
-#@app.route('/OPTIONALHEADER', methods = ['GET', 'POST'])
-#def optionalheader():
-#	return render_template('OPTIONALHEADER.html')
-
-#@app.route('/SECTIONHEADRSRC', methods = ['GET', 'POST'])
-#def sectionheadrsrc():
-#	return render_template('SECTIONHEADRSRC.html')
+	f=request.form['fname']
+	return render_template(f+'FILEHEADER.html')
 
 @app.route('/SECTIONHEADUPX0')
 def sectionheadupx0():
-	return render_template('SECTIONHEADUPX0.html')
-
-#@app.route('/SECTIONHEADUPX1', methods = ['GET','POST'])
-#def sectionheadupx1():
-	#return render_template('SECTIONHEADUPX1.html')
-
+	f=request.form['fname']
+	return render_template(f+'SECTIONHEADUPX0.html')
 
 @app.route('/SECTIONUPX0')
-def sectionupx0():
-	return render_template('SECTIONUPX0.html')
+def sectionupx0(filename):
+	#f=request.form['fname']
+	return render_template('%s/SECTIONUPX0.html' %filename)
 
-@app.route('/STUBPROGRAM')
+@app.route('/STUBPROGRAM', methods = ['GET', 'POST'])
 def stubprogram():
-	return render_template('STUBPROGRAM.html')
-
-#@app.route('/SECTIONUPX1')
-#def sectionupx1():
-	#return render_template('SECTIONUPX1.html')
-
-#@app.route('/SECTIONRSRC', methods = ['GET','POST'])
-#def sectionrsrc():
-	#return render_template('SECTIONRSRC.html')
-
+	f=request.form['fname']
+	with open('/PEviewer-Packer-Protector-PEinfo-website/app/static/stubprogram.txt', 'r') as f:
+	     content = f.read()
+	return render_template(f+'STUBPROGRAM.html', content=content)
 
 @app.route('/pack_protector', methods = ['GET','POST'])
 def render_file():
@@ -139,26 +131,22 @@ def upload_file():
    #error = None
    if request.method == 'POST':
       f = request.files['file']
-      name=os.path.splitext(os.path.basename("/PEviewer-Packer-Protector-PEinfo-website/app/%s", f))[0]
-      
       #저장할 경로 + 파일명
-#try:
    if f.filename == '':
       flash('No file selected for uploading')
-      print(name)
       return render_template('pack_protector.html',ff="Upload File..")
    if f and allowed_file(f.filename):
-      #flash('Upload Successfully!')
       f.save(secure_filename(f.filename))
       os.system('./viruscheck '+f.filename)
-
-      os.system('pepack -f html '+f.filename+'> ./templates/'+f.filename+'peinfo1.html ')
-      os.system('pesec -f html '+f.filename+'>> ./templates/'+f.filename+'peinfo1.html ')
+      dir_path = "/PEviewer-Packer-Protector-PEinfo-website/app/templates"
+      dir_name = f.filename
+      #os.mkdir(dir_path+"/"+dir_name+"/")
+      os.system('pepack -f html '+f.filename+'> ./templates/peinfo1.html ')
+      os.system('pesec -f html '+f.filename+'>> ./templates/peinfo1.html ')
       os.system('readpe -f html -h dos '+f.filename+'> ./templates/'+f.filename+'DOSHEADER.html ')
       os.system('readpe -f html -h coff '+f.filename+'> ./templates/'+f.filename+'FILEHEADER.html ')
       os.system('readpe -f html -h optional '+f.filename+'>> ./templates/'+f.filename+'FILEHEADER.html ')
-     #os.system('pestr -o '+f.filename+'> ./stubprogram.txt ')
-     #os.system('rst2html5 ./stubprogram.txt > ./templates/STUBPROGRAM.html ')
+      os.system('pestr -o '+f.filename+'> ./static/'+f.filename+'stubprogram.txt ')
       os.system('readpe -f html -S UPX0 '+f.filename+'> ./templates/'+f.filename+'SECTIONHEADUPX0.html ')
       os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTIONUPX0.html ')
 
@@ -171,6 +159,9 @@ def upload_file():
       else:
         error = 'Please exe file upload!'
         flash(error)
+        return render_template('pack_protector.html',ff="Upload File..")
+   else:
+        flash('Please upload .exe file')
         return render_template('pack_protector.html',ff="Upload File..")
 
 @app.route('/pack_download', methods = ['GET', 'POST'])
@@ -223,5 +214,5 @@ def protect_download_file():
 if __name__ == '__main__':
     #서버 실행
    app.config['TEMPLATES_AUTO_RELOAD'] = True
-   app.run(threaded=True, host='0.0.0.0', port=80)
+   app.run(threaded=True, host='0.0.0.0', port=80) #extra_files=extra_files
 

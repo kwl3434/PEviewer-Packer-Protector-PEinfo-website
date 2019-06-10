@@ -1,0 +1,3 @@
+[console_scripts]
+walk = walk.walk:main
+

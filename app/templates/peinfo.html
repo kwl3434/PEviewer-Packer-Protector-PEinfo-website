@@ -3,23 +3,33 @@
 <head>
         <meta charset="utf-8">
         <title></title>
-        <link href="https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Pen+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300|Roboto+Condensed|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
         <style>
-                a{
-                        background-color:  #BACEB0;
-                        color: #263835;
-                        font-size: 20px;
-                        font-weight: bold;
-                        font-family: 'Hi Melody', cursive;
-                        padding: 6px;
-                }
+        html, body { height:100%; overflow:hidden }
+        div{
+                margin-top: 10px;
+        }
+        a{
+                border-radius: 5px;
+                padding: 5px;
+                background-color:  #c1d1ff;
+                color: #0d193a;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: 'Roboto Condensed', sans-serif;
+        }
+
         </style>
 </head>
 
 <body style="text-align:center;">
         <form action = "http://p4gwnu.koreacentral.cloudapp.azure.com/peinfo" methods = "POST" enctype = "multipart/form-data">
-                <a href="/peinfo">PEINFO</a>
+        <!--<ul onclick="context.location.href='/peinfo'"><a href="#">PEINFO</a></ul> -->
+        <div>
+		<a href="/peinfo">PEINFO</a>
                 {% include 'peinfo1.html' %}
+
+        </div>
         </form>
 </body>
 </html>
