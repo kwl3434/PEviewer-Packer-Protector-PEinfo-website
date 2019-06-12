@@ -19,33 +19,14 @@ from datetime import datetime
 
 ALLOWED_EXTENSIONS = set(['exe'])
 app = Flask(__name__)
-
-#extra_dirs = ['/PEviewer-Packer-Protector-PEinfo-website/app/static','/PEviewer-Packer-Protector-PEinfo-website/app/templates']
-#extra_files = extra_dirs[:]
-#for extra_dir in extra_dirs:
-    #for dirname, dirs, files in os.walk(extra_dir):
-        #for filename in files:
-            #filename = os.path.join(dirname, filename)
-            #if os.path.isfile(filename):
-		#extra_files.append(filename)
-#my_loader = jinja2.ChoiceLoader([
-#	app.jinja_loader,
-#	jinja2.FileSystemLoader(['/PEviewer-Packer-Protector-PEinfo-website/app/templates' ]), ])
-#app.jinja_loader = my_loader
-#username = f.filename
-#render_template('templask/%s/DOSHEADER.html' %username)
-
-#UPLOAD_FOLDER = '/PEviewer-Packer-Protector-PEinfo-website/app'
-#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-#app.config['UPLOADED_FILES_DEST'] = 'uploads'
-#configure_uploads(app, files)
+#32Mb limit
 
 app.secret_key = 'dont tell anyone'
 main='main.html'
 pack='pack_protector'
 howto='howtouse.html'
 total='total.html'
-peinfo='peinfo'
+PEINFO='PEINFO'
 peview='peview'
 dosheader='DOSHEADER.html'
 fileheader='FILEHEADER.html'
@@ -70,7 +51,7 @@ def main():
 
 @app.route('/total')
 def total():
-    return render_template('total.html',src1=pack,src2=peinfo, src3=peview)
+    return render_template('total.html',src1=pack,src2=PEINFO, src3=peview)
 
 @app.route('/home')
 def home():
@@ -84,11 +65,16 @@ def howtouse():
 def loading():
     return render_template('loading.html')
 
-@app.route('/peinfo', methods = ['GET', 'POST'])
-def peinfo_e():
-   # with open('/PEviewer-Packer-Protector-PEinfo-website/app/static/peinfo.txt', 'r') as d:
-   #      data = d.read()
-    return render_template('peinfo.html') #data=data
+@app.route('/PEINFO', methods = ['GET', 'POST'])
+def PEINFO_e():
+        return render_template('PEINFO.html') 
+
+@app.route('/peinfo/<f>', methods = ['GET', 'POST'])
+def peinfo_e(f):
+    if f=="Upload":
+        return render_template('empty.html')
+    else:
+        return render_template(f+'peinfo.html') 
 
 @app.route('/peview', methods = ['GET','POST'])
 def peview_e():
@@ -96,30 +82,38 @@ def peview_e():
 
 @app.route('/DOSHEADER/<f>')
 def dosheader(f):
-	#with open('/PEviewer-Packer-Protector-PEinfo-website/app/static/dosheader.txt', 'r') as f:
-	#data = f.read()
-	return render_template(f+'DOSHEADER.html')
-@app.route('/FILEHEADER')
-def fileheader():
-	f=request.form['fname']
-	return render_template(f+'FILEHEADER.html')
+    if f=="Upload":
+        return render_template('empty.html')
+    else:
+        return render_template(f+'DOSHEADER.html')
+@app.route('/FILEHEADER/<f>')
+def fileheader(f):
+    if f=="Upload":
+        return render_template('empty.html')
+    else:
+        return render_template(f+'FILEHEADER.html')
 
-@app.route('/SECTIONHEADUPX0')
-def sectionheadupx0():
-	f=request.form['fname']
-	return render_template(f+'SECTIONHEADUPX0.html')
+@app.route('/SECTIONHEAD/<f>')
+def sectionhead(f):
+    if f=="Upload":
+        return render_template('empty.html')
+    else:
+        return render_template(f+'SECTIONHEAD.html')
 
-@app.route('/SECTIONUPX0')
-def sectionupx0(filename):
-	#f=request.form['fname']
-	return render_template('%s/SECTIONUPX0.html' %filename)
+@app.route('/SECTION/<f>')
+def section(f):
+    if f=="Upload":
+        return render_template('empty.html')
+    else:
+        return render_template(f+'SECTION.html')
 
-@app.route('/STUBPROGRAM', methods = ['GET', 'POST'])
-def stubprogram():
-	f=request.form['fname']
-	with open('/PEviewer-Packer-Protector-PEinfo-website/app/static/stubprogram.txt', 'r') as f:
-	     content = f.read()
-	return render_template(f+'STUBPROGRAM.html', content=content)
+@app.route('/STUBPROGRAM/<f>', methods=['GET', 'POST'])
+def stubprogram(f):
+        if f=="Upload":
+            return render_template('empty.html')
+        else:
+            ft = open('static/'+f+'stubprogram.txt','r')
+            return "</br>".join(ft.readlines())
 
 @app.route('/pack_protector', methods = ['GET','POST'])
 def render_file():
@@ -137,18 +131,25 @@ def upload_file():
       return render_template('pack_protector.html',ff="Upload File..")
    if f and allowed_file(f.filename):
       f.save(secure_filename(f.filename))
+      size = os.stat(f.filename).st_size
+
+      if size > 32*1024*1024:
+          flash("File limit 32MB")
+          os.system('rm '+f.filename)
+          return render_template('pack_protector.html',ff="Upload File..")
+
       os.system('./viruscheck '+f.filename)
       dir_path = "/PEviewer-Packer-Protector-PEinfo-website/app/templates"
       dir_name = f.filename
       #os.mkdir(dir_path+"/"+dir_name+"/")
-      os.system('pepack -f html '+f.filename+'> ./templates/peinfo1.html ')
-      os.system('pesec -f html '+f.filename+'>> ./templates/peinfo1.html ')
+      os.system('pepack -f html '+f.filename+'> ./templates/'+f.filename+'peinfo.html ')
+      os.system('pesec -f html '+f.filename+'>> ./templates/'+f.filename+'peinfo.html ')
       os.system('readpe -f html -h dos '+f.filename+'> ./templates/'+f.filename+'DOSHEADER.html ')
       os.system('readpe -f html -h coff '+f.filename+'> ./templates/'+f.filename+'FILEHEADER.html ')
       os.system('readpe -f html -h optional '+f.filename+'>> ./templates/'+f.filename+'FILEHEADER.html ')
       os.system('pestr -o '+f.filename+'> ./static/'+f.filename+'stubprogram.txt ')
-      os.system('readpe -f html -S UPX0 '+f.filename+'> ./templates/'+f.filename+'SECTIONHEADUPX0.html ')
-      os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTIONUPX0.html ')
+      os.system('readpe -f html -S '+f.filename+'> ./templates/'+f.filename+'SECTIONHEAD.html ')
+      os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTION.html ')
 
       flash("Upload and Virus check complete!")
       TXT = open("/root/TorF.txt",'r');
