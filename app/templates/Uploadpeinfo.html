@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title></title>
+	<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300|Roboto+Condensed|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+        <style>
+        html, body { height:100%; overflow:hidden }
+        div{
+                margin-top: 10px;
+        }
+        a{
+             	border: 2px solid  #0d193a;
+	     	border-radius: 5px;
+                padding: 5px;
+                background-color:  #c1d1ff;
+                color: #0d193a;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        </style>
+</head>
+
+<body style="text-align:center;">
+	<script>
+		function pe(){
+			context.location.href='/peinfo/'+window.parent.frames["pack"].document.unpack.fname.value;
+		}
+	</script>
+        <ul onclick="javascript:pe()"><a href="#">PEINFO</a></ul>
+        </form>
+</body>
+</html>

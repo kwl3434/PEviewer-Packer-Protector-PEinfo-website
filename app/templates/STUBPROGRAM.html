@@ -5,7 +5,7 @@
 <body>
 	<form action="http://p4gwnu.koreacentral.cloudapp.azure.com/STUBPROGRAM" method="POST" enctype = "multipart/form-data">
 	<h2 style="text-align:left;"> Stub Program </h2>
-	<pre style="font-size:150%;">{{content}}</pre>
+	<pre style="font-size:150%;">{{ url_for( 'static', filename='static/'+{{context}}) }}</pre>
 	</form>
 </body>
 </html>

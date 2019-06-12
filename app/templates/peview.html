@@ -6,8 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
         <style>
-
-                span{
+                a{
                         border-radius: 5px;
                         padding: 5px;
                         background-color:  #d6a7cb;
@@ -25,26 +24,18 @@
         		text-align: center;
         	}
         	#menubar ul a {
-        		margin : 1px;
-        		width : 200px;
+        		width : 100%;
                         background : #e8c5db;
                         border-radius: 5px;
                         border: 1px solid #411344;
-                        display : inline-block;
-                        list-style-type : none;
-                        padding : 5px 15px;
         		font-family: 'Roboto Condensed', sans-serif;
         		font-size: 20px;
         		font-weight: bold;
         	  	text-decoration : none;
                 	color : #411344;
+			display : inline-block;
         	}
                 #menubar ul a:hover{
-                        margin : 1px;
-                        width : 200px;
-                        display : inline-block;
-                        list-style-type : none;
-                        padding : 5px 15px;
                         border: 1px solid #5e1b46;
                         background-color: #411344;
                         color: #e8c5db;
@@ -55,25 +46,44 @@
 <body style="text-align:center;">
 	<script>
 		function DOS(){
-			window.location.href=window.parent.frames["pack"].document.unpack.fname.value+'/DOSHEADER';
+			context.location.href='/DOSHEADER/'+window.parent.frames["pack"].document.unpack.fname.value;
+		}
+		function STUB(){
+			context.location.href='/STUBPROGRAM/'+window.parent.frames["pack"].document.unpack.fname.value;
+		}
+		function FILEHEADER(){
+			context.location.href='/FILEHEADER/'+window.parent.frames["pack"].document.unpack.fname.value;
+		}
+		function SECTIONHEAD(){
+			context.location.href='/SECTIONHEAD/'+window.parent.frames["pack"].document.unpack.fname.value;
+		}
+		function SECTION(){
+			context.location.href='/SECTION/'+window.parent.frames["pack"].document.unpack.fname.value;
 		}
 	</script>
-	<span>PEVIEW</span>
+	{% with messages = get_flashed_messages() %}
+  	{% if messages %}
+    	{% for message in messages %}
+      	<script>
+	alert('{{ message }}');
+	</script>
+    	{% endfor %}
+  	{% endif %}
+	{% endwith %}
+	<a href="peview">PEVIEW</a>
         <br>
         <br>
-        <div style="float: left; width: 29%;">
+        <div style="float: left; width: 32%; margin:0px; padding:0px">
                 <nav id="menubar">
         		<ul onclick="javascript:DOS()"><a href="#">IMAGE_DOS_HEADER</a></ul>
-         		<ul onclick="context.location.href='/STUBPROGRAM'"><a href="#">STUB_PROGRAM</a></ul>
-        		<ul onclick="context.location.href='/FILEHEADER'"><a href="#">IMAGE_NT_HEADERS</a></ul>
-                        <ul onclick="context.location.href='/SECTIONHEADUPX0'"><a href="#">IMAGE_SECTION_HEADER</a></ul>
-                        <ul onclick="context.location.href='/SECTIONUPX0'"><a href="#">SECTION</a></ul>
-        	<!--	<ul onclick="context.location.href='/SECTIONUPX1'"><a href="#">SECTION UPX1</a></ul> -->
-        	<!--	<ul onclick="context.location.href='/SECTIONRSRC'"><a href="#">SECTION .rsrc</a></ul> -->
+         		<ul onclick="javascript:STUB()"><a href="#">STUB_PROGRAM</a></ul>
+        		<ul onclick="javascript:FILEHEADER()"><a href="#">IMAGE_NT_HEADERS</a></ul>
+                        <ul onclick="javascript:SECTIONHEAD()"><a href="#">IMAGE_SECTION_HEADER</a></ul>
+                        <ul onclick="javascript:SECTION()"><a href="#">SECTION</a></ul>
         	</nav>
         </div>
-        <div style="border: 2px solid #5e1b46; float: left; width: 68%; padding:5px; ">
-                <iframe name = "context" width="100%" height="800px" frameborder=none marginheight=20 scrolling=yes></iframe>
+        <div style="float:right; border: 2px solid #5e1b46; width: 65%; padding-left:5px; ">
+                <iframe name = "context" width="100%" height="700px" frameborder=none marginheight=20 scrolling=yes></iframe>
         </div>
 
 </body>
