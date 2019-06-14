@@ -34,11 +34,17 @@ sectionheadupx0='SECTIONHEADUPX0.html'
 sectionupx0='SECTIONUPX0.html'
 stubprogram='STUBPROGRAM.html'
 
-jpg1='1.JPG'
-jpg2='2.JPG'
-jpg3='3.JPG'
-jpg4='4.JPG'
-jpg5='5.JPG'
+jpg1='main.JPG'
+jpg2='loading.JPG'
+jpg3='file.JPG'
+jpg4='pack4.JPG'
+jpg5='protect.JPG'
+jpg6='peview1.JPG'
+jpg7='peview2.JPG'
+jpg8='peview3.JPG'
+jpg9='peview4.JPG'
+jpg10='peview5.JPG'
+jpg11='virus1.JPG'
 # exe파일만 허용하는 함수
 def allowed_file(filename): 
         return '.' in filename and \
@@ -141,7 +147,6 @@ def upload_file():
       os.system('./viruscheck '+f.filename)
       dir_path = "/PEviewer-Packer-Protector-PEinfo-website/app/templates"
       dir_name = f.filename
-      #os.mkdir(dir_path+"/"+dir_name+"/")
       os.system('pepack -f html '+f.filename+'> ./templates/'+f.filename+'peinfo.html ')
       os.system('pesec -f html '+f.filename+'>> ./templates/'+f.filename+'peinfo.html ')
       os.system('readpe -f html -h dos '+f.filename+'> ./templates/'+f.filename+'DOSHEADER.html ')
@@ -151,11 +156,11 @@ def upload_file():
       os.system('readpe -f html -S '+f.filename+'> ./templates/'+f.filename+'SECTIONHEAD.html ')
       os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTION.html ')
 
-      flash("Upload and Virus check complete!")
       TXT = open("/root/TorF.txt",'r');
       line = TXT.readline()
       TXT.close()
       if line=='None':
+        flash("Upload and Virus check complete!")
       	return render_template('pack_protector.html',ff=f.filename)
       else:
         error = 'Please exe file upload!'

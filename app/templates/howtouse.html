@@ -1,87 +1,213 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <meta charset="UTF-8">
-                <link href="https://fonts.googleapis.com/css?family=Hi+Melody|Nanum+Pen+Script" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredericka+the+Great|Press+Start+2P" rel="stylesheet">
-                <title>사용방법</title>
-                <style>
-        div {
-                font-family: 'Hi Melody', cursive;
-                text-align: center;
-                font-size : 40px;
-                font-weight: bold;
-                color : #5E8680;
-        }
-        figure {
-                text-align : center;
+<head>
+<title>사용방법</title>
+<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+<style>
+	table tr td{
+		text-align : center;
+	}
+	table {
+		margin-left: auto;
+		margin-right: auto;
+		border: 1px solid #625a7a;
+	}
+	td {
+		border-bottom: 1px solid #625a7a;
+		font-family: 'Do Hyeon', sans-serif;
+		font-size: 20px;
+		color: #02073a;
+		padding-top:10px;
+		padding-bottom:20px;
+  	}
+	body{
+		background: #f6f4ff
+	}
+	span{
+		background : #e8c5db;
+		border-radius: 5px;
+		border: 2px solid #411344;
+		color: #411344;
+		padding: 10px;
+		font-family: 'Do Hyeon', sans-serif;
+		font-size: 20px;
+	}
+	img{
+		padding-bottom:20px;
+		border: 5px solid #3f1b5e;
+	}
+        .logo {
+		font-family: 'Do Hyeon', sans-serif;
+		text-align: center;
+		font-size : 36px;
+		color : #3f1b5e;
         }
 
-                </style>
-        </head>
-        <h3>
-                <body>
-                <figure id="1-1">
-		<div>P4 웹 페이지 사용 방법</div>
-                <table>
-                        <tr>
-                                <pre><td><img src="{{ url_for( 'static', filename='images/1.jpg' ) }}" alt="실행결과"><br>
- Main버튼 선택 결과</pre></td>
-                                <td>
-                                        <figure>
-                                                <mark>Main버튼 선택 화면</mark> 입니다.
-                                        </figure>
-                                </td>
-                        </tr>
-                        <tr>
-                                <pre><td><img src="{{ url_for( 'static', filename='images/2.jpg' ) }}" alt="실행결과"><br>
-  파일 선택 후 예시</pre></td>
-                                <td>
-                                        <figure>
-                                                ① 파일을 <mark>선택</mark>합니다.<br>
-                                                ② <mark>제출</mark>을 눌러 파일을 <mark>제출</mark> 해주세요.
-                                        </figure>
-                                </td>
-                        </tr>
-                        <pre><td><img src="{{ url_for( 'static', filename='images/3.jpg' ) }}" alt="실행결과"><br>
-         패커의 종류 선택 예시</pre></td>
-                        <td>
-                                <figure>
-                                        ① 패커의 종류를 <mark>선택</mark> 하여 주세요. 패커의 종류는 총 <mark>3가지</mark> 입니다.<br>
-                                        ② 다음은 <mark>Pack 버튼</mark>을 눌러 주세요.<br>
-                                        ③ <mark>UnPack버튼</mark>으로 <mark>UnPack</mark> 할 수 있습니다.
-                                </figure>
-                        </td>
-                        </tr>
-                        <tr>
-                                <pre><td><img src="{{ url_for( 'static', filename='images/4.jpg' ) }}" alt="실행결과"><br>
-    하단의 진행상황 예시</pre></td>
-                                <td>
-                                        <figure>
-                                                하단의 <mark>진행 상황</mark>으로 <mark>현재 진행 상황</mark>을 알수있습니다.
-                                        </figure>
-                                </td>
-                        </tr>
-                        <tr>
-                                <pre><td><img src="{{ url_for( 'static', filename='images/5.jpg' ) }}" alt="실행결과"><br>
-    프로텍터 종류 선택 예시</pre></td>
-                                <td>
-                                        <figure>
-                                                ① <mark>프로텍터 종류 선택</mark> 하여 주세요. <mark>프로텍터</mark>의 종류는 총 <mark>3가지</mark> 입니다.<br>
-                                                ② 다음은 <mark>Protect 버튼</mark>을 눌러 주세요.
-                                        </figure>
-                                </td>
-                        </tr>
-                        <tr>
-                                <pre><td><img src="{{ url_for( 'static', filename='images/6.jpg' ) }}" alt="실행결과"><br>
-     하단의 진행상황 예시</pre></td>
-                                <td>
-                                        <figure>
-                                                하단의 <mark>진행 상황</mark>으로 <mark>현재 진행 상황</mark>을 알수있습니다.
-                                        </figure>
-                                </td>
-                        </tr>
-        </figure>
-                </table>
-                </body>
+
+
+</style>
+</head>
+<body>
+	<div class="logo">
+		사용자 메뉴얼
+	</div>
+<table>
+	<tr>
+		 <td>
+			<img src="{{ url_for( 'static', filename='images/main.jpg' ) }}" alt="실행결과">
+
+			<br>
+			<br>
+			<span>Main버튼 실행결과</span>
+		</td>
+		<td>
+ 			<mark>Main버튼</mark> 클릭 시 화면입니다.
+ 		</td>
+ 	</tr>
+ 	<tr>
+	 	<br>
+ 		<td>
+		        <img src="{{ url_for( 'static', filename='images/loading.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+  			<span>파일 선택 후 화면</span>
+		</td>
+ 		<td>
+
+				① 파일을 <mark>선택</mark>합니다.
+			<br>
+  				② <mark>제출버튼</mark>을 눌러 파일을 <mark>제출</mark> 하세요.
+
+  		</td>
+  	</tr>
+	<tr>
+		<td>
+		        <img src="{{ url_for( 'static', filename='images/virus1.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+	 		<span>바이러스 체크 실행</span>
+		</td>
+		<td>
+		 	① 파일 제출 시 동시에 <mark>바이러스 체크</mark>를 합니다.
+	 	</td>
+	 </tr>
+   	<tr>
+   		<td>
+		        <img src="{{ url_for( 'static', filename='images/pack.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+    			<span>팩커 선택 예시</span>
+   		</td>
+		<td>
+       			① <mark>Pack</mark>되어 있는 파일은 <mark>UnPack버튼</mark> 으로 Unpacking하고,
+			<br>
+			<br>
+			<mark>일반파일</mark>은 <mark> Pack버튼</mark>으로  Packing 할 수 있습니다.
+    		</td>
+    	</tr>
+   	<tr>
+   		<td>
+		        <img src="{{ url_for( 'static', filename='images/protect.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+    			<span>프로텍터 종류 선택 예시</span>
+		</td>
+   		<td>
+
+      			① <mark>프로텍터</mark> 종류를 선택하세요.
+			<br>
+      			② <mark>Protect버튼</mark>을 누르세요.
+
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+		        <img src="{{ url_for( 'static', filename='images/file.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+     			<span>Pack | UnPack | Protect 선택 후 다운로드 완료</span>
+		</td>
+    		<td>
+     			<mark>Packing | UnPacking | Protecting</mark> 완료 후 download파일에 저장됩니다.
+     		</td>
+     	</tr>
+	<tr>
+	   	<td>
+		        <img src="{{ url_for( 'static', filename='images/peinfo.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+	    		<span>PEINFO</span>
+		</td>
+	   	<td>
+	      		업로드 창 바로 아래 <mark>PEINFO버튼</mark>을 눌러 확인 할 수 있습니다.
+	    	</td>
+	</tr>
+	<tr>
+		<td>
+		        <img src="{{ url_for( 'static', filename='images/peview1.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+			<span>PEVIEW</span>
+		</td>
+		<td>
+			<mark>PEVIEW버튼</mark>을 눌러 확인 할 수 있습니다.<br>
+		</td>
+	</tr>
+	<tr>
+ 		<td>
+		        <img src="{{ url_for( 'static', filename='images/peview2.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+			<span>STUB_PROGRAM</span>
+ 		</td>
+ 		<td>
+
+ 			<mark>STUB_PROGRAM</mark>를 확인 할 수 있습니다.<br>
+
+ 		</td>
+ 	</tr>
+	<tr>
+ 		<td>
+		        <img src="{{ url_for( 'static', filename='images/peview3.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+			<span>IMAGE_NT_HEADERS</span>
+		</td>
+ 		<td>
+
+ 			<mark>IMAGE_NT_HEADERS</mark>를 확인 할 수 있습니다.<br>
+
+ 		</td>
+ 	</tr>
+	<tr>
+ 		<td>
+		        <img src="{{ url_for( 'static', filename='images/peview4.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+			<span>IAMGE_SECTION_HEADER</span>
+ 		</td>
+ 		<td>
+
+ 			<mark>IAMGE_SECTION_HEADER</mark>를 확인 할 수 있습니다.<br>
+
+ 		</td>
+ 	</tr>
+	<tr>
+ 		<td>
+		        <img src="{{ url_for( 'static', filename='images/peview5.jpg' ) }}" alt="실행결과">
+			<br>
+			<br>
+			<span>SECTION</span>
+ 		</td>
+ 		<td>
+
+ 			<mark>SECTION</mark>를 확인 할 수 있습니다.<br>
+
+ 		 </td>
+ 	</tr>
+
+</table>
+</body>
 </html>

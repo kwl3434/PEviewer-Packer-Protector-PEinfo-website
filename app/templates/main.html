@@ -56,19 +56,24 @@
                 color : #3f1b5e;
                 padding-left: 50px;
         }
-	.frame {
-		width: 98vw;
-		height: 86vh;
-	}
         hr{
 		border-color: #3f1b5e;
                 border-width: 1px;
         }
 
 </style>
-<script>
-
-</script>
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+		$(document).ready(function(){ 
+			$('.frame').css('width', $(window).width()-30); 
+			$('.frame').css('height', $(window).height()-150); 
+			$(window).resize(function() { 
+				$('.frame').css('width', $(window).width()-30); 
+				$('.frame').css('height', $(window).height()-150); 
+			}); 
+		});
+        </script>
+	
 </head>
 
 <body style="background-color: #f6f4ff">

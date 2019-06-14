@@ -42,6 +42,22 @@
                 }
 
         </style>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	        <script>
+			$(document).ready(function(){ 
+				$('.peview').css('width', $(window).width()-400); 
+				$('.peview').css('height', $(window).height()-100); 
+				$('.iframe').css('width', $(window).width()-410); 
+				$('.iframe').css('height', $(window).height()-110); 
+				$(window).resize(function() { 
+					$('.peview').css('width', $(window).width()-400); 
+					$('.peview').css('height', $(window).height()-100); 
+					$('.iframe').css('width', $(window).width()-410); 
+					$('.iframe').css('height', $(window).height()-110); 
+				}); 
+			});
+		</script>
+
 </head>
 <body style="text-align:center;">
 	<script>
@@ -82,8 +98,8 @@
                         <ul onclick="javascript:SECTION()"><a href="#">SECTION</a></ul>
         	</nav>
         </div>
-        <div style="float:right; border: 2px solid #5e1b46; width: 65%; padding-left:5px; ">
-                <iframe name = "context" width="100%" height="700px" frameborder=none marginheight=20 scrolling=yes></iframe>
+        <div class="peview" style="float:right; border: 2px solid #5e1b46; padding-left:5px; ">
+                <iframe class="iframe" name = "context" width="100%" height="500px" frameborder=none marginheight=20 scrolling=yes></iframe>
         </div>
 
 </body>

@@ -102,7 +102,7 @@
 			<span> 파일 선택 버튼을 누르고 파일을 선택 후 제출 버튼을 누르세요.</span>
 			<br>
 			<div class="deupload" style="margin:5px;">
-				<form class="upload" id="upload" action="http://p4gwnu.koreacentral.cloudapp.azure.com/upload" method = "POST" enctype = "multipart/form-data">
+				<form class="upload" id="upload" action="http://p4hidegwnu.koreacentral.cloudapp.azure.com/upload" method = "POST" enctype = "multipart/form-data">
 					<input class="button" type = "file" name = "file" />
 		<!--건들면안됨-->	<input onclick="$('#loading').show();" class="button" type = "submit" id = "uploadB" />
 		<!--건들면안됨-->	<span>{{ff}}</span>
@@ -133,11 +133,11 @@
 					<option value="1" selected>UPXpacker</option>
 					<option value="2" >packer2</option>
 				</select>
-				<form id="unpack" name="unpack" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/unpack_download" method = "POST" style="float:right;margin:0;">
+				<form id="unpack" name="unpack" action ="http://p4hidegwnu.koreacentral.cloudapp.azure.com/unpack_download" method = "POST" style="float:right;margin:0;">
 					<input class="button" type="submit" value="UnPack" id="unpackB"/>
 			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname" />
 				</form>
-				<form id="pack" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/pack_download" method = "POST"  style="float:right;margin:0;">
+				<form id="pack" action ="http://p4hidegwnu.koreacentral.cloudapp.azure.com/pack_download" method = "POST"  style="float:right;margin:0;">
 					<input class="button" type="submit" value="Pack" id="packB"/>
 			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname" />
 				</form>
@@ -150,7 +150,7 @@
 					<option value="1" selected> VMProtector </option>
 				</select>
 
-				<form id="protect" action ="http://p4gwnu.koreacentral.cloudapp.azure.com/protect_download" method = "POST" style="float:right;margin:0;">
+				<form id="protect" action ="http://p4hidegwnu.koreacentral.cloudapp.azure.com/protect_download" method = "POST" style="float:right;margin:0;">
 					<input class="button" type="submit" value="Protect" id="protectB"/>
 			<!--건들면안됨--><input type="hidden" value={{ff}} name="fname"/>
 				</form>
