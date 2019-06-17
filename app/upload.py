@@ -1,9 +1,9 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import subprocess
 import os, walk
 import sys
 import commands
-
+import string
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -49,6 +49,86 @@ jpg11='virus1.JPG'
 def allowed_file(filename): 
         return '.' in filename and \
                 filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+def character_black(f):
+    if ';' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '=' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '+' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '!' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '@' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif ']' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '[' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '#' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '$' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '%' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '^' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '&' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '*' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif ')' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '(' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '{' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '}' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '|' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '\\' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '`' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '<' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '>' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif ' ' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '\'' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    elif '\"' in f:
+        flash('dont use filename ! ~ ` # $ % ^ & * ( ) + = { } [ ] \" \' ; :')
+        return False
+    else:
+        return True
+
 #업로드 HTML 렌더링
 
 @app.route('/')
@@ -132,6 +212,15 @@ def upload_file():
    if request.method == 'POST':
       f = request.files['file']
       #저장할 경로 + 파일명
+   printable = set(string.printable)
+   for c in f.filename:
+      if c not in printable:
+          flash('File names are only ASCII code')
+          return render_template('pack_protector.html',ff="Upload File..")
+
+   CH=character_black(f.filename)
+   if not CH:
+      return render_template('pack_protector.html',ff="Upload File..")
    if f.filename == '':
       flash('No file selected for uploading')
       return render_template('pack_protector.html',ff="Upload File..")
