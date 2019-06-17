@@ -34,9 +34,13 @@
 		$(document).ready(function(){ 
 			$('.peinfo').css('width', $(window).width()-30); 
 			$('.peinfo').css('height', $(window).height()-100); 
+			$('.iframe').css('width', $(window).width()-40); 
+			$('.iframe').css('height', $(window).height()-110); 
 			$(window).resize(function() { 
 				$('.peinfo').css('width', $(window).width()-30); 
 				$('.peinfo').css('height', $(window).height()-100); 
+				$('.iframe').css('width', $(window).width()-40); 
+				$('.iframe').css('height', $(window).height()-110); 
 			}); 
 		});
         </script>
@@ -51,7 +55,7 @@
 		</script>
 		<a onclick="javascript:pe()" href="#">PEINFO</a>
 		<div class="peinfo">
-			<iframe name = "context" width="100%" frameborder=none marginheight=20 scrolling=yes></iframe>
+			<iframe class="iframe" name = "context" frameborder=none scrolling=yes></iframe>
 		</div>
 	</body>
 </html>

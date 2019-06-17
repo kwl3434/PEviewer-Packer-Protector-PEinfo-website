@@ -5,9 +5,6 @@
 		<title></title>
 		<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans+Condensed:300|Roboto+Condensed|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 	<style>
-		div{
-			margin-top: 10px;
-		}
 		a{
 			border: 2px solid  #0d193a;
 			border-radius: 5px;
@@ -22,16 +19,23 @@
 			background-color:  #c1d1ff;
 			color: black;
 		}
-
+		.peinfo{
+			float:right; 
+			border: 2px solid #0d193a; 
+			padding-left:5px;
 
 	</style>
 	<script language="JavaScript" type="text/javascript">
 		 $(document).ready(function(){ 
-			$('peinfo').css('width', $(window).width()-500); 
-			$('peinfo').css('height', $(window).height()-500); 
+			$('.peinfo').css('width', $(window).width()-500); 
+			$('.peinfo').css('height', $(window).height()-500); 
+			$('.iframe').css('width', $(window).width()-500); 
+			$('.iframe').css('height', $(window).height()-300); 
 			$(window).resize(function() { 
-				$('peinfo').css('width', $(window).width()i-500); 
-				$('peinfo').css('height', $(window).height()-500); 
+				$('.peinfo').css('width', $(window).width()-500); 
+				$('.peinfo').css('height', $(window).height()-500); 
+				$('.iframe').css('width', $(window).width()-500); 
+				$('.iframe').css('height', $(window).height()-500); 
 			}); 
 		 });
 	</script>
@@ -42,10 +46,12 @@
 			function pe(){
 				context.location.href='/peinfo/'+window.parent.frames["pack"].document.unpack.fname.value;
 			}
+0xadd9  E S3
+
 		</script>
 		<ul id="hover" onclick="javascript:pe()"><a href="#">PEINFO</a></ul>
-		<div id="peinfo" style="float:right; border: 2px solid #5e1b46; padding-left:5px; ">
-			<iframe name = "context" width="100%" height="200px" frameborder=none marginheight=20 scrolling=yes></iframe>
+		<div id="peinfo">
+			<iframe id="iframe" name = "context" ></iframe>
 		</div>
 	</body>
 </html>

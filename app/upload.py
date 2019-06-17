@@ -145,22 +145,23 @@ def upload_file():
           return render_template('pack_protector.html',ff="Upload File..")
 
       os.system('./viruscheck '+f.filename)
-      dir_path = "/PEviewer-Packer-Protector-PEinfo-website/app/templates"
-      dir_name = f.filename
-      os.system('pepack -f html '+f.filename+'> ./templates/'+f.filename+'peinfo.html ')
-      os.system('pesec -f html '+f.filename+'>> ./templates/'+f.filename+'peinfo.html ')
-      os.system('readpe -f html -h dos '+f.filename+'> ./templates/'+f.filename+'DOSHEADER.html ')
-      os.system('readpe -f html -h coff '+f.filename+'> ./templates/'+f.filename+'FILEHEADER.html ')
-      os.system('readpe -f html -h optional '+f.filename+'>> ./templates/'+f.filename+'FILEHEADER.html ')
-      os.system('pestr -o '+f.filename+'> ./static/'+f.filename+'stubprogram.txt ')
-      os.system('readpe -f html -S '+f.filename+'> ./templates/'+f.filename+'SECTIONHEAD.html ')
-      os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTION.html ')
-
       TXT = open("/root/TorF.txt",'r');
       line = TXT.readline()
       TXT.close()
+
       if line=='None':
         flash("Upload and Virus check complete!")
+        dir_path = "/PEviewer-Packer-Protector-PEinfo-website/app/templates"
+        dir_name = f.filename
+        os.system('pepack -f html '+f.filename+'> ./templates/'+f.filename+'peinfo.html ')
+        os.system('pepack '+f.filename+'> ./templates/'+f.filename+'peinfo')
+        os.system('pesec -f html '+f.filename+'>> ./templates/'+f.filename+'peinfo.html ')
+        os.system('readpe -f html -h dos '+f.filename+'> ./templates/'+f.filename+'DOSHEADER.html ')
+        os.system('readpe -f html -h coff '+f.filename+'> ./templates/'+f.filename+'FILEHEADER.html ')
+        os.system('readpe -f html -h optional '+f.filename+'>> ./templates/'+f.filename+'FILEHEADER.html ')
+        os.system('pestr -o '+f.filename+'> ./static/'+f.filename+'stubprogram.txt ')
+        os.system('readpe -f html -S '+f.filename+'> ./templates/'+f.filename+'SECTIONHEAD.html ')
+        os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTION.html ')
       	return render_template('pack_protector.html',ff=f.filename)
       else:
         error = 'Please exe file upload!'
@@ -175,47 +176,60 @@ def pack_download_file():
    if request.method == 'POST':
 	f=request.form['fname']
 	if f=="Upload":
-                flash("Please Upload File first")
-                return render_template('pack_protector.html',ff="Upload File..")
+            flash("Please Upload File first")
+            return render_template('pack_protector.html',ff="Upload File..")
 	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
-		return "Warning 112"
-	else:
-  		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
-        	os.system('upx '+f)
+	    return "Warning 112"
+	else:    
+            pein = open('./templates/'+f+'peinfo','r')
+            line = pein.readline()
+            pein.close()
+            if "no" in line:
+  	        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
+                os.system('upx '+f)
 	        os.system('7z a '+f+'.7z '+f)
-        	return send_file(path,as_attachment=True)
+                return send_file(path,as_attachment=True)
+            else:
+                flash("Already packing")
+                return render_template('pack_protector.html',ff=f)
 
 @app.route('/unpack_download', methods = ['GET', 'POST'])
 def unpack_download_file():
    if request.method == 'POST':
 	f=request.form['fname']
 	if f=="Upload":
-                flash("Please Upload File first")
-                return render_template('pack_protector.html',ff="Upload File..")
+            flash("Please Upload File first")
+            return render_template('pack_protector.html',ff="Upload File..")
 	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
-		return "Warning 112"
+	    return "Warning 112"
         else:
-        	path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
-        	os.system('upx -d '+f)
-        	os.system('7z a '+f+'.7z '+f)
-           	return send_file(path,as_attachment=True)
+            pein = open('./templates/'+f+'peinfo','r')
+            line = pein.readline()
+            pein.close()
+            if "no" in line:
+                flash("It is not already packed.")
+                return render_template('pack_protector.html',ff=f)
+            else:
+                path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
+                os.system('upx -d '+f)
+                os.system('7z a '+f+'.7z '+f)
+                return send_file(path,as_attachment=True)
 
 @app.route('/protect_download', methods = ['GET', 'POST'])
 def protect_download_file():
    if request.method == 'POST':
 	f=request.form['fname']
 	if f=="Upload":
-                flash("Please Upload File first")
-                return render_template('pack_protector.html',ff="Upload File..")
+            flash("Please Upload File first")
+            return render_template('pack_protector.html',ff="Upload File..")
 	elif f[0]=='/' or f[0]=='.' or f[0]==' ' or f[0]==';':
-		return "Warning 112"
+	    return "Warning 112"
 	else:
-                f_list = f.split('.');
-        	#path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
-        	os.system('./vmprotect_con '+f)
-        	os.system('7z a '+ f_list[0] + '.vmp.7z '+ f_list[0] + ".vmp.exe")
-  		path="/PEviewer-Packer-Protector-PEinfo-website/app/"+ f_list[0] + ".vmp.7z";
-                return send_file(path,as_attachment=True)
+            f_list = f.split('.');
+            os.system('./vmprotect_con '+f)
+            os.system('7z a '+ f_list[0] + '.vmp.7z '+ f_list[0] + ".vmp.exe")
+  	    path="/PEviewer-Packer-Protector-PEinfo-website/app/"+ f_list[0] + ".vmp.7z";
+            return send_file(path,as_attachment=True)
 
 if __name__ == '__main__':
     #서버 실행
