@@ -1,0 +1,379 @@
+0x4d	!This program cannot be run in DOS mode.
+0xbf	fRich8
+0x1c8	.text
+0x1ef	`.rdata
+0x217	@.data
+0x240	.idata
+0x268	.rsrc
+0x28f	@.reloc
+0x1035	@SVW
+0x106e	h0*B
+0x1081	j@hH
+0x1115	DSVW
+0x11a5	HSVW
+0x12a8	t&:a
+0x1329	PRSVWhh
+0x1338	Bj*
+0x134f	_^[ZX
+0x136a	BhD
+0x14c4	=X6B
+0x14f4	=X6B
+0x16b0	hH*B
+0x16c4	=\6B
+0x16ca	uBh 
+0x16fe	=\6B
+0x1738	hH*B
+0x18a6	hH*B
+0x1995	hH*B
+0x19ae	hH*B
+0x19d1	u%hp
+0x1dfc	h$'B
+0x1e0e	h,)B
+0x1e13	h((B
+0x223b	=tGjyh
+0x2893	jjjj
+0x2d80	=TNB
+0x2e4f	SVWUj
+0x2e57	jhd
+0x2e64	]_^[
+0x2e98	hl.@
+0x2eb8	t.;t$$t(
+0x2f3c	VC20XC00U
+0x2f4a	SVWU
+0x2f84	tEVU
+0x2f96	t3x<
+0x2ff9	]_^[
+0x3024	=X6B
+0x302d	=X6B
+0x3036	=D*B
+0x30e5	=X6B
+0x30ee	=X6B
+0x30f7	=D*B
+0x35f5	0SVW
+0x37e5	,SVW
+0x3d54	u]h 
+0x3e07	tzVS
+0x3e29	GIt%
+0x3e4d	t/Ku
+0x4077	Bjjjj
+0x409f	Bjjjj
+0x40ff	Bjjj
+0x4153	Bjjj
+0x42eb	 _^[
+0x44af	Bjjjj
+0x44d7	Bjjjj
+0x450a	Bjjj
+0x4559	Bjjj
+0x4645	t!hT
+0x47b4	t!h 
+0x4963	QSVW
+0x49d5	Bjjjj
+0x4a68	t!hp
+0x4ae3	Bjjj
+0x4b49	Bjjj
+0x4e25	t!hp
+0x4ee3	QSVW
+0x4f30	t!hp
+0x4f93	QSVW
+0x4fe7	Bjjjj
+0x508d	Bjjjj
+0x50b8	Bjjjj
+0x50e0	Bjjjj
+0x5108	Bjjjj
+0x5130	Bjjjj
+0x51fb	Bjjjj
+0x5258	Bjjjj
+0x52ac	 Qh<
+0x52b1	Bjjjj
+0x52fa	Bjjjj
+0x532d	Bjjjj
+0x55ed	u+hP
+0x55f7	Bjjjj
+0x56f4	Bjjjj
+0x572d	H0_^[
+0x5760	u.hx
+0x576a	Bjjjj
+0x5833	A,+B,
+0x5845	J0+H0
+0x5888	Bjjjj
+0x5949	Bjjjj
+0x597a	Bjjjj
+0x59a2	Bjjjj
+0x59f1	Bjjjj
+0x5a10	=HNB
+0x5a5c	Bjjjj
+0x5ab9	Bjjjj
+0x5af0	Bjjjj
+0x5b25	\SVW
+0x5c0f	Bjjjj
+0x5c45	4SVW
+0x5c7c	Bjjjj
+0x5cc3	QSVW
+0x5d0e	Bjjjj
+0x5d32	Q,Rh
+0x5d38	Bjjjj
+0x5d5a	Q0Rh
+0x5d60	Bjjjj
+0x60ff	U LB
+0x624e	E LB
+0x63c7	E LB
+0x66f4	=,LB
+0x8826	Bj
+0x9e05	0SVW
+0x9fca	BhD
+0x9fe7	= 8B
+0xa060	= 8B
+0xa08c	= 8B
+0xa32a	BhD
+0xa347	=$8B
+0xa39f	=$8B
+0xa3d6	=$8B
+0xabc3	QSVW
+0xabd4	Bj
+0xac06	j;h,
+0xad0e	=,8B
+0xad43	=,8B
+0xafe4	|jyh@
+0xb09d	=D*B
+0xb16c	=D*B
+0xb652	Bj
+0xb8a3	Bj
+0xb91d	_^[]
+0xb9cb	% RB
+0xb9d1	%$RB
+0xb9d7	%(RB
+0xb9dd	%,RB
+0xb9e3	%0RB
+0xb9e9	%4RB
+0xb9ef	%8RB
+0xb9f5	%<RB
+0xb9fb	%@RB
+0xba01	%DRB
+0xba07	%HRB
+0xba0d	%LRB
+0xba13	%PRB
+0xba3d	%TRB
+0x2001c	Wrong serial!!!
+0x20030	ERROR
+0x20038	You got it ;)
+0x20048	Good Job!
+0x20054	i386\chkesp.c
+0x20068	The value of ESP was not properly saved across a function call.  This is usually a result of calling a function declared with one calling convention with a function pointer declared with a different calling convention. 
+0x20154	@Assertion Fail
+0x20168	Error
+0x20170	Warning
+0x20178	%s(%d) : %s
+0x2018c	Assertion failed!
+0x201a0	Assertion failed: 
+0x201b4	_CrtDbgReport: String too long or IO Error
+0x201e0	Second Chance Assertion Failed: File %s, Line %d
+0x20214	wsprintfA
+0x20220	user32.dll
+0x2022c	Microsoft Visual C++ Debug Library
+0x20250	Debug %s!
+0x2025b	Program: %s%s%s%s%s%s%s%s%s%s%s
+0x2027c	(Press Retry to debug the application)
+0x202a5	Module: 
+0x202b1	File: 
+0x202b9	Line: 
+0x202c4	Expression: 
+0x202d6	For information on how your program can cause an assertion
+0x20311	failure, see the Visual C++ documentation on asserts.
+0x2034c	<program name unknown>
+0x20364	dbgrpt.c
+0x20370	szUserMessage != NULL
+0x20388	stdenvp.c
+0x20394	stdargv.c
+0x203a0	a_env.c
+0x203a8	ioinit.c
+0x203b4	runtime error 
+0x203c8	TLOSS error
+0x203d8	SING error
+0x203e8	DOMAIN error
+0x203f8	R6028
+0x203ff	- unable to initialize heap
+0x20420	R6027
+0x20427	- not enough space for lowio initialization
+0x20458	R6026
+0x2045f	- not enough space for stdio initialization
+0x20490	R6025
+0x20497	- pure virtual function call
+0x204b8	R6024
+0x204bf	- not enough space for _onexit/atexit table
+0x204f0	R6019
+0x204f7	- unable to open console device
+0x2051c	R6018
+0x20523	- unexpected heap error
+0x20540	R6017
+0x20547	- unexpected multithread lock error
+0x20570	R6016
+0x20577	- not enough space for thread data
+0x2059e	abnormal program termination
+0x205c0	R6009
+0x205c7	- not enough space for environment
+0x205ec	R6008
+0x205f3	- not enough space for arguments
+0x20618	R6002
+0x2061f	- floating point not loaded
+0x20640	Microsoft Visual C++ Runtime Library
+0x20668	Runtime Error!
+0x20678	Program: 
+0x20684	format != NULL
+0x20694	sprintf.c
+0x206a0	string != NULL
+0x206b0	vsprintf.c
+0x206bc	GetLastActivePopup
+0x206d0	GetActiveWindow
+0x206e0	MessageBoxA
+0x206ec	Client
+0x206f4	Ignore
+0x20700	Normal
+0x20708	Free
+0x20710	Error: memory allocation: bad memory block type.
+0x20744	Invalid allocation size: %u bytes.
+0x2076c	Client hook allocation failure.
+0x20790	Client hook allocation failure at file %hs line %d.
+0x207c8	dbgheap.c
+0x207d4	_CrtCheckMemory()
+0x207e8	_pFirstBlock == pOldBlock
+0x20804	_pLastBlock == pOldBlock
+0x20820	fRealloc || (!fRealloc && pNewBlock == pOldBlock)
+0x20854	_BLOCK_TYPE(pOldBlock->nBlockUse)==_BLOCK_TYPE(nBlockUse)
+0x20890	pOldBlock->nLine == IGNORE_LINE && pOldBlock->lRequest == IGNORE_REQ
+0x208d8	_CrtIsValidHeapPointer(pUserData)
+0x208fc	Allocation too large or negative: %u bytes.
+0x2092c	Client hook re-allocation failure.
+0x20950	Client hook re-allocation failure at file %hs line %d.
+0x20988	_pFirstBlock == pHead
+0x209a0	_pLastBlock == pHead
+0x209b8	pHead->nBlockUse == nBlockUse
+0x209d8	pHead->nLine == IGNORE_LINE && pHead->lRequest == IGNORE_REQ
+0x20a18	DAMAGE: after %hs block (#%d) at 0x%08X.
+0x20a44	DAMAGE: before %hs block (#%d) at 0x%08X.
+0x20a70	_BLOCK_TYPE_IS_VALID(pHead->nBlockUse)
+0x20a98	Client hook free failure.
+0x20ab4	memory check error at 0x%08X = 0x%02X, should be 0x%02X.
+0x20af0	%hs located at 0x%08X is %u bytes long.
+0x20b1c	%hs allocated at file %hs(%d).
+0x20b3c	DAMAGE: on top of Free block at 0x%08X.
+0x20b68	DAMAGED
+0x20b70	_heapchk fails with unknown return value!
+0x20b9c	_heapchk fails with _HEAPBADPTR.
+0x20bc0	_heapchk fails with _HEAPBADEND.
+0x20be4	_heapchk fails with _HEAPBADNODE.
+0x20c08	_heapchk fails with _HEAPBADBEGIN.
+0x20c2c	Bad memory block found at 0x%08X.
+0x20c50	_CrtMemCheckPoint: NULL state pointer.
+0x20c78	_CrtMemDifference: NULL state pointer.
+0x20ca0	Object dump complete.
+0x20cb8	crt block at 0x%08X, subtype %x, %u bytes long.
+0x20cec	normal block at 0x%08X, %u bytes long.
+0x20d14	client block at 0x%08X, subtype %x, %u bytes long.
+0x20d48	{%ld} 
+0x20d50	%hs(%d) : 
+0x20d5c	#File Error#(%d) : 
+0x20d70	Dumping objects ->
+0x20d84	 Data: <%s> %s
+0x20d94	%.2X 
+0x20d9c	Detected memory leaks!
+0x20db4	Total allocations: %ld bytes.
+0x20dd4	Largest number used: %ld bytes.
+0x20df8	%ld bytes in %ld %hs Blocks.
+0x20e18	("inconsistent IOB fields", stream->_ptr - stream->_base >= 0)
+0x20e58	_flsbuf.c
+0x20e64	str != NULL
+0x20e91	 (8PX
+0x20e99	700WP
+0x20ea9	`h````
+0x20eb1	ppxxxx
+0x20ecc	(null)
+0x20edc	(null)
+0x20ee4	output.c
+0x20ef0	ch != _T('\0')
+0x20f2c	@_getbuf
+0x20f38	_file.c
+0x20f40	osfinfo.c
+0x20f4c	fclose.c
+0x20f58	_freebuf.c
+0x20f64	stream != NULL
+0x22a30	AD46DFS547
+0x22cfe	         (((((                  H
+0x242ec	KERNEL32.DLL
+0x242f9	USER32.dll
+0x24306	GetModuleHandleA
+0x24318	FlushFileBuffers
+0x2432a	SetStdHandle
+0x24338	SetFilePointer
+0x24348	GetStringTypeW
+0x24358	GetStringTypeA
+0x24368	LCMapStringW
+0x24376	GetStartupInfoA
+0x24388	GetCommandLineA
+0x2439a	GetVersion
+0x243a6	ExitProcess
+0x243b4	DebugBreak
+0x243c0	GetStdHandle
+0x243ce	WriteFile
+0x243da	InterlockedDecrement
+0x243f0	OutputDebugStringA
+0x24404	GetProcAddress
+0x24414	LoadLibraryA
+0x24422	InterlockedIncrement
+0x24438	GetModuleFileNameA
+0x2444c	TerminateProcess
+0x2445e	GetCurrentProcess
+0x24472	UnhandledExceptionFilter
+0x2448c	FreeEnvironmentStringsA
+0x244a6	FreeEnvironmentStringsW
+0x244c0	WideCharToMultiByte
+0x244d6	GetEnvironmentStrings
+0x244ee	GetEnvironmentStringsW
+0x24506	SetHandleCount
+0x24516	GetFileType
+0x24524	HeapDestroy
+0x24532	HeapCreate
+0x2453e	HeapFree
+0x24548	VirtualFree
+0x24556	RtlUnwind
+0x24562	GetLastError
+0x24570	SetConsoleCtrlHandler
+0x24588	IsBadWritePtr
+0x24598	IsBadReadPtr
+0x245a6	HeapValidate
+0x245b4	GetCPInfo
+0x245c0	GetACP
+0x245c8	GetOEMCP
+0x245d2	HeapAlloc
+0x245de	VirtualAlloc
+0x245ec	HeapReAlloc
+0x245fa	MultiByteToWideChar
+0x24610	LCMapStringA
+0x2461e	CloseHandle
+0x2462c	DialogBoxParamA
+0x2463e	LoadIconA
+0x2464a	GetDlgItemTextA
+0x2465c	MessageBoxA
+0x2466a	EndDialog
+0x252aa	wwwwwww
+0x252ba	wwwwwwwp
+0x252cb	wwwwwww
+0x252db	wwwwwww
+0x252ec	wwwwwp
+0x252fc	wwwwww
+0x2530d	wwwwwww
+0x2531d	wwwwwwwp
+0x2532e	wwwwwwp
+0x2533e	wwwwww
+0x2534f	wwwwwpw
+0x2535f	wwwwwwwp
+0x25370	wwwwwww
+0x25380	wwwwwww
+0x25391	wwwwww
+0x253a1	wwwwww
+0x253b2	wwwww
+0x253c2	wwwww
+0x253d3	wwww
+0x253e3	wwww
+0x2553e	Raz0r Crackme #1
+0x25566	MS Sans Serif
+0x255c0	Check Serial

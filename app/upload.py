@@ -253,7 +253,7 @@ def upload_file():
         os.system('pehash -f html -s '+f.filename+'> ./templates/'+f.filename+'SECTION.html ')
       	return render_template('pack_protector.html',ff=f.filename)
       else:
-        error = 'Please exe file upload!'
+        error = 'Virus detected!'
         flash(error)
         return render_template('pack_protector.html',ff="Upload File..")
    else:
@@ -278,6 +278,11 @@ def pack_download_file():
                 os.system('upx '+f)
 	        os.system('7z a '+f+'.7z '+f)
                 return send_file(path,as_attachment=True)
+            elif "Microsoft Visual C++" in line:
+  	        path="/PEviewer-Packer-Protector-PEinfo-website/app/"+f+".7z"
+                os.system('upx '+f)
+	        os.system('7z a '+f+'.7z '+f)
+                return send_file(path,as_attachment=True)
             else:
                 flash("Already packing")
                 return render_template('pack_protector.html',ff=f)
@@ -296,6 +301,9 @@ def unpack_download_file():
             line = pein.readline()
             pein.close()
             if "no" in line:
+                flash("It is not already packed.")
+                return render_template('pack_protector.html',ff=f)
+            elif "Microsoft Visual C++" in line:
                 flash("It is not already packed.")
                 return render_template('pack_protector.html',ff=f)
             else:
