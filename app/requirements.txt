@@ -16,7 +16,7 @@ Flask-SQLAlchemy==2.3.2
 Flask-Testing==0.7.1
 functools32==3.2.3.post2
 itsdangerous==1.1.0
-Jinja2==2.10
+Jinja2==2.11.3
 jsonschema==3.0.1
 Mako==1.0.8
 MarkupSafe==1.1.1
