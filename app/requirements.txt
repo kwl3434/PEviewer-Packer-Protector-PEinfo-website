@@ -18,7 +18,7 @@ functools32==3.2.3.post2
 itsdangerous==1.1.0
 Jinja2==2.11.3
 jsonschema==3.0.1
-Mako==1.0.8
+Mako==1.2.2
 MarkupSafe==1.1.1
 pkg-resources==0.0.0
 pycparser==2.19
